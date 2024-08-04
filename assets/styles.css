@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     width: 100%;
@@ -12,51 +8,222 @@ body {
     text-align: center;
     flex-direction: column;
 }
-h1{
+
+h1 {
     font-size: 35px;
     margin: 30px;
+    width: max-content;
+    text-align: center;
 }
 
-main {
+h2 {
+    font: 20px;
+    margin: 2px;
+}
+
+.input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+    margin: 10px;
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+
+}
+
+select:hover {
+    border: 1px solid #07b30aa9;
+
+}
+
+#formContainer {
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  
-
 }
 
-.task {
-margin: 10px;
- text-align: justify;
- width: 80%;
+#formContainer form {
+    width: 80%;
 }
 
-.task h2{
+.taskContainer {
+    margin: 10px;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+    margin-right: 10px;
     cursor: pointer;
 }
-.task h2:hover{
-    font-size: 25px;
-    color: #c40114;
+
+.taskContainer div.taskName {
+    cursor: pointer;
 }
 
-.task h2:hover +  ul{
-    display: block !important;
-  }
-.task ul:hover{
-    display: block !important;
-  }
-.task ul{
-  display: none;
+.taskContainer div.taskName:hover {
+    font-size: 25px;
+    color: green;
 }
+
+.taskContainer:hover>ul {
+    display: block !important;
+}
+
+.taskContainer ul {
+    display: none;
+}
+
 ul {
+    font: 15px;
     list-style: none;
 }
+.taskContainer ul li{
+   height: 20px;
+   margin-top: 10px;
+}
 
-/* .task h2:hover +  ul{
-    opacity: 1 !important;
-   }
- 
- .task ul{
-  opacity: 0;
- } */
+.taskOverview {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.taskOverview input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+.splitH{
+ display: flex;
+   justify-content: space-between;
+}
+img.status{
+    width: 25px;
+    height: auto;
+}
+.taskOverview:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.taskOverview input:checked~.checkmark {
+    background-color: green;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.taskOverview input:checked~.checkmark:after {
+    display: block;
+}
+
+.taskOverview .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#fields aside div {
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer hr {
+    margin: 15px;
+}
+
+#formContainer label {
+    font-size: 14px;
+    margin: 5px;
+}
+
+#formContainer textarea {
+    height: 125px;
+    width: 100%;
+}
+
+.btn {
+    width: 80%;
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid white;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #C40C11;
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    border: 1px solid #C40C11;
+    color: #C40C11;
+    font-weight: bolder;
+    animation: alternate;
+}
+
+select:hover {
+    border: 1px solid #07b30aa9;
+
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+::placeholder {
+    font-size: 12px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.smileRating {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px 10px;
+}
+
+.smileRating img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+#moodRate {
+    opacity: 0;
+}

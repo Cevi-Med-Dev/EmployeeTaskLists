@@ -2,133 +2,132 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>Transportation Coordinator Checklist</title>
-    <link rel="stylesheet" href="./assets/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <title>Transportation Coordinator Checklist</title>
+        <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
 <body>
-    <h1>Transportation Coordinator Checklist</h1>
-    <main>
-        <div class="task">
-            <h2>Planning and Scheduling</h2>
-            <ul>
-                <li><label><input type="checkbox"> Review Transportation Needs: Assess transportation requirements for
-                        all
-                        projects or events.</label></li>
-                <li><label><input type="checkbox"> Create Schedules: Develop and manage transportation schedules to
-                        ensure
-                        timely arrivals and departures.</label></li>
-                <li><label><input type="checkbox"> Route Planning: Determine the most efficient routes considering
-                        traffic
-                        patterns, construction, and other potential delays.</label></li>
-                <li><label><input type="checkbox"> Coordinate with Stakeholders: Communicate with clients, drivers, and
-                        other stakeholders to ensure alignment on transportation needs.</label></li>
-            </ul>
-        </div>
+        <main id="formContainer">
+                <h1>Transportation Coordinator Checklist</h1>
+                <form action="">
+                        <select class="input" name="role" id="role">
+                                <option value="">Choose a Role </option>
+                        </select>
+                        <hr>
+                        
+                        <div class="taskContainer">
+                                <div class="splitH">
+                                        <h2>Planning and Scheduling </h2>
+                                        <img class="status" src="./assets/imgs/done.svg" alt="">
+                                </div>
+                                <ul>
+                                        <li><label class="taskOverview">
+                                                        Review Transportation Needs: Assess
+                                                        transportation requirements for
+                                                        all
+                                                        projects or events.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                        <li><label class="taskOverview">
+                                                        Create Schedules: Develop and manage
+                                                        transportation schedules to
+                                                        ensure
+                                                        timely arrivals and departures.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                        <li><label class="taskOverview">
+                                                        Route Planning: Determine the most efficient
+                                                        routes considering
+                                                        traffic
+                                                        patterns, construction, and other potential delays.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                        <li><label class="taskOverview">
+                                                        Coordinate with Stakeholders: Communicate
+                                                        with clients, drivers, and
+                                                        other stakeholders to ensure alignment on transportation
+                                                        needs.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                </ul>
+                        </div>
 
-        <!-- 
-            These check list should be dynamic
-        
-        <div class="task">
-            <h2>Fleet Management</h2>
-            <ul>
-                <li><label><input type="checkbox"> Vehicle Maintenance: Ensure all vehicles are regularly inspected and
-                        maintained.</label></li>
-                <li><label><input type="checkbox"> Inventory Management: Track vehicle availability and
-                        condition.</label>
-                </li>
-                <li><label><input type="checkbox"> Compliance Checks: Verify that all vehicles meet regulatory
-                        requirements
-                        and safety standards.</label></li>
-            </ul>
-        </div>
-        <div class="task">
-            <h2>Driver Coordination</h2>
-            <ul>
-                <li><label><input type="checkbox"> Driver Scheduling: Assign drivers to specific routes and
-                        shifts.</label>
-                </li>
-                <li><label><input type="checkbox"> Training and Certification: Ensure drivers are properly trained and
-                        hold
-                        necessary certifications.</label></li>
-                <li><label><input type="checkbox"> Performance Monitoring: Evaluate driver performance and address any
-                        issues.</label></li>
-            </ul>
-        </div>
-        <div class="task">
-            <h2>Logistics and Operations</h2>
-            <ul>
-                <li><label><input type="checkbox"> Load Management: Oversee the loading and unloading of goods or
-                        passengers, ensuring safe and efficient handling.</label></li>
-                <li><label><input type="checkbox"> Problem Resolution: Address and resolve any logistical issues or
-                        disruptions.</label></li>
-                <li><label><input type="checkbox"> Documentation: Maintain records of transportation activities,
-                        including
-                        schedules, routes, and incidents.</label></li>
-            </ul>
-        </div>
-        <div class="task">
-            <h2>Communication</h2>
-            <ul>
-                <li><label><input type="checkbox"> Internal Communication: Coordinate with other departments to align on
-                        transportation needs and issues.</label></li>
-                <li><label><input type="checkbox"> External Communication: Keep clients and external partners informed
-                        about
-                        schedules, changes, and any issues.</label></li>
-                <li><label><input type="checkbox"> Emergency Communication: Develop and implement emergency
-                        communication
-                        protocols.</label></li>
-            </ul>
-        </div>
-        <div class="task">
-            <h2>Compliance and Safety</h2>
-            <ul>
-                <li><label><input type="checkbox"> Regulatory Compliance: Ensure adherence to all local, state, and
-                        federal
-                        transportation regulations.</label></li>
-                <li><label><input type="checkbox"> Safety Protocols: Implement and monitor safety procedures to protect
-                        drivers, passengers, and cargo.</label></li>
-                <li><label><input type="checkbox"> Incident Reporting: Document and report any accidents or safety
-                        incidents.</label></li>
-            </ul>
-        </div>
-        <div class="task">
+                        <div class="taskContainer">
+                                <div class="splitH">
+                                        <h2>Planning and Scheduling </h2>
+                                        <img class="status" src="./assets/imgs/done.svg" alt="">
+                                </div>
+                                <ul>
+                                        <li><label class="taskOverview">
+                                                        Review Transportation Needs: Assess
+                                                        transportation requirements for
+                                                        all
+                                                        projects or events.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                        <li><label class="taskOverview">
+                                                        Create Schedules: Develop and manage
+                                                        transportation schedules to
+                                                        ensure
+                                                        timely arrivals and departures.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                        <li><label class="taskOverview">
+                                                        Route Planning: Determine the most efficient
+                                                        routes considering
+                                                        traffic
+                                                        patterns, construction, and other potential delays.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                        <li><label class="taskOverview">
+                                                        Coordinate with Stakeholders: Communicate
+                                                        with clients, drivers, and
+                                                        other stakeholders to ensure alignment on transportation
+                                                        needs.
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                </label></li>
+                                </ul>
+                        </div>
 
-            <h2>Technology and Systems</h2>
-            <ul>
-                <li><label><input type="checkbox"> Software Utilization: Use transportation management systems (TMS) for
-                        scheduling, tracking, and reporting.</label></li>
-                <li><label><input type="checkbox"> Data Management: Ensure accurate and secure handling of
-                        transportation
-                        data and records.</label></li>
-            </ul>
 
-        </div>
-        <div class="task">
-            <h2>Cost Management</h2>
-            <ul>
-                <li><label><input type="checkbox"> Budgeting: Develop and manage transportation budgets.</label></li>
-                <li><label><input type="checkbox"> Cost Analysis: Analyze transportation costs and identify
-                        opportunities
-                        for cost savings.</label></li>
-            </ul>
-        </div>
-        <div class="task">
-            <h2>Continuous Improvement</h2>
-            <ul>
-                <li><label><input type="checkbox"> Feedback Collection: Gather feedback from clients, drivers, and other
-                        stakeholders to identify areas for improvement.</label></li>
-                <li><label><input type="checkbox"> Performance Review: Regularly review and assess transportation
-                        operations
-                        for efficiency and effectiveness.</label></li>
-                <li><label><input type="checkbox"> Process Optimization: Implement improvements based on feedback and
-                        performance reviews.</label></li>
-            </ul>
-        </div> -->
-    </main>
+                        <hr>
+                        <div>
+                                <h4>How Do You Feel ?</h4>
+                                <section class="smileRating">
+                                        <img src="./assets/imgs/happy.svg" name="happy" alt="happy">
+                                        <img src="./assets/imgs/kindaHappy.svg" name="kindaHappy" alt="kinda happy">
+                                        <img src="./assets/imgs/alright.svg" name="alright" alt="alright">
+                                        <img src="./assets/imgs/kindaBad.svg" name="kindaBad" alt="kindabad">
+                                        <img src="./assets/imgs/bad.svg" name="bad" alt="bad">
+                                </section>
+                                <div class="split">
+                                        <label for="feedback">FeedBack</label>
+                                        <textarea name="feedback" class="input animate__animated animate__bounceInRight"
+                                                rows="1"></textarea>
+                                </div>
+                                <input id="moodRate" name="moodRate" value="" />
+                        </div>
+                     
+                        <div class="btnContainer">
+                                <hr>
+                                <button class="btn animate__animated animate__bounce animate" type="submit"> Send Report
+                                </button>
+                        </div>
+
+                </form>
+        </main>
 </body>
 <script src="./assets/script.js"></script>
+
 </html>

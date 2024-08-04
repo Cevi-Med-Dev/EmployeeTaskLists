@@ -34,9 +34,9 @@
             <label for="department">Department:</label>
             <select id="department" onchange="updateNames()">
                 <option value="">Select a department</option>
-                <option value="hr">Human Resources</option>
-                <option value="it">Information Technology</option>
-                <option value="marketing">Marketing</option>
+                <option value="Admin">Admin</option>
+                <option value="CS">Customer Service</option>
+                <option value="Marketing">Information Technology</option>
             </select>
         </div>
         <div class="select-group">
@@ -49,9 +49,9 @@
 
     <script>
         const names = {
-            hr: ["Alice Johnson", "Bob Smith", "Carol White"],
-            it: ["David Brown", "Eva Green", "Frank Black"],
-            marketing: ["Grace Blue", "Henry Yellow", "Ivy Purple"]
+            Admin: ["Angela", "Lina", "Carina", "Natally"],
+            CS: ["Albert",, "Stephany", "Gio", "Robert"],
+            Marketing: ["James", "Henctor", "Diana"]
         };
 
         function updateNames() {
