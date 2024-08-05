@@ -37,7 +37,7 @@ export const roles = {
         "Manage and safeguard financial documentation and reports.",
         "Monitor changes in accounting regulations and implement necessary updates.",
       ],
-      EndOfPeriodReview: [
+     "End Of Period Review": [
         "Conduct a thorough review of the period’s financial activities.",
         "Address any discrepancies or issues found during the review.",
         "Document lessons learned and improvements for future periods.",
@@ -120,7 +120,7 @@ export const roles = {
         "Prepare and distribute regular operational reports to relevant stakeholders.",
         "Ensure all documentation complies with company standards and regulatory requirements.",
       ],
-      EndOfPeriodReview: [
+      "End Of Period Review": [
         "Conduct a review of operational achievements and areas for improvement.",
         "Address any issues or discrepancies identified during the review.",
         "Implement and document lessons learned for future operational cycles.",
@@ -238,23 +238,23 @@ export const roles = {
     },
   
     "Transportation Coordinator": {
-      planningAndScheduling: [
+      "Planning And Scheduling": [
         "Review Transportation Needs: Assess transportation requirements for all projects.",
         "Create Schedules: Develop and manage transportation schedules to ensure timely arrivals and departures.",
         "Route Planning: Determine the most efficient routes considering traffic patterns, construction, and other potential delays.",
         "Coordinate with Stakeholders: Communicate with clients, and other stakeholders to ensure alignment on transportation needs.",
         "Coordinate with Stakeholders: Communicate with drivers.",
       ],
-      fleetManagement: [
+      "Fleet Management": [
         "Vehicle Maintenance: Ensure all vehicles are regularly inspected and maintained.",
         "Inventory Management: Track vehicle availability and condition.",
         "Compliance Checks: Verify that all vehicles meet regulatory requirements and safety standards.",
       ],
-      driverCoordination: [
+      "Driver Coordination": [
         "Driver Scheduling: Assign drivers to specific routes and shifts.",
         "Performance Monitoring: Evaluate driver performance and address any issues.",
       ],
-      logisticsAndOperations: [
+      "Logistics And Operations": [
         "Load Management: Oversee the loading and unloading of goods or passengers, ensuring safe and efficient handling.",
         "Problem Resolution: Address and resolve any logistical issues.",
         "Documentation : Maintain records of transportation activities, including schedules, routes, and incidents.",
@@ -263,41 +263,41 @@ export const roles = {
         "Internal Communication: Coordinate with other departments to align on transportation needs and issues.",
         "External Communication: Keep clients and external partners informed about schedules, changes, and any issues via email.",
       ],
-      complianceAndSafety: [
+      "Compliance And Safety": [
         "Regulatory Compliance: Ensure adherence to all local, state, and federal transportation regulations.",
         "Safety Protocols: Implement and monitor safety procedures to protect drivers, passengers, and cargo.",
         "Incident Reporting: Document and report any accidents or safety incidents.",
       ],
-      technologyAndSystems: [
+      "Technology And Systems": [
         "Software Utilization: Use transportation management systems (Samsara) for scheduling, tracking, and reporting.",
         "Data Management: Ensure accurate and secure handling of transportation data and records.",
       ],
-      continuousImprovement: [
+     "Continuous Improvement": [
         "Feedback Collection: Gather feedback from clients, drivers, and other stakeholders to identify areas for improvement.",
         "Process Optimization: Implement improvements based on feedback and performance reviews.",
       ],
-      routePlanning: [
+      "Route Planning": [
         "Plan and create efficient delivery routes for all orders.",
         "Optimize routes based on delivery addresses, traffic conditions, and delivery time windows.",
         "Ensure routes minimize fuel consumption and delivery time.",
       ],
-      coordinateWithDeliveryTeam: [
+     "Coordinate With Delivery Team": [
         "Communicate planned routes with the delivery team.",
         "Provide necessary details and instructions for each route in order to inform the customers.",
       ],
-      enterRouteInformation: [
+      "Enter Route Information": [
         "Input all relevant route details into Airtable (e.g., delivery addresses, route specifics, delivery times).",
         "Ensure accuracy and completeness of the route data.",
       ],
-      updateDeliveryDates: [
+     "Update Delivery Dates": [
         "Enter estimated delivery dates and times into Airtable.",
         "Update any changes to delivery schedules promptly.",
       ],
-      notifyRelevantDepartments: [
+      "Notify Relevant Departments": [
         "Share route and delivery information with all relevant departments using Airtable.",
         "Ensure departments are aware of their responsibilities and any changes in delivery schedules.",
       ],
-      creatingLabelsForWarranty: [
+     "Creating Labels For Warranty": [
         "Access FedEx shipping tools or software to generate warranty labels.",
         "Ensure that each label includes accurate shipping information and warranty details.",
         "Print and attach labels to warranty shipments.",
@@ -321,28 +321,28 @@ export const roles = {
         "Log all customer interactions and order updates in Airtable.",
         "Ensure records are current and reflect the latest information.",
       ],
-      OrganizeDeliveryTimesWithTransportationDepartment: [
+      "Organize Delivery Times With Transportation Department": [
         "Coordinate delivery times and schedules with the transportation department.",
         "Ensure that delivery windows align with transportation availability.",
       ],
-      ScheduleMeetingsWithTransportationDepartment: [
+      "Schedule Meetings With Transportation Department": [
         "Hold regular meetings with the transportation department to review schedules and updates.",
         "Ensure both teams are aligned on delivery plans and any changes.",
       ],
-      RespondToCustomerCareEmails: [
+      "Respond To Customer Care Emails": [
         "Answer emails from customers regarding their orders or delivery issues.",
         "Provide accurate and timely information based on the latest updates.",
       ],
-      CallDriversForGuidanceAndConfirmation: [
+      "Call Drivers For Guidance And Confirmation": [
         "Contact drivers to provide guidance to their delivery locations.",
         "Confirm the delivery schedule and ensure drivers are prepared for their routes.",
         "Check with drivers to confirm their availability and readiness for scheduled deliveries.",
       ],
-      DocumentCustomerInteractions: [
+     "Document Customer Interactions": [
         "Record details of all customer calls and interactions in Airtable.",
         "Update any changes in delivery schedules or addresses.",
       ],
-      FollowUpOnPendingIssues: [
+      "Follow Up On Pending Issues": [
         "Monitor any pending issues or unresolved customer concerns.",
         "Ensure follow-up actions are completed and documented.",
       ],
@@ -351,24 +351,24 @@ export const roles = {
         "Provide tracking information to customers.",
         "Address and resolve any shipping-related inquiries or issues.",
       ],
-      RecordKeeping: [
+      "Record Keeping": [
         "Maintain accurate records of all shipped orders.",
         "Track shipping costs and monitor for discrepancies.",
         "Ensure proper documentation is filed for future reference.",
       ],
-      ContinuousImprovement: [
+      "Continuous Improvement": [
         "Review shipping processes regularly for efficiency.",
         "Collect and analyze customer feedback on shipping and delivery.",
         "Implement changes based on feedback and performance metrics.",
       ],
     },
     "Dispatcher ": {
-      dailyPreparations: [
+      "Daily Preparations": [
         "Review schedule and shift assignments.",
         "Check communication equipment and systems for functionality.",
         "Verify emergency protocols and contact information.",
       ],
-      vehicleAndEquipmentChecks: [
+      "Vehicle And Equipment Checks": [
         "Ensure all vehicles are in operational condition.",
         "Confirm maintenance records are up-to-date.",
         "Verify that all equipment (e.g., GPS, radios) is working properly.",
@@ -378,7 +378,7 @@ export const roles = {
         "Ensure all team members are informed of their duties and any changes.",
         "Monitor radio channels and communication systems for updates.",
       ],
-      incidentManagement: [
+      "Incident Management": [
         "Prioritize and assign tasks based on urgency.",
         "Track and log incidents and responses.",
         "Coordinate with emergency services if needed.",
@@ -388,38 +388,38 @@ export const roles = {
         "Update records of vehicle movements and assignments.",
         "File reports on incidents and operations as required.",
       ],
-      customerInteraction: [
+      "Customer Interaction": [
         "Address customer inquiries and concerns promptly.",
         "Ensure accurate and timely information is provided to customers.",
         "Follow up on service requests and issues.",
       ],
-      safetyAndCompliance: [
+      "Safety And Compliance": [
         "Ensure compliance with safety regulations and company policies.",
         "Monitor and address any safety hazards or concerns.",
         "Keep updated on regulatory changes affecting operations.",
       ],
-      endOfShiftProcedures: [
+      "End Of Shift Procedures": [
         "Review and hand over any unresolved issues or tasks to the next shift.",
         "Update records and documentation.",
         "Conduct a brief debriefing with the team to discuss any issues or improvements.",
       ],
-      continuousImprovement: [
+      "Continuous Improvement": [
         "Analyze performance metrics and feedback.",
         "Identify areas for improvement in processes and procedures.",
         "Implement training or changes as needed.",
       ],
     },
     "Web Development": {
-      dailyWebsiteMonitoring: [
+      "Daily Website Monitoring": [
         "Review the website for any issues.",
         "Verify that all prices and product information are accurate and up-to-date.",
       ],
-      websiteDesignAndDevelopment: [
+      "Website Design And Development": [
         "Design Websites for Ongoing Projects",
         "Develop and design website elements according to the current project requirements.",
         "Ensure design aligns with project goals.",
       ],
-      researchToolsForFeatureDevelopment: [
+      "Research Tools For Feature Development": [
         "Investigate and evaluate tools that can enhance website features.",
         "Stay updated on emerging technologies and trends for website development.",
         "Collaborate with Hector to review and implement any necessary changes to the website.",
@@ -427,31 +427,31 @@ export const roles = {
         "Coordinate with the marketing team to align website design and functionality with marketing strategies.",
         "Implement marketing recommendations and updates on the website.",
       ],
-      provideWebsiteImprovementRecommendations: [
+      "Provide Website Improvement Recommendations": [
         "Analyze the website's performance and user experience.",
         "Suggest improvements and optimizations for better functionality and user engagement.",
       ],
-      designFormsForDepartments: [
+      "Design Forms For Departments": [
         "Create and design forms as needed for different departments.",
         "Ensure forms are user-friendly and meet departmental requirements.",
       ],
-      websiteMaintenanceAndRepairs: [
+      "Website Maintenance And Repairs": [
         "Address and fix any issues or bugs on the website.",
         "Ensure website stability and functionality through regular maintenance.",
       ],
     },
     "Sales Support": {
-      dailySalesEmailReview: [
+     "Daily Sales Email Review": [
         "Review Sales Emails Daily",
         "Check and respond to sales emails.",
         "Follow up on any pending issues or inquiries.",
       ],
-      supportForCEO: [
+     "Support For CEO": [
         "Provide Direct Support to the CEO",
         "Assist with any activities or tasks required by the CEO.",
         "Prioritize and execute tasks as directed by the CEO.",
       ],
-      estimateAndInvoiceManagement: [
+      "Estimate And Invoice Management": [
         "Prepare and issue estimates for potential projects or sales.",
         "Ensure accuracy and detail in estimates.",
         "Generate and send invoices for completed sales or services.",
@@ -459,21 +459,21 @@ export const roles = {
         "Monitor the status of sent estimates and invoices.",
         "Follow up with customers to ensure timely responses and payments.",
       ],
-      customerAssistance: [
+      "Customer Assistance": [
         "Make Calls, Assistance, and Support.",
         "Assist existing and potential customers with inquiries and support via email.",
       ],
-      databaseManagement: [
+     "Database Management": [
         "Maintain and update CRM and Airtable databases.",
         "Ensure data accuracy and completeness.",
         "Gather and organize data for new database creation.",
         "Ensure data is accurate and relevant.",
       ],
-      shippingLabelCreation: [
+     "Shipping Label Creation": [
         "Prepare and print shipping labels for outgoing orders when necessary.",
         "Ensure accuracy in shipping details.",
       ],
-      appointmentManagement: [
+     "Appointment Management": [
         "Manage Reminders and Appointments",
         "Inform the CEO of upcoming appointments and ensure reminders are set.",
       ],
@@ -482,47 +482,47 @@ export const roles = {
         "Take detailed notes during meetings.",
         "Ensure clear and accurate documentation of key points.",
       ],
-      accountsReceivableManagement: [
+     "Accounts Receivable Management": [
         "Oversee the database of accounts receivable.",
         "Make calls and send emails to customers regarding outstanding payments.",
         "Update information in Airtable as needed.",
       ],
     },
     "Purchasing Assistant": {
-      dailyOrderEmailReview: [
+      "Daily Order Email Review": [
         "Check and respond to emails related to orders.",
         "Follow up on any pending order issues or inquiries.",
       ],
-      creationOfPurchaseOrders: [
+      "Creation Of Purchase Orders": [
         "Generate and issue purchase orders for required products.",
         "Ensure purchase orders include accurate product details and quantities.",
       ],
-      supplierPurchasing: [
+      "Supplier Purchasing": [
         "Purchase products from suppliers via online platforms and direct contact.",
         "Confirm product availability and pricing with suppliers.",
       ],
-      supplierFollowUp: [
+    "Supplier Follow Up": [
         "Confirm or adjust orders as necessary.",
         "Track orders and ensure they are delivered on time.",
         "Contact suppliers for order updates, confirmations, or issues.",
         "Address any concerns or discrepancies with orders.",
       ],
-      stockLevelMonitoring: [
+     "Stock Level Monitoring": [
         "Regularly check inventory levels in the warehouse.",
         "Determine when and what products need to be reordered.",
       ],
-      supplierInquiry: [
+      "Supplier Inquiry": [
         "Research and contact potential new suppliers.",
         "Evaluate potential suppliers for product quality and pricing.",
         "Assist with various aspects of the ordering process as needed.",
         "Ensure smooth execution of purchase orders and supplier transactions.",
       ],
-      databaseMaintenance: [
+     "Database Maintenance": [
         "Update and manage order details in the internal database.",
         "Record important information such as order dates, suppliers, quantities, and discounts.",
         "Oversee the management of systems and software (e.g., BigCommerce, QuickBooks, Airtable).",
       ],
-      invoicingManagement: [
+      "Invoicing Management": [
         "Ensure invoices are current in systems such as QuickBooks and Airtable.",
         "Verify accuracy and completeness of invoice records.",
         "Regularly review and update product and purchase costs.",
@@ -530,7 +530,7 @@ export const roles = {
       ],
     },
     "Customer Support": {
-      customerInquiriesAndSupport: [
+      "Customer Inquiries And Support": [
         "Answer Inbound Calls",
         "Respond to incoming calls from customers.",
         "Address inquiries ranging from order placement to order status.",
@@ -540,31 +540,31 @@ export const roles = {
         "Coordinate with remote team members to gather answers and solutions.",
         "Use Airtable for effective communication and updates.",
       ],
-      conductFollowUpCalls: [
+      "Conduct Follow Up Calls": [
         "Reach out to customers who have received their orders to ensure satisfaction.",
         "Contact customers who have not received their orders to provide updates on delivery.",
       ],
-      crmAndSalesResearch: [
+      "CRM And Sales Research": [
         "Use CRM (Airtable) to identify previous customers and their purchase history.",
         "Solicit information about available products they may not be aware of.",
         "Rate Interactions.",
         "Evaluate and rate customer interactions based on gathered information (5 stars scale).",
       ],
-      administrativeTasks: [
+      "Administrative Tasks": [
         "Generate and issue invoices for customer orders.",
         "Ensure accuracy and completeness of invoice details.",
         "Research Customer Information in Airtable.",
         "Look up and verify customer details and order history in Airtable.",
         "Update and maintain customer records as necessary.",
       ],
-      timeAndOrganizationalManagement: [
+      "Time And Organizational Management": [
         "Manage Time Effectively",
         "Prioritize tasks and manage time to handle customer inquiries and follow-ups efficiently.",
         "Balance multiple responsibilities effectively.",
         "Keep records and information organized for easy access and retrieval.",
         "Ensure that tasks are completed in a systematic and orderly manner.",
       ],
-      researchPotentialCustomers: [
+      "Research Potential Customers": [
         "Define and understand the target market for potential customers.",
         "Gather information on industries, companies, and individuals that fit the target profile.",
         "Use available tools and databases to collect contact information for potential customers.",
@@ -572,7 +572,7 @@ export const roles = {
       ],
     },
     "Warehouse Manager": {
-      inventoryManagement: [
+      "Inventory Management": [
         "Regularly check and maintain inventory levels.",
         "Ensure adequate stock levels to meet demand and avoid shortages.",
         "Perform periodic physical counts of inventory.",
@@ -581,7 +581,7 @@ export const roles = {
         "Plan and order stock based on inventory levels and sales forecasts.",
         "Coordinate with suppliers to ensure timely replenishment.",
       ],
-      warehouseOperations: [
+     "Warehouse Operations": [
         "Oversee Daily Operations.",
         "Supervise daily warehouse activities, including receiving, storing, and shipping goods.",
         "Ensure smooth and efficient warehouse operations.",
@@ -591,16 +591,16 @@ export const roles = {
         "Organize and optimize warehouse layout for efficient storage and retrieval.",
         "Ensure proper labeling and organization of storage areas.",
       ],
-      staffManagement: [
+      "Staff Management": [
         "Supervise Warehouse Staff.",
         "Oversee and manage warehouse employees.",
         "Assign tasks and monitor performance.",
       ],
-      safetyAndMaintenance: [
+     "Safety And Maintenance": [
         "Oversee maintenance and repair of warehouse equipment.",
         "Schedule regular maintenance checks.",
       ],
-      shippingAndReceiving: [
+      "Shipping And Receiving": [
         "Oversee Receiving and Inspection.",
         "Manage the receiving process for incoming shipments.",
         "Inspect goods for accuracy and quality upon receipt.",
@@ -611,7 +611,7 @@ export const roles = {
         "Manage returns and exchanges according to company policy.",
         "Process returned goods and update inventory records.",
       ],
-      reportingAndDocumentation: [
+      "Reporting And Documentation": [
         "Generate Reports.",
         "Prepare and submit reports on inventory levels, warehouse operations, and performance metrics.",
         "Analyze data to identify trends and areas for improvement.",
@@ -619,36 +619,36 @@ export const roles = {
         "Keep accurate records of inventory, shipments, and warehouse activities.",
         "Ensure all documentation is up-to-date and accessible.",
       ],
-      continuousImprovement: [
+      "Continuous Improvement": [
         "Evaluate Processes.",
         "Review and assess warehouse processes for efficiency and effectiveness.",
         "Implement improvements and innovations to enhance operations.",
       ],
-      regularMeetings: [
+     "Regular Meetings": [
         "Coordinate a meeting with remote team members to discuss any updates related to the warehouse.",
       ],
     },
     "Graphic Designer": {
-      createLogosOrImagesForAdvertisingCampaigns: [
+      "Create Logos Or Images For Advertising Campaigns": [
         "Develop logos and graphics as per campaign requirements.",
         "Ensure designs align with brand guidelines and campaign objectives.",
         "Review and Finalize Designs.",
         "Seek feedback on designs and make necessary revisions.",
         "Finalize and prepare files for use in campaigns.",
       ],
-      reviewEstimates: [
+      "Review Estimates": [
         "Prepare detailed estimates for upcoming projects or services.",
         "Ensure accuracy and clarity in the estimates provided.",
         "Verify Estimates.",
       ],
-      dailyReviews: [
+     "Daily Reviews": [
         "Check daily for any updates or changes to estimates.",
         "Address any discrepancies or issues identified.",
         "Review Airtable Databases.",
         "Monitor and update Airtable databases daily.",
         "Ensure data accuracy and completeness.",
       ],
-      createTheCompanyCatalog: [
+     "Create The Company Catalog": [
         "Compile Catalog Information.",
         "Gather and organize information about company products or services.",
         "Create and format the catalog to highlight key offerings.",
@@ -656,7 +656,7 @@ export const roles = {
         "Design the layout and visual elements of the catalog.",
         "Finalize and produce the catalog for distribution.",
       ],
-      editVideosForTheCompany: [
+     "Edit Videos For The Company": [
         "Review Video Footage:",
         "Evaluate video footage for quality and relevance.",
         "Select and organize clips for editing.",
@@ -665,28 +665,28 @@ export const roles = {
       ],
     },
     "FullStack Developer": {
-      automateAirtableProcesses: [
+     "Automate Airtable Processes": [
         "Create and implement automation workflows in Airtable to streamline processes.",
         "Ensure automation improves data accuracy and efficiency.",
         "Test and Refine Automations:",
         "Test automated workflows to ensure they function correctly.",
         "Make adjustments as needed based on performance and feedback.",
       ],
-      improveWebsiteData: [
+      "Improve Website Data": [
         "Analyze and Manage Website Data:",
         "Review and analyze data to identify areas for website improvement.",
         "Provide insights and recommendations for enhancing website functionality and content.",
         "Implement Data Enhancements:",
         "Make data-driven adjustments to improve the website’s performance and user experience.",
       ],
-      assistWithProgramRepairs: [
+     "Assist With Program Repairs": [
         "Identify and resolve issues with Airtable programs.",
         "Provide support and solutions to ensure Airtable operates smoothly.",
         "Assist with QuickBooks Repairs.",
         "Address and resolve issues with QuickBooks software.",
         "Ensure QuickBooks is functioning correctly and accurately.",
       ],
-      maintainWebsiteUpdates: [
+     "Maintain Website Updates": [
         "Check and update the company website to reflect current prices and product codes.",
         "Ensure all website information is accurate and up-to-date.",
         "Regularly review the website for any required updates or corrections.",
@@ -694,7 +694,7 @@ export const roles = {
       ],
     },
     "Inside Sales Rep": {
-      identifyingSalesOpportunities: [
+      "Identifying Sales Opportunities": [
         "Research and Identify Leads.",
         "Conduct market research to identify potential sales opportunities.",
         "Use various sources such as online databases, networking, and industry events to find prospects.",
@@ -702,7 +702,7 @@ export const roles = {
         "Build and manage a robust pipeline of potential clients.",
         "Regularly update and maintain records of leads and prospects.",
       ],
-      buildingAndMaintainingClientRelationships: [
+     "Building And Maintaining Client Relationships": [
         "Engage with Prospective Clients.",
         "Initiate contact with potential customers through calls, emails, and meetings.",
         "Understand client needs and tailor product or service offerings accordingly.",
@@ -710,7 +710,7 @@ export const roles = {
         "Build and maintain strong relationships with existing clients.",
         "Provide exceptional customer service to ensure client satisfaction and retention.",
       ],
-      conductingSalesPresentations: [
+  "Conducting Sales Presentations": [
         "Deliver Product Presentations.",
         "Prepare and deliver compelling presentations and demonstrations to showcase products or services.",
         "Highlight key features, benefits, and value propositions to prospective clients.",
@@ -751,3 +751,5 @@ export const roles = {
       ],
     },
   };
+
+  

@@ -10,6 +10,11 @@ Array.from(Object.keys(roles)).forEach((el) => {
   document.getElementById("role").add(new Option(el, el));
 });
 
+Array.from(Object.values(roles)).forEach(val =>{
+  console.log(Object.keys(val))
+
+})
+
 //when a role is chosen
 document.getElementById("role").addEventListener("change", ({ target }) => {
   //starts to loop roles
