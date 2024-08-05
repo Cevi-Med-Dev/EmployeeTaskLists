@@ -19,6 +19,7 @@ h1 {
 h2 {
     font: 20px;
     margin: 2px;
+    color: grey;
 }
 
 .input{
@@ -31,7 +32,11 @@ h2 {
     height: 35px;
 
 }
-
+select option{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+}
 select:hover {
     border: 1px solid #07b30aa9;
 
@@ -59,12 +64,19 @@ select:hover {
     margin-right: 10px;
     cursor: pointer;
 }
+.taskContainer ul.show{
+    display: flex !important;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid green;
+}
 
-.taskContainer div.taskName {
+.taskContainer h2.taskName {
     cursor: pointer;
 }
 
-.taskContainer div.taskName:hover {
+.taskContainer h2.taskName:hover {
     font-size: 25px;
     color: green;
 }
@@ -153,10 +165,6 @@ img.status{
     transform: rotate(45deg);
 }
 
-#fields aside div {
-    display: flex;
-    flex-direction: column;
-}
 
 #formContainer hr {
     margin: 15px;

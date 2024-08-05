@@ -11,97 +11,19 @@
 
 <body>
         <main id="formContainer">
-                <h1>Transportation Coordinator Checklist</h1>
+                <h1 id="title">Employee Task List Form</h1>
                 <form action="">
                         <select class="input" name="role" id="role">
                                 <option value="">Choose a Role </option>
                         </select>
-                        <hr>
-                        
-                        <div class="taskContainer">
-                                <div class="splitH">
-                                        <h2>Planning and Scheduling </h2>
-                                        <img class="status" src="./assets/imgs/done.svg" alt="">
-                                </div>
-                                <ul>
-                                        <li><label class="taskOverview">
-                                                        Review Transportation Needs: Assess
-                                                        transportation requirements for
-                                                        all
-                                                        projects or events.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                        <li><label class="taskOverview">
-                                                        Create Schedules: Develop and manage
-                                                        transportation schedules to
-                                                        ensure
-                                                        timely arrivals and departures.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                        <li><label class="taskOverview">
-                                                        Route Planning: Determine the most efficient
-                                                        routes considering
-                                                        traffic
-                                                        patterns, construction, and other potential delays.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                        <li><label class="taskOverview">
-                                                        Coordinate with Stakeholders: Communicate
-                                                        with clients, drivers, and
-                                                        other stakeholders to ensure alignment on transportation
-                                                        needs.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                </ul>
-                        </div>
+                       
+                        <section id="taskList">
 
-                        <div class="taskContainer">
-                                <div class="splitH">
-                                        <h2>Planning and Scheduling </h2>
-                                        <img class="status" src="./assets/imgs/done.svg" alt="">
-                                </div>
-                                <ul>
-                                        <li><label class="taskOverview">
-                                                        Review Transportation Needs: Assess
-                                                        transportation requirements for
-                                                        all
-                                                        projects or events.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                        <li><label class="taskOverview">
-                                                        Create Schedules: Develop and manage
-                                                        transportation schedules to
-                                                        ensure
-                                                        timely arrivals and departures.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                        <li><label class="taskOverview">
-                                                        Route Planning: Determine the most efficient
-                                                        routes considering
-                                                        traffic
-                                                        patterns, construction, and other potential delays.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                        <li><label class="taskOverview">
-                                                        Coordinate with Stakeholders: Communicate
-                                                        with clients, drivers, and
-                                                        other stakeholders to ensure alignment on transportation
-                                                        needs.
-                                                        <input type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                </label></li>
-                                </ul>
-                        </div>
-
+                                
+                        </section>
 
                         <hr>
+
                         <div>
                                 <h4>How Do You Feel ?</h4>
                                 <section class="smileRating">
@@ -118,7 +40,7 @@
                                 </div>
                                 <input id="moodRate" name="moodRate" value="" />
                         </div>
-                     
+
                         <div class="btnContainer">
                                 <hr>
                                 <button class="btn animate__animated animate__bounce animate" type="submit"> Send Report
@@ -128,6 +50,6 @@
                 </form>
         </main>
 </body>
-<script src="./assets/script.js"></script>
+<script type="module" src="./assets/script.js"></script>
 
 </html>
