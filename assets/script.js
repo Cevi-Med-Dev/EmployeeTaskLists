@@ -1,23 +1,29 @@
-import { roles } from "./json.js";
+//imports
+import { roles,employeeRoles } from "./json.js";
 
+//variables
 var call_form_ = document.querySelector("#formContainer form");
 var call_formData = new FormData(call_form_);
 var currentChecklist = "";
 var rateOptions = document.querySelectorAll(".smileRating img");
 
-//generates role options
-Array.from(Object.keys(roles)).forEach((el) => {
-  document.getElementById("role").add(new Option(el, el));
-});
 
-Array.from(Object.values(roles)).forEach(val =>{
-  console.log(Object.keys(val))
+//updates employee list 
+function updateNames() {
+  const departmentSelect = document.getElementById('role');
+  const nameSelect = document.getElementById('employee');
+  const selectedDepartment = departmentSelect.value;
 
-})
+  // Clear previous options
+  nameSelect.innerHTML = '<option value="">Select a name</option>';
 
-//when a role is chosen
-document.getElementById("role").addEventListener("change", ({ target }) => {
-  //starts to loop roles
+  if (selectedDepartment && employeeRoles[selectedDepartment]) {
+      employeeRoles[selectedDepartment].forEach(name => {
+          nameSelect.add(new Option(name, name));
+      });
+  }
+}
+const createInterface = (target) => {
   for (const [key, value] of Object.entries(roles)) {
     if (target.value === key) {
       //finds role chosen
@@ -79,6 +85,18 @@ document.getElementById("role").addEventListener("change", ({ target }) => {
       });
     } //end of targeted configurations
   } //end of loop
+}
+//generates role options
+Array.from(Object.keys(roles)).forEach((el) => {
+  document.getElementById("role").add(new Option(el, el));
+});
+
+//when a role is chosen
+document.getElementById("role").addEventListener("change", ({ target }) => {
+  //match name with role
+  updateNames() 
+  //starts to loop roles
+ createInterface(target)
 });
 
 //retreives mood value
@@ -94,24 +112,11 @@ rateOptions.forEach((rate) => {
 
 //submitt data form
 document.querySelector("button[type=submit]").addEventListener("click", (e) => {
-  e.preventDefault()
+  e.preventDefault();
   call_formData = new FormData(call_form_);
   document.querySelectorAll("input[type=checkbox]").forEach((box) => {
-    box.checked && call_formData.append(`${box.name}`, `${box.value}`)
-     
+    box.checked && call_formData.append(`${box.name}`, `${box.value}`);
   });
-  console.log(Object.entries(call_formData))
+  console.log(Object.entries(call_formData));
 });
 
-// const updateTask = (role) => {
-//   const departmentSelect = document.getElementById("department");
-//   const nameSelect = document.getElementById("name");
-//   const selectedDepartment = departmentSelect.value;
-
-//   // Clear previous options
-//   nameSelect.innerHTML = '<option value="">Select a name</option>';
-
-//   roles[role].forEach((name) => {
-//     nameSelect.add(new Option(name, name));
-//   });
-// };

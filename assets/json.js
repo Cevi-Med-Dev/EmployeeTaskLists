@@ -67,7 +67,7 @@ export const roles = {
         "Ensure accuracy and proper categorization of expenses.",
       ],
     },
-    "Operationa Manager": {
+    "Operational Manager": {
       Daily: [
         "Review and prioritize daily operational activities and tasks.",
         "Monitor key performance indicators (KPIs) and operational metrics.",
@@ -752,4 +752,35 @@ export const roles = {
     },
   };
 
-  
+  export const employeeRoles = {
+    "Accounting": ["Carina Butriago", "Carina's Assitant", "Charlie Brown"],
+    "Operational Manager": ["Simon Cortes", "Evan White", "Fiona Green"],
+    "Purchasing Manager": ["Lina Moreno", "Hannah Blue", "Ivy Yellow"],
+    "Warranty Customer Service": ["Albert Einstein", "Kelly Orange", "Liam Purple"],
+    "Transportation Coordinator": ["Angela Rodriguez", "Noah Gold", "Olivia Bronze"],
+    "Shipping Assistant": ["Stephany Sterling", "Quinn Emerald", "Rachel Ruby"],
+    "Dispatcher": ["Angela Rodriguez", "Tina Topaz", "Uma Onyx"],
+    "Web Development": ["James Chaves", "James Rodriguez", "Xander Yellow"],
+    "Sales Support": ["Robert Raundel", "Zack Brown", "Amelia Gray"],
+    "Purchasing Assistant": ["Angelina", "Cathy Cyan", "David Diamond"],
+    "Customer Support": ["Albert Sweitzer", "Faith Fuchsia", "Gabe Gold"],
+    "Warehouse Manager": ["ViVi", "Ian Indigo", "Jade Jade"],
+    "Graphic Designer": ["Diana Tomas", "Lara Lavender", "Max Mint"],
+    "FullStack Developer": ["Hector Castellano", "Oscar Olive", "Pam Peach"],
+    "Inside Sales Rep": ["Quincy Quartz", "Rita Rose", "Steve Silver"]
+  };
+
+  //  Operational Manager
+  //  Purchasing Manager
+  //  Warranty Customer Service
+  //  Transportation Coordinator
+  //  Shipping Assistant 
+  //  Dispatcher 
+  //  Web Development
+  //  Sales Support
+  //  Purchasing Assistant
+  //  Customer Support
+  //  Warehouse Manager
+  //  Graphic Designer
+  //  FullStack Developer
+  //  Inside Sales Rep
