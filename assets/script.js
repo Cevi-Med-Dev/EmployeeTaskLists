@@ -1,105 +1,10 @@
-//imports
-import { roles,employeeRoles } from "./json.js";
-
-//variables
 var call_form_ = document.querySelector("#formContainer form");
 var call_formData = new FormData(call_form_);
-var currentChecklist = "";
+var call_params = "";
+var rate = document.querySelector(".smileRating");
+var progressNum = "%";
 var rateOptions = document.querySelectorAll(".smileRating img");
-
-
-//updates employee list 
-function updateNames() {
-  const departmentSelect = document.getElementById('role');
-  const nameSelect = document.getElementById('employee');
-  const selectedDepartment = departmentSelect.value;
-
-  // Clear previous options
-  nameSelect.innerHTML = '<option value="">Select a name</option>';
-
-  if (selectedDepartment && employeeRoles[selectedDepartment]) {
-      employeeRoles[selectedDepartment].forEach(name => {
-          nameSelect.add(new Option(name, name));
-      });
-  }
-}
-const createInterface = (target) => {
-  for (const [key, value] of Object.entries(roles)) {
-    if (target.value === key) {
-      //finds role chosen
-      currentChecklist = Object.entries(value); // get checklist
-      document.getElementById("taskList").innerHTML = ""; // clears checklist
-      currentChecklist.forEach((task) => {
-        //runs thru every task
-        document.getElementById("title").innerText = `${key} CheckList`; //chnages title
-        document.getElementById(
-          "taskList"
-        ).innerHTML += `<div class="taskContainer">
-                                        <div class="splitH">
-                                                <h2 class="taskName">${
-                                                  task[0]
-                                                } </h2>
-                                                <img class="status" src="./assets/imgs/undone.svg" alt="">
-                                        </div>
-                                        <ul>
-                                               ${task[1].map(
-                                                 (taskDescription) => {
-                                                   return ` <li>
-                                                <label class="taskOverview">
-                                                            ${taskDescription}
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                                </label>
-                                                </li>       `;
-                                                 }
-                                               )}       
-                                        </ul>
-                                </div>`;
-      });
-
-      //adds event listeners to new checklist interface
-      document.querySelectorAll(".taskContainer").forEach((taskList) => {
-        taskList
-          .querySelectorAll("input[type=checkbox]")
-          .forEach((taskCheckbox) => {
-            //checks if all task are in task group are completed
-            taskCheckbox.addEventListener("change", () => {
-              if (
-                taskList.querySelectorAll("input:checked~.checkmark").length ===
-                taskList.querySelectorAll("input[type=checkbox]").length
-              ) {
-                taskList.querySelector("img.status").src =
-                  "./assets/imgs/done.svg";
-                taskList.querySelector("h2").style.color = "green";
-              } else {
-                taskList.querySelector("img.status").src =
-                  "./assets/imgs/undone.svg";
-                taskList.querySelector("h2").style.color = "black";
-              }
-            });
-          });
-        //keeps tb task
-        taskList.addEventListener("click", () => {
-          taskList.querySelector("ul").classList.toggle("show");
-        });
-      });
-    } //end of targeted configurations
-  } //end of loop
-}
-//generates role options
-Array.from(Object.keys(roles)).forEach((el) => {
-  document.getElementById("role").add(new Option(el, el));
-});
-
-//when a role is chosen
-document.getElementById("role").addEventListener("change", ({ target }) => {
-  //match name with role
-  updateNames() 
-  //starts to loop roles
- createInterface(target)
-});
-
-//retreives mood value
+var preloader = document.querySelector('.preloder');
 rateOptions.forEach((rate) => {
   rate.addEventListener("click", () => {
     rateOptions.forEach(
@@ -107,16 +12,100 @@ rateOptions.forEach((rate) => {
     );
     rate.src = `./assets/imgs/${rate.name}Selected.svg`;
     document.getElementById("moodRate").value = rate.name;
+    console.log(document.getElementById("moodRate").value, " = ", rate.name);
   });
 });
 
-//submitt data form
-document.querySelector("button[type=submit]").addEventListener("click", (e) => {
-  e.preventDefault();
-  call_formData = new FormData(call_form_);
-  document.querySelectorAll("input[type=checkbox]").forEach((box) => {
-    box.checked && call_formData.append(`${box.name}`, `${box.value}`);
+let call_trigger = async (url, data) => {
+  const response = await fetch(url, {
+    method: "POST",
+    cache: "no-cache",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: data, // body data type must match "Content-Type" header
   });
-  console.log(Object.entries(call_formData));
+
+  return response; // parses JSON response into native JavaScript objects
+};
+
+call_form_.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
+    console.log(checkBox, checkBox.value, checkBox.name);
+    checkBox.checked ? call_formData.append(`${checkBox.name}`, `${checkBox.value}`) : call_formData.append(`${checkBox.name}`, `Not done`);
+  });
+
+  for (var [key, value] of call_formData.entries()) {
+    console.log("key :", key, key === "progress");
+    call_params += `${key}=${
+      key === "progress"
+        ? progressNum
+        : document.querySelector("*[name=" + key + "]").value //  finds first radius and always sends 20%
+    }&`;
+    console.log(key, value);
+  }
+
+  // dataObject = Object.fromEntries(fn)
+  console.log("this is the data retreived", call_params);
+  call_trigger(
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflAs9AHZzei3EO7D/wtrC6Af88tnEk0Sb7",
+    call_params
+  ).then((data) => {
+    console.log(data);
+    call_form_.reset();
+    window.alert("Your Daily Report Has Been Sent! thank you!");
+    // window.location.reload()
+  });
 });
+
+document.querySelectorAll("input[type=radio]").forEach((radioBtn) => {
+  radioBtn.addEventListener("click",({target})=>{
+    call_formData.set(`${target.name}`, `${target.value}`)
+    progressNum = call_formData.get(`${target.name}`)
+  })
+});
+
+const uploadFiles = async (fileInput, type, validation) => {
+  preloader.style.display = 'block'
+
+  const file = fileInput.files[0];
+
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("type", type);
+  formData.append("validation", validation);
+
+  const request = await fetch("https://api.cevimedone.com/technician-form/", {
+    method: "POST",
+    body: formData,
+  });
+
+  const response = await request.json();
+  if(response.status){
+    preloader.style.display = 'none'
+  }
+  //
+  if (response.status === "success") {
+    if(response.type === '_imgpd_'){
+      document.querySelector("#fileURL").value = "https://api.cevimedone.com/technician-form/" + response.url;
+    }else{
+      document.querySelector("#videoURL").value = "https://api.cevimedone.com/technician-form/" + response.url;
+    }
+    
+  } else alert(response.message);
+
+}
+
+// Images And PDF files
+document.getElementById("_imgpdf_").addEventListener("change", (e) =>{
+  uploadFiles(e.target, '_imgpd_',  ["jpg", "jpeg", "png", "pdf"])
+})
+// Videos files
+document.getElementById("_video_").addEventListener("change", (e) => {
+   uploadFiles(e.target, '_video_',  ["mp4", "mpg", "avi", "mov"])
+})
+
 

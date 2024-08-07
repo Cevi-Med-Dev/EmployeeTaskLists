@@ -1,186 +1,135 @@
-
-
-body {
+body{
     width: 100%;
-    height: 100%;
+    box-sizing: border-box;
     display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
+    overflow-x: hidden;
 }
 
-h1 {
-    font-size: 35px;
-    margin: 30px;
-    width: max-content;
-    text-align: center;
-}
-
-h2 {
-    font: 20px;
-    margin: 2px;
-    color: grey;
-}
-
-.input{
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #D9D9D9;
-    margin: 10px;
-    cursor: pointer;
-    width: 100%;
-    height: 35px;
-
-}
-select option{
-    text-align: center;
-    font-size: 20px;
-    margin-top: 5px;
-}
-select:hover {
-    border: 1px solid #07b30aa9;
-
-}
-
-#formContainer {
+#formContainer{
     height: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-#formContainer form {
     width: 80%;
+
 }
 
-.taskContainer {
+.preloder{
+    width: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 24px;
+  }
+  
+  
+  .loder{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #ff909f;
+    border-top: 8px solid #be0c11;
+    animation: spinner 1s linear infinite;
+    position: relative;
+  }
+  
+  @keyframes spinner{
+    0%{
+      transform: rotate(0deg);
+  
+    }
+    50%{
+      border-top-width: 5px;
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media screen and (max-width: 668px){
+    .loder{
+      height: 60px;
+      width: 60px;
+      border-top: 6px solid #3775FF;
+    }
+  }
+#flags{
+    display: flex;
+    justify-content: center;
     margin: 10px;
-    width: 100%;
+}
+.input{
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #D9D9D9;
     margin-right: 10px;
-    cursor: pointer;
 }
-.taskContainer ul.show{
-    display: flex !important;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid green;
-}
-
-.taskContainer h2.taskName {
-    cursor: pointer;
-}
-
-.taskContainer h2.taskName:hover {
-    font-size: 25px;
-    color: green;
-}
-
-.taskContainer:hover>ul {
-    display: block !important;
-}
-
-.taskContainer ul {
-    display: none;
-}
-
-ul {
-    font: 15px;
-    list-style: none;
-}
-.taskContainer ul li{
-   height: 20px;
-   margin-top: 10px;
-}
-
-.taskOverview {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.taskOverview input[type=checkbox] {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+.split{
+    display: flex;
+    text-align: center;
+    flex-direction: column !important;
 }
 .splitH{
- display: flex;
-   justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
 }
-img.status{
-    width: 25px;
-    height: auto;
+select{
+    cursor: pointer;
 }
-.taskOverview:hover input~.checkmark {
-    background-color: #ccc;
+input{
+    outline: none;
+    cursor: pointer;
 }
-
-.taskOverview input:checked~.checkmark {
-    background-color: green;
+textarea{
+    outline: none;
 }
-
-.checkmark:after {
-    content: "";
-    position: absolute;
+.input:focus{
+    border: 1px solid #07b30aa9;
+    
+}
+#fields {
+    display: flex;
+    flex-direction: column;
+}
+#fields aside{
+    display: flex !important;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 10px;
+}
+.evidence{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="file"] {
     display: none;
+  }
+  
+  .evidenceBtn{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+#fields aside div{
+    display: flex;
+    flex-direction: column;
 }
-
-.taskOverview input:checked~.checkmark:after {
-    display: block;
-}
-
-.taskOverview .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-
-#formContainer hr {
+#formContainer hr{
     margin: 15px;
 }
-
-#formContainer label {
+#formContainer label{
     font-size: 14px;
     margin: 5px;
 }
-
-#formContainer textarea {
-    height: 125px;
-    width: 100%;
+#formContainer textarea{
+   height: 125px;
 }
-
-.btn {
+.btn{
     width: 80%;
     margin: 10px;
     border-radius: 15px;
@@ -190,48 +139,40 @@ img.status{
     background-color: #C40C11;
     color: white;
 }
-
-.btn:hover {
+.btn:hover{
     background-color: white;
     border: 1px solid #C40C11;
     color: #C40C11;
     font-weight: bolder;
     animation: alternate;
 }
-
-select:hover {
+select:hover{
     border: 1px solid #07b30aa9;
 
 }
-
-.btnContainer {
+.btnContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-::placeholder {
+::placeholder{
     font-size: 12px;
 }
-
-h4 {
+h4{
     text-align: center;
 }
-
-.smileRating {
+.smileRating{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     margin: 20px 10px;
 }
-
-.smileRating img {
+.smileRating img{
     width: 50px;
     height: auto;
     cursor: pointer;
 }
-
-#moodRate {
+#moodRate{
     opacity: 0;
 }
