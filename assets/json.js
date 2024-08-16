@@ -775,6 +775,7 @@ export const employeeRoles = {
     "Noah Gold",
     "Olivia Bronze",
   ],
+  CEO : ["Simon Cortes"],
   "Shipping Assistant": ["Stephany Sterling", "Quinn Emerald", "Rachel Ruby"],
   Dispatcher: ["Angela Rodriguez", "Tina Topaz", "Uma Onyx"],
   "Web Development": ["James Chaves", "James Rodriguez", "Xander Yellow"],
