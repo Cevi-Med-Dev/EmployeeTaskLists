@@ -2,7 +2,7 @@
 import { roles, employeeRoles, webHooks } from "./json.js";
 
 //variables
-var dynamicWebhook = "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ"
+var dynamicWebhook = ""
 var call_form_ = document.querySelector("#formContainer form");
 var call_formData = new FormData(call_form_);
 var call_params = "";
@@ -149,7 +149,7 @@ call_form_.addEventListener("submit", (e) => {
   }
   console.log("this is the data retreived", call_params);
   call_trigger(
-    dynamicWebhook,
+    `${dynamicWebhook}`,
     call_params
   ).then((data) => {
     console.log(data);

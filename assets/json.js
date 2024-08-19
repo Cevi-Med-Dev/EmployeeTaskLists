@@ -256,9 +256,9 @@ export const employeeRoles = {
 
 export const webHooks = {
   "Angela Fernandez" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ",
-  "Lina Montesino" : "not yet create ",
-  "Stephany Sterling" : "not yet create ",
-  "Carina Ballesteros" : "not yet create "
+  "Lina Montesino" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflhVrWdpEW0w6MLb/wtrU53uxQyb7cUlwN",
+  "Stephany Sterling" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflTNsjEmYflrXCwk/wtrOYnmJBSdQd3wgJ",
+  "Carina Ballesteros" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflgqzKSo6lZ1bFez/wtrMr6NhsqYrfJHYf"
 }
 
 
