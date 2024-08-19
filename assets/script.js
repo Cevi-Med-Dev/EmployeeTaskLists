@@ -139,8 +139,8 @@ call_form_.addEventListener("submit", (e) => {
   console.log("not sent", call_formData)
   document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
     checkBox.checked
-      ? call_formData.append(`${(checkBox.value).slice(0,15)}`, "done")
-      : call_formData.append(`${(checkBox.value).slice(0,15)}`, `Not done`);
+      ? call_formData.append(`${(checkBox.value).slice(0,20)}.. `, `${(checkBox.value).slice(0,30)} : ✅  `)
+      : call_formData.append(`${(checkBox.value).slice(0,20)}.. `, `${(checkBox.value).slice(0,30)} : ❌  `);
   });
 
   for (var [key, value] of call_formData.entries()) {
