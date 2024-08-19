@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,21 @@
         <title>Employee Task Checklist</title>
         <link rel="stylesheet" href="./assets/styles.css">
 </head>
-
 <body>
         <main id="formContainer">
                 <h1 id="title">Employee Task List Form</h1>
-                <form action="">
+                <form action=" https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ" method="POST" >
                         <div class="splitH">
-
                                 <select class="input" name="role" id="role">
                                         <option value="">Choose a Role </option>
                                 </select>
-                                <select class="input" name="employee" id="employee">
+                                <select required class="input" name="employee" id="employee">
                                         <option value="">Employee</option>
                                 </select>
                         </div>
-
                         <section id="taskList">
-
-
                         </section>
-
                         <hr>
-
                         <div>
                                 <h4>How Do You Feel ?</h4>
                                 <section class="smileRating">
@@ -41,18 +33,16 @@
                                 </section>
                                 <div class="split">
                                         <label for="feedback">FeedBack</label>
-                                        <textarea name="feedback" class="input animate__animated animate__bounceInRight"
+                                        <textarea id="feedback" name="feedback" class="input animate__animated animate__bounceInRight"
                                                 rows="1"></textarea>
                                 </div>
                                 <input id="moodRate" name="moodRate" value="" />
                         </div>
-
                         <div class="btnContainer">
                                 <hr>
                                 <button class="btn animate__animated animate__bounce animate" type="submit"> Send Report
                                 </button>
                         </div>
-
                 </form>
         </main>
 </body>
