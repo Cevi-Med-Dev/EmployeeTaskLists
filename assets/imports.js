@@ -4,12 +4,9 @@ import { roles, employeeRoles } from "./json.js";
 //variables
 var call_form_ = document.querySelector("#formContainer form");
 var call_formData = new FormData(call_form_);
-var call_params = {};
-var taskCounter = 0;
+var call_params = "";
 var currentChecklist = "";
 var rateOptions = document.querySelectorAll(".smileRating img");
-var d = new Date();
-const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 let call_trigger = async (url, data) => {
   const response = await fetch(url, {
     method: "POST",
@@ -39,28 +36,22 @@ function updateNames() {
   }
 }
 const createInterface = (target) => {
-
   for (const [key, value] of Object.entries(roles)) {
-
     if (target.value === key) {
-
       //finds role chosen
       currentChecklist = Object.entries(value); // get checklist
       document.getElementById("taskList").innerHTML = ""; // clears checklist
-
       currentChecklist.forEach((task) => {
-    
-        document.getElementById("title").innerText = `${key} Task List `; //chnages title
-        document.getElementById("timeDate").innerText = `${daysOfWeek[d.getDay()]} ${d.toLocaleString('default', { month: 'long' })} ${d.getDate()}th - ${d.getHours() > 12 ? d.getHours()-12: d.getHours()}:${d.getMinutes()}${d.getHours() > 12 ? "pm" : "am"}`; //chnages time and date
-       
+        //runs thru every task
+        document.getElementById("title").innerText = `${key} CheckList`; //chnages title
+        let taskCounter = 0;
         document.getElementById(
           "taskList"
         ).innerHTML += `<div class="taskContainer">
                                         <div class="splitH">
                                                 <h2 class="taskName">${
-                                                  task[0] 
-                                                }</h2>
-                                          
+                                                  task[0]
+                                                } </h2>
                                                 <img class="status" src="./assets/imgs/undone.svg" alt="">
                                         </div>
                                       
@@ -70,7 +61,7 @@ const createInterface = (target) => {
                                                    return ` <li>
                                                 <label class="taskOverview">
                                                             ${taskDescription}
-                                                <input type="checkbox" name=${taskCounter+=1} value="${taskDescription}">
+                                                <input type="checkbox" name=${taskCounter+1} value="${taskDescription}">
                                                 <span class="checkmark"></span>
                                                 </label>
                                                 </li>       `;
@@ -147,24 +138,25 @@ call_form_.addEventListener("submit", (e) => {
   e.preventDefault();
   document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
     checkBox.checked
-    ? call_formData.set(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...✅`)
-    : call_formData.set(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...❌`);
+    ? call_formData.set(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,5)}...✅}`)
+    : call_formData.set(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,5)}...❌`);
   });
 
   for (var [key, value] of call_formData.entries()) {
-    call_params[key] = value;
+    call_params += `${key}=${value}&`;
+    console.log(key, value);
   }
 
-  console.log(call_params);
+
   
   call_trigger(
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ",
-    `JSON=${JSON.stringify(call_params)}`
+    call_params
   ).then((data) => {
     console.log(data);
     call_form_.reset();
     window.alert("Your Daily Report Has Been Sent! thank you!");
-    taskCounter = 0
+    // window.location.reload()
   });
 });
 
