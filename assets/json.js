@@ -199,7 +199,7 @@ export const roles = {
       "Process Optimization: Implement improvements based on feedback performance reviews.",
     ],
   },
-  "Shipping Assistant ": {
+  "Shipping Assistant": {
     "Inform Customers About Their Orders(Daily)": [
       "Call customers to provide updates regarding their order status.",
       "Communicate any changes or delays in the delivery schedule.",
@@ -245,19 +245,15 @@ export const employeeRoles = {
   "C.E.O." : ["Simon Cortes", "Simon Cacheton"],
   "Accounting": ["Carina Ballesteros", "Carina's Assitant"],
   "Purchasing Manager": ["Lina Montesino", "Lina's Assitant"],
-  "Transportation Coordinator": [
-    "Angela Fernandez",
-    "Angela's Assitant",
-    "Fernanda Angelica",
-  ],
+  "Transportation Coordinator": ["Angela Fernandez","Angela's Assitant","Fernanda Angelica"],
   "Shipping Assistant": ["Stephany Sterling", "Steffy Sterly"],
   
 };
 
 export const webHooks = {
   "Angela Fernandez" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ",
-  "Lina Montesino" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflhVrWdpEW0w6MLb/wtrU53uxQyb7cUlwN",
-  "Stephany Sterling" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflTNsjEmYflrXCwk/wtrOYnmJBSdQd3wgJ",
+  "Lina Montesino" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflHAMBXO08q8JIPk/wtr0Ljkb3Ltp48BU4",
+  "Stephany Sterling" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflyLdfLDL9cu7yqT/wtrRWKYZSwubqwrvD",
   "Carina Ballesteros" : "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflgqzKSo6lZ1bFez/wtrMr6NhsqYrfJHYf"
 }
 

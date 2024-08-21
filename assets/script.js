@@ -1,5 +1,5 @@
 //imports
-import { roles, employeeRoles } from "./json.js";
+import { roles, employeeRoles ,webHooks } from "./json.js";
 
 //variables
 var call_form_ = document.querySelector("#formContainer form");
@@ -7,6 +7,7 @@ var call_formData = new FormData(call_form_);
 var call_params = {};
 var taskCounter = 0;
 var currentChecklist = "";
+var dynamicWebhook = ""
 var rateOptions = document.querySelectorAll(".smileRating img");
 var d = new Date();
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -26,9 +27,8 @@ let call_trigger = async (url, data) => {
 };
 //updates employee list
 function updateNames() {
-  const departmentSelect = document.getElementById("role");
   const nameSelect = document.getElementById("employee");
-  const selectedDepartment = departmentSelect.value;
+  const selectedDepartment = document.getElementById("role").value;
 
   // Clear previous options
   nameSelect.innerHTML = '<option value="">Select a name</option>';
@@ -36,7 +36,10 @@ function updateNames() {
   if (selectedDepartment && employeeRoles[selectedDepartment]) {
     employeeRoles[selectedDepartment].forEach((name) => {
       nameSelect.add(new Option(name, name));
+       console.log(selectedDepartment , employeeRoles ,employeeRoles[selectedDepartment])
     });
+  }else{
+    console.log(selectedDepartment , employeeRoles ,employeeRoles[selectedDepartment])
   }
 }
 const createInterface = (target) => {
@@ -124,7 +127,7 @@ document.getElementById("role").addEventListener("change", ({ target }) => {
 document.getElementById("employee").addEventListener("change", ({ target }) => {
   call_formData.set("employee",target.value);
   call_formData.set("timeStamp", timeStamp)
-  // dynamicWebhook = webHooks[`${target.value}`]
+  dynamicWebhook = webHooks[`${target.value}`]
   // console.log('webhook for ',target.value, " is ",webHooks[`${target.value}`])
 });
 
@@ -149,8 +152,8 @@ call_form_.addEventListener("submit", (e) => {
   e.preventDefault();
   document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
     checkBox.checked
-    ? call_formData.set(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...✅`)
-    : call_formData.set(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...❌`);
+    ? call_formData.append(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...✅`)
+    : call_formData.append(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...❌`);
   });
 
   for (var [key, value] of call_formData.entries()) {
@@ -160,10 +163,10 @@ call_form_.addEventListener("submit", (e) => {
   console.log(call_params);
   
   call_trigger(
-    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ",
+    `${dynamicWebhook}`,
     `JSON=${JSON.stringify(call_params)}`
   ).then((data) => {
-    console.log(data , call_params);
+    console.log(data , call_params, `${dynamicWebhook}`);
     call_form_.reset();
     window.alert("Your Daily Report Has Been Sent! thank you!");
     taskCounter = 0
