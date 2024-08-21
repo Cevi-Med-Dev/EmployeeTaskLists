@@ -9,6 +9,7 @@ var taskCounter = 0;
 var currentChecklist = "";
 var rateOptions = document.querySelectorAll(".smileRating img");
 var d = new Date();
+var timeStamp = `${daysOfWeek[d.getDay()]} ${d.toLocaleString('default', { month: 'long' })} ${d.getDate()}th - ${d.getHours() > 12 ? d.getHours()-12: d.getHours()}:${d.getMinutes() < 10 ? "0"+d.getMinutes() : d.getMinutes()}${d.getHours() > 12 ? "pm" : "am"}`
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 let call_trigger = async (url, data) => {
   const response = await fetch(url, {
@@ -51,7 +52,7 @@ const createInterface = (target) => {
       currentChecklist.forEach((task) => {
     
         document.getElementById("title").innerText = `${key} Task List `; //chnages title
-        document.getElementById("timeDate").innerText = `${daysOfWeek[d.getDay()]} ${d.toLocaleString('default', { month: 'long' })} ${d.getDate()}th - ${d.getHours() > 12 ? d.getHours()-12: d.getHours()}:${d.getMinutes()}${d.getHours() > 12 ? "pm" : "am"}`; //chnages time and date
+        document.getElementById("timeDate").innerText = timeStamp; //chnages time and date
        
         document.getElementById(
           "taskList"
@@ -122,6 +123,7 @@ document.getElementById("role").addEventListener("change", ({ target }) => {
 
 document.getElementById("employee").addEventListener("change", ({ target }) => {
   call_formData.set("employee",target.value);
+  call_formData.set("timeStamp", timeStamp)
   // dynamicWebhook = webHooks[`${target.value}`]
   // console.log('webhook for ',target.value, " is ",webHooks[`${target.value}`])
 });
@@ -161,7 +163,7 @@ call_form_.addEventListener("submit", (e) => {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ",
     `JSON=${JSON.stringify(call_params)}`
   ).then((data) => {
-    console.log(data);
+    console.log(data , call_params);
     call_form_.reset();
     window.alert("Your Daily Report Has Been Sent! thank you!");
     taskCounter = 0
