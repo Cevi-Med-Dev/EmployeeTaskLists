@@ -9,8 +9,8 @@ var taskCounter = 0;
 var currentChecklist = "";
 var rateOptions = document.querySelectorAll(".smileRating img");
 var d = new Date();
-var timeStamp = `${daysOfWeek[d.getDay()]} ${d.toLocaleString('default', { month: 'long' })} ${d.getDate()}th - ${d.getHours() > 12 ? d.getHours()-12: d.getHours()}:${d.getMinutes() < 10 ? "0"+d.getMinutes() : d.getMinutes()}${d.getHours() > 12 ? "pm" : "am"}`
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var timeStamp = `${daysOfWeek[d.getDay()]} ${d.toLocaleString('default', { month: 'long' })} ${d.getDate()}th - ${d.getHours() > 12 ? d.getHours()-12: d.getHours()}:${d.getMinutes() < 10 ? "0"+d.getMinutes() : d.getMinutes()}${d.getHours() > 12 ? "pm" : "am"}`
 let call_trigger = async (url, data) => {
   const response = await fetch(url, {
     method: "POST",
