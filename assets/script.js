@@ -152,8 +152,8 @@ call_form_.addEventListener("submit", (e) => {
   e.preventDefault();
   document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
     checkBox.checked
-    ? call_formData.append(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...✅`)
-    : call_formData.append(`${(checkBox.value).slice(0,15)}`,`${checkBox.name}-${(checkBox.value).slice(0,35)}...❌`);
+    ? call_formData.set(`${checkBox.name}`,`${(checkBox.value).slice(0,40)} : ✅`)
+    : call_formData.set(`${checkBox.name}`,`${(checkBox.value).slice(0,40)} : ❌`);
   });
 
   for (var [key, value] of call_formData.entries()) {
@@ -168,8 +168,10 @@ call_form_.addEventListener("submit", (e) => {
   ).then((data) => {
     console.log(data , call_params, `${dynamicWebhook}`);
     call_form_.reset();
-    window.alert("Your Daily Report Has Been Sent! thank you!");
+    call_params = {}
     taskCounter = 0
+    document.getElementById("taskList").innerHTML = ""
+    window.alert("Your Daily Report Has Been Sent! thank you!");
   });
 });
 
