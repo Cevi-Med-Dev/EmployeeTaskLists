@@ -29,11 +29,11 @@ let call_trigger = async (url, data) => {
 function updateNames() {
   const nameSelect = document.getElementById("employee");
   const selectedDepartment = document.getElementById("role").value;
-
   // Clear previous options
   nameSelect.innerHTML = '<option value="">Select a name</option>';
 
   if (selectedDepartment && employeeRoles[selectedDepartment]) {
+    
     employeeRoles[selectedDepartment].forEach((name) => {
       nameSelect.add(new Option(name, name));
        console.log(selectedDepartment , employeeRoles ,employeeRoles[selectedDepartment])
@@ -128,6 +128,8 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   call_formData.set("employee",target.value);
   call_formData.set("timeStamp", timeStamp)
   dynamicWebhook = webHooks[`${target.value}`]
+  document.getElementById("role").classList.add("disabled")
+  target.classList.add("disabled")
   // console.log('webhook for ',target.value, " is ",webHooks[`${target.value}`])
 });
 

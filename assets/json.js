@@ -242,11 +242,11 @@ export const roles = {
 };
 
 export const employeeRoles = {
-  "C.E.O." : ["Simon Cortes", "Simon Cacheton"],
-  "Accounting": ["Carina Ballesteros", "Carina's Assitant"],
-  "Purchasing Manager": ["Lina Montesino", "Lina's Assitant"],
-  "Transportation Coordinator": ["Angela Fernandez","Angela's Assitant","Angela Angelita Angelical"],
-  "Shipping Assistant": ["Stephany Sterling", "Steffy Sterly"],
+  "C.E.O." : ["Simon Cortes"],
+  "Accounting": ["Carina Ballesteros"],
+  "Purchasing Manager": ["Lina Montesino"],
+  "Transportation Coordinator": ["Angela Fernandez"],
+  "Shipping Assistant": ["Stephany Sterling"],
   
 };
 
