@@ -43,7 +43,7 @@ function updateNames() {
   }
 }
 const createInterface = (target) => {
-
+console.log(target, target.value)
   for (const [key, value] of Object.entries(roles)) {
 
     if (target.value === key) {
@@ -120,7 +120,6 @@ Array.from(Object.keys(roles)).forEach((role) => {
 //when a role is chosen
 document.getElementById("role").addEventListener("change", ({ target }) => {
   updateNames();
-  createInterface(target);
   call_formData.set("role",target.value);
 });
 
@@ -129,6 +128,7 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   call_formData.set("timeStamp", timeStamp)
   dynamicWebhook = webHooks[`${target.value}`]
   document.getElementById("role").classList.add("disabled")
+  createInterface(document.getElementById("role"));
   target.classList.add("disabled")
   // console.log('webhook for ',target.value, " is ",webHooks[`${target.value}`])
 });
