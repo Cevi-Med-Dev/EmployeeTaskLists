@@ -173,7 +173,7 @@ call_form_.addEventListener("submit", (e) => {
     call_params = {}
     taskCounter = 0
     document.getElementById("taskList").innerHTML = ""
-    window.alert("Your Daily Report Has Been Sent! thank you!");
+    document.getElementById("title").innerText = "Your Daily Report Has Been Sent! thank you!"
   });
 });
 

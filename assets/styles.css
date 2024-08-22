@@ -34,9 +34,12 @@ h2 {
 
 }
 .disabled{
+    border: 1px solid #07b30aa9;
     pointer-events: none;
   }
-
+select{
+    outline: none;
+}
 select option{
     text-align: center;
     font-size: 20px;
@@ -186,6 +189,7 @@ img.status{
 #formContainer textarea {
     height: 125px;
     width: 100%;
+    outline: none;
 }
 
 .btn {
