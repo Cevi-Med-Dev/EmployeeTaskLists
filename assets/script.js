@@ -116,12 +116,14 @@ const createInterface = (target) => {
                 taskList.querySelector("img.status").src =
                   "./assets/imgs/done.svg";
                   taskList.style.color = "green";
+                  taskList.style.border = "2px solid green";
                 taskList.querySelector("h2").style.color = "green";
               } else {
                 taskList.querySelector("img.status").src =
                   "./assets/imgs/undone.svg";
                 taskList.querySelector("h2").style.color = "black";
-                taskList.style.color = "#d9d9d9";
+                taskList.style.color = "#black";
+                taskList.style.border = "#d9d9d9";
               }
             });
           });
