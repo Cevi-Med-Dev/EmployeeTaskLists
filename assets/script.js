@@ -125,7 +125,7 @@ const createInterface = (target) => {
           });
         //keeps tb task
         taskList.addEventListener("click", () => {
-          taskList.querySelector("ul").classList.toggle("show");
+          taskList.querySelector(".splitH").classList.toggle("show");
         });
       });
     } //end of targeted configurations
