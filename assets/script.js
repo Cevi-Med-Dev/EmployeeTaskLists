@@ -115,11 +115,13 @@ const createInterface = (target) => {
               ) {
                 taskList.querySelector("img.status").src =
                   "./assets/imgs/done.svg";
+                  taskList.style.color = "green";
                 taskList.querySelector("h2").style.color = "green";
               } else {
                 taskList.querySelector("img.status").src =
                   "./assets/imgs/undone.svg";
                 taskList.querySelector("h2").style.color = "black";
+                taskList.style.color = "#d9d9d9";
               }
             });
           });
@@ -236,7 +238,7 @@ call_form_.addEventListener("submit", (e) => {
 //         },
 //         {
 //           element: document.querySelector("#formContainer"),
-//           intro: `All your Task lists will open up, When you hover over them, they list will expand... You can keep a task list open by clicking on it.. Give it a try!`
+//           intro: `All your Task lists will open up, When you hover over them, they list will expand... You can keep a task list open by clicking its Name.. Give it a try!`
 //         },
 //         {
 //           element: document.querySelector("#taskList"),
