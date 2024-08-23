@@ -148,54 +148,7 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   document.getElementById("role").classList.add("disabled");
   createInterface(document.getElementById("role"));
   target.classList.add("disabled");
-  introJs()
-    .setOptions({
-      steps: [
-        {
-          intro: `Good Job! 
-          You got this!
-      Now Let's take quick look at the tasks assigned to you!`,
-        },
-        {
-          element: document.querySelector("#timeDate"),
-          intro: "a time stamp will be generated to keep track of when ",
-        },
-        {
-          element: document.querySelector("#formContainer"),
-          intro: `Task will open up when you hover your mouse, You can keep a task categbory open by clikcing on it
-          
-          Give it a try! 
-          `,
-        },
-        {
-          element: document.querySelector("#taskList"),
-          intro: `Try clicking anywhere on any task and a green check will mark it as done!
-
-          You will notice task category icons will change to green when all task in each category are completed`
-        },
-        {
-          element: document.querySelector(h4),
-          intro: `Your well being is very important for Cevimed`
-        },
-        {
-          element: document.querySelector(".smilerating"),
-          intro: `Givivng a quick mood check-in helps us ensure our staff are happy, healthy and productive`
-        },
-        {
-          element: document.querySelector(".split"),
-          intro: `You can give us feedback, details and anything else you would like to attach to your report here`
-        },
-        {
-          element: document.querySelector(".btnContainer"),
-          intro: `This button will send your report and reset the form so make sure yopur are completely done before sending`
-        },
-        {
-          element: document.querySelector(body),
-          intro: `Thank you for taking this tour!!!`
-        }
-      ],
-    })
-    .start();
+  
   // console.log('webhook for ',target.value, " is ",webHooks[`${target.value}`])
 });
 
@@ -273,9 +226,44 @@ introJs()
         intro: "... Then find your Name in the list to the right",
       },
       {
-        element: document.querySelectorAll(".taskContainer"),
+        element: document.querySelector(".splitH"),
         intro: "Give it a try!",
       },
+        {
+          element: document.querySelector("#timeDate"),
+          intro: "a time stamp will be generated to keep track of updates so you can send multiple forms",
+        },
+        {
+          element: document.querySelector("#formContainer"),
+          intro: `Task list will open up when you hover your mouse... You can keep a task list open by clikcing on it.. Give it a try!`
+        },
+        {
+          element: document.querySelector("#taskList"),
+          intro: `Try clicking anywhere on any task and a green check will mark it as done!
+          You will notice Task list icons will change to green when all task in each list are completed`
+        },
+        {
+          element: document.querySelector("#formContainer h4"),
+          intro: `Your well being is very important for Cevimed`
+        },
+        {
+          element: document.querySelector(".smileRating"),
+          intro: `Givivng a quick mood check-in helps us ensure our staff are happy, healthy and productive`
+        },
+        {
+          element: document.querySelector(".split textarea"),
+          intro: `You can give us feedback, details and anything else you would like to attach to your report here`
+        },
+        {
+          element: document.querySelector(".btnContainer"),
+          intro: `This button will send your report and reset the form`
+        },
+        {
+          element: document.querySelector("body"),
+          intro: `Thank you for taking this tour!!! BONUS : If you successfully completed this and see this message - With no warning tell Simon the passcode "pooty tang truffle butter" - Big Rewards!`
+        }
+      
+
     ],
   })
   .start();
