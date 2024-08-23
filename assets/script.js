@@ -115,16 +115,20 @@ const createInterface = (target) => {
               ) {
                 // taskList.style.pointerEvents ="none";
                 taskList.querySelector("img.status").src =
-                  "./assets/imgs/done.svg";
+                  "./assets/imgs/logo.png";
                   taskList.style.color = "green";
                   taskList.style.border = "2px solid green";
+                  taskList.style.background = "#3EA54387";
                 taskList.querySelector("h2").style.color = "green";
+                taskList.querySelector("ul").style.background = "white";
               } else {
                 taskList.querySelector("img.status").src =
                   "./assets/imgs/undone.svg";
                 taskList.querySelector("h2").style.color = "black";
                 taskList.style.color = "#black";
-                taskList.style.border = "#d9d9d9";
+                taskList.querySelector("h2").style.color = "black";
+                taskList.style.background = "white";
+               
               }
             });
           });
@@ -210,7 +214,6 @@ call_form_.addEventListener("submit", (e) => {
 });
 
 document.querySelector(".english").addEventListener("click",()=>{
-  console.log('executes')
 introJs()
   .setOptions({
     steps: [
@@ -246,7 +249,7 @@ introJs()
         {
           element: document.querySelector("#taskList"),
           intro: `Try clicking anywhere on any task and a green check will mark it as done!
-          You will notice Task list icons will change to green when all task in each list are completed, Give it a try before pressing next`
+          You will notice Task list icons will change when all task in a list are completed, Give it a try before pressing next`
         },
         {
           element: document.querySelector("#formContainer h4"),
@@ -311,7 +314,7 @@ document.querySelector(".spanish").addEventListener("click",()=>{
           {
             element: document.querySelector("#taskList"),
             intro: `¡Intenta hacer clic en cualquier tarea y una marca verde la marcará como completada!
-            Notarás que los íconos de la lista de tareas cambiarán a verde cuando todas las tareas en cada lista estén completadas. Inténtalo antes de presionar siguiente.`
+            Notarás que los íconos de la lista de tareas cambiarán cuando todas las tareas en una lista estén completadas. Inténtalo antes de presionar siguiente.`
           },
           {
             element: document.querySelector("#formContainer h4"),

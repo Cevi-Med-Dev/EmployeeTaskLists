@@ -116,6 +116,9 @@ select:hover {
 .taskContainer:hover>ul {
     display: flex !important;
     flex-direction: column;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 10px;
 }
 
 .taskContainer ul {
@@ -165,8 +168,8 @@ ul {
    justify-content: space-between;
 }
 img.status{
-    width: 25px;
-    height: auto;
+    width: auto;
+    height: 50px;
 }
 .taskOverview:hover input~.checkmark {
     background-color: #ccc;
