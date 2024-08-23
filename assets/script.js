@@ -210,7 +210,7 @@ introJs()
     steps: [
       {
         intro: `Hey The CeviMeder!
-    Let's Take Quick Tour!`,
+    Let's Take a Quick Tour!`,
       },
       {
         element: document.querySelector("#title"),
@@ -227,7 +227,7 @@ introJs()
       },
       {
         element: document.querySelector(".splitH"),
-        intro: "Give it a try!",
+        intro: "Give it a try! before pressing next",
       },
         {
           element: document.querySelector("#timeDate"),
@@ -235,24 +235,24 @@ introJs()
         },
         {
           element: document.querySelector("#formContainer"),
-          intro: `Task list will open up when you hover your mouse... You can keep a task list open by clikcing on it.. Give it a try!`
+          intro: `Also all your Task list will open up, When you hover your mouse they will expand... You can keep a task list open by clikcing on it.. Give it a try before pressing next!`
         },
         {
           element: document.querySelector("#taskList"),
           intro: `Try clicking anywhere on any task and a green check will mark it as done!
-          You will notice Task list icons will change to green when all task in each list are completed`
+          You will notice Task list icons will change to green when all task in each list are completed, Give it a try before pressing next`
         },
         {
           element: document.querySelector("#formContainer h4"),
-          intro: `Your well being is very important for Cevimed`
+          intro: `Your well-being is very important for Cevimed`
         },
         {
           element: document.querySelector(".smileRating"),
-          intro: `Givivng a quick mood check-in helps us ensure our staff are happy, healthy and productive`
+          intro: `Giving us a quick mood check-in helps us ensure our staff are happy, healthy and productive`
         },
         {
           element: document.querySelector(".split textarea"),
-          intro: `You can give us feedback, details and anything else you would like to attach to your report here`
+          intro: `You can give us feedback, details, request and / or comments would like to attach to the report here`
         },
         {
           element: document.querySelector(".btnContainer"),
@@ -260,7 +260,7 @@ introJs()
         },
         {
           element: document.querySelector("body"),
-          intro: `Thank you for taking this tour!!! BONUS : If you successfully completed this and see this message - With no warning tell Simon the passcode "pooty tang truffle butter" - Big Rewards!`
+          intro: `Thank you for taking this tour!!! you did it! BONUS : If you successfully completed this and see this message - With no warning tell Simon the passcode "pooty tang truffle butter" - Big Rewards!`
         }
       
 
