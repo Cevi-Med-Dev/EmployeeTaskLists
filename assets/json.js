@@ -1,6 +1,22 @@
 export const roles = {
   "C.E.O.": {
-    Daily: ["check on staff", "check on customers", "sign checks"],
+    Daily: [
+      "Develop and execute the company's business strategies",
+      "Make high-level decisions about policy and strategy",
+      "Oversee all operations and business activities",
+      "Ensure the company maintains its vision and mission",
+      "Act as the primary spokesperson for the company",
+      "Analyze and interpret data and metrics",
+      "Build alliances and partnerships with other organizations",
+      "Create a positive organizational culture",
+      "Manage senior executives and leadership teams",
+      "Ensure compliance with legal and regulatory requirements",
+      "Drive profitability and company growth",
+      "Allocate resources effectively for maximum efficiency",
+      "Communicate effectively with shareholders and the board of directors",
+      "Identify and manage potential risks to the business",
+      "Lead the development of the company's short and long-term goals"
+  ]
   },
   "Accounting": {
     Daily: [
