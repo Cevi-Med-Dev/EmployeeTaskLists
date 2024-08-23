@@ -223,11 +223,11 @@ introJs()
       },
       {
         element: document.querySelector("#employee"),
-        intro: "... Then find your Name in the list to the right",
+        intro: "... Then find your Name in this list",
       },
       {
         element: document.querySelector(".splitH"),
-        intro: "Give it a try! before pressing next",
+        intro: "Give it a try!",
       },
         {
           element: document.querySelector("#timeDate"),
@@ -235,7 +235,7 @@ introJs()
         },
         {
           element: document.querySelector("#formContainer"),
-          intro: `Also all your Task list will open up, When you hover your mouse they will expand... You can keep a task list open by clikcing on it.. Give it a try before pressing next!`
+          intro: `All your Task list will open up, When you hover over any list the list will expand... You can keep a task list open by clikcing on it.. Give it a try!`
         },
         {
           element: document.querySelector("#taskList"),
@@ -248,19 +248,19 @@ introJs()
         },
         {
           element: document.querySelector(".smileRating"),
-          intro: `Giving us a quick mood check-in helps us ensure our staff are happy, healthy and productive`
+          intro: `Giving us a quick "mood check-in" helps us ensure you're Happy, Healthy and Productive`
         },
         {
           element: document.querySelector(".split textarea"),
-          intro: `You can give us feedback, details, request and / or comments would like to attach to the report here`
+          intro: `You can give us feedback, details, request and/or any comments would like to attach to the report here.`
         },
         {
           element: document.querySelector(".btnContainer"),
-          intro: `This button will send your report and reset the form`
+          intro: `This button will send your report and reset the form.`
         },
         {
           element: document.querySelector("body"),
-          intro: `Thank you for taking this tour!!! you did it! BONUS : If you successfully completed this and see this message - With no warning tell Simon the passcode "pooty tang truffle butter" - Big Rewards!`
+          intro: `Thank you for taking the tour!`
         }
       
 
