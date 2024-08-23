@@ -209,7 +209,7 @@ introJs()
   .setOptions({
     steps: [
       {
-        intro: `Hey The CeviMeder!
+        intro: `Hey there CeviMeder!
     Let's Take a Quick Tour!`,
       },
       {
