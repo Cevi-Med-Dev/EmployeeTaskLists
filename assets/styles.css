@@ -16,6 +16,28 @@ h1 {
     width: 60%;
     text-align: center;
 }
+#tutorialBtns{
+
+    width: 200px;
+}
+.btn2{
+    width: 80%;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid #C40C11;
+    color: #C40C11;
+    font-weight: bolder;
+    animation: alternate;
+    padding: 6px 12px;
+}
+.btn2:hover {
+    border: 2px solid white;
+    cursor: pointer;
+    background-color: #C40C11;
+    color: white;
+}
+
 
 h2 {
     font: 20px;
@@ -69,7 +91,6 @@ select:hover {
     height: max-content;
     padding: 5px 10px;
     border-radius: 5px;
-
     margin-right: 10px;
     cursor: pointer;
     text-align: left;
@@ -80,6 +101,7 @@ select:hover {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid green;
+
 }
 
 .taskContainer h2.taskName {

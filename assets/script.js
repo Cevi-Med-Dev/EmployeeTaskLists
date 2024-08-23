@@ -113,6 +113,7 @@ const createInterface = (target) => {
                 taskList.querySelectorAll("input:checked~.checkmark").length ===
                 taskList.querySelectorAll("input[type=checkbox]").length
               ) {
+                // taskList.style.pointerEvents ="none";
                 taskList.querySelector("img.status").src =
                   "./assets/imgs/done.svg";
                   taskList.style.color = "green";
@@ -208,131 +209,133 @@ call_form_.addEventListener("submit", (e) => {
   );
 });
 
-//Intro Js implementation for onboarding All Cevimed Staff
-
-// introJs()
-//   .setOptions({
-//     steps: [
-//       {
-//         intro: `Hey there CeviMeder!
-//     Let's Take a Quick Tour!`,
-//       },
-//       {
-//         element: document.querySelector("#title"),
-//         intro:
-//           "You will be filling out this form to send quick and easy reports!",
-//       },
-//       {
-//         element: document.querySelector("#role"),
-//         intro: "Select your Role in Cevimed..",
-//       },
-//       {
-//         element: document.querySelector("#employee"),
-//         intro: "... Then find your Name in this list",
-//       },
-//       {
-//         element: document.querySelector(".splitH"),
-//         intro: "Give it a try!",
-//       },
-//         {
-//           element: document.querySelector("#timeDate"),
-//           intro: "a time stamp will be generated to keep track of updates so you can send multiple forms",
-//         },
-//         {
-//           element: document.querySelector("#formContainer"),
-//           intro: `All your Task lists will open up, When you hover over them, they list will expand... You can keep a task list open by clicking its Name.. Give it a try!`
-//         },
-//         {
-//           element: document.querySelector("#taskList"),
-//           intro: `Try clicking anywhere on any task and a green check will mark it as done!
-//           You will notice Task list icons will change to green when all task in each list are completed, Give it a try before pressing next`
-//         },
-//         {
-//           element: document.querySelector("#formContainer h4"),
-//           intro: `Your well-being is very important for Cevimed`
-//         },
-//         {
-//           element: document.querySelector(".smileRating"),
-//           intro: `Giving us a quick "mood check-in" helps us ensure you're Happy, Healthy and Productive`
-//         },
-//         {
-//           element: document.querySelector(".split textarea"),
-//           intro: `You can give us feedback, details, request and/or any comments that you would like to attach to the report here.`
-//         },
-//         {
-//           element: document.querySelector(".btnContainer"),
-//           intro: `This button will send your report and reset the form.`
-//         },
-//         {
-//           element: document.querySelector("body"),
-//           intro: `Thank you for taking the tour!`
-//         }
-      
-
-//     ],
-//   })
-//   .start();
-
-
+document.querySelector(".english").addEventListener("click",()=>{
+  console.log('executes')
 introJs()
   .setOptions({
     steps: [
       {
-        intro: `¡Hola CeviMeder!
-    ¡Hagamos un recorrido rápido!`,
+        intro: `Hey there CeviMeder!
+    Let's Take a Quick Tour!`,
       },
       {
         element: document.querySelector("#title"),
         intro:
-          "¡Llenarás este formulario para enviar informes de manera rápida y sencilla!",
+          "You will be filling out this form to send quick and easy reports!",
       },
       {
         element: document.querySelector("#role"),
-        intro: "Selecciona tu Rol en Cevimed..",
+        intro: "Select your Role in Cevimed..",
       },
       {
         element: document.querySelector("#employee"),
-        intro: "... Luego encuentra tu Nombre en esta lista",
+        intro: "... Then find your Name in this list",
       },
       {
         element: document.querySelector(".splitH"),
-        intro: "¡Inténtalo!",
+        intro: "Give it a try!",
       },
         {
           element: document.querySelector("#timeDate"),
-          intro: "Se generará una marca de tiempo para realizar un seguimiento de las actualizaciones para que puedas enviar varios formularios",
+          intro: "a time stamp will be generated to keep track of updates so you can send multiple forms",
         },
         {
           element: document.querySelector("#formContainer"),
-          intro: `Toda tu lista de tareas se abrirá. Cuando pases el cursor sobre cualquier lista, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en ella. ¡Inténtalo!`
+          intro: `All your Task lists will open up, When you hover over them, they list will expand... You can keep a task list open by clicking its Name.. Give it a try!`
         },
         {
           element: document.querySelector("#taskList"),
-          intro: `¡Intenta hacer clic en cualquier tarea y una marca verde la marcará como completada!
-          Notarás que los íconos de la lista de tareas cambiarán a verde cuando todas las tareas en cada lista estén completadas. Inténtalo antes de presionar siguiente.`
+          intro: `Try clicking anywhere on any task and a green check will mark it as done!
+          You will notice Task list icons will change to green when all task in each list are completed, Give it a try before pressing next`
         },
         {
           element: document.querySelector("#formContainer h4"),
-          intro: `Tu bienestar es muy importante para Cevimed`
+          intro: `Your well-being is very important for Cevimed`
         },
         {
           element: document.querySelector(".smileRating"),
-          intro: `Darnos un rápido "chequeo de estado de ánimo" nos ayuda a asegurar que estés Feliz, Saludable y Productivo.`
+          intro: `Giving us a quick "mood check-in" helps us ensure you're Happy, Healthy and Productive`
         },
         {
           element: document.querySelector(".split textarea"),
-          intro: `Aquí puedes darnos retroalimentación, detalles, solicitudes y/o cualquier comentario que desees adjuntar al informe.`
+          intro: `You can give us feedback, details, request and/or any comments that you would like to attach to the report here.`
         },
         {
           element: document.querySelector(".btnContainer"),
-          intro: `Este botón enviará tu informe y reiniciará el formulario.`
+          intro: `This button will send your report and reset the form.`
         },
         {
           element: document.querySelector("body"),
-          intro: `¡Gracias por hacer el recorrido!`
+          intro: `Thank you for taking the tour!`
         }
       
 
     ],
   })
   .start();
+})
+
+document.querySelector(".spanish").addEventListener("click",()=>{
+  introJs()
+    .setOptions({
+      steps: [
+        {
+          intro: `¡Hola CeviMeder!
+      ¡Hagamos un recorrido rápido!`,
+        },
+        {
+          element: document.querySelector("#title"),
+          intro:
+            "¡Llenarás este formulario para enviar informes de manera rápida y sencilla!",
+        },
+        {
+          element: document.querySelector("#role"),
+          intro: "Selecciona tu Rol en Cevimed..",
+        },
+        {
+          element: document.querySelector("#employee"),
+          intro: "... Luego encuentra tu Nombre en esta lista",
+        },
+        {
+          element: document.querySelector(".splitH"),
+          intro: "¡Inténtalo!",
+        },
+          {
+            element: document.querySelector("#timeDate"),
+            intro: "Se generará una marca de tiempo para realizar un seguimiento de las actualizaciones para que puedas enviar varios formularios",
+          },
+          {
+            element: document.querySelector("#formContainer"),
+            intro: `Toda tu lista de tareas se abrirá. Cuando pases el cursor sobre cualquier lista, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en ella. ¡Inténtalo!`
+          },
+          {
+            element: document.querySelector("#taskList"),
+            intro: `¡Intenta hacer clic en cualquier tarea y una marca verde la marcará como completada!
+            Notarás que los íconos de la lista de tareas cambiarán a verde cuando todas las tareas en cada lista estén completadas. Inténtalo antes de presionar siguiente.`
+          },
+          {
+            element: document.querySelector("#formContainer h4"),
+            intro: `Tu bienestar es muy importante para Cevimed`
+          },
+          {
+            element: document.querySelector(".smileRating"),
+            intro: `Darnos un rápido "chequeo de estado de ánimo" nos ayuda a asegurar que estés Feliz, Saludable y Productivo.`
+          },
+          {
+            element: document.querySelector(".split textarea"),
+            intro: `Aquí puedes darnos retroalimentación, detalles, solicitudes y/o cualquier comentario que desees adjuntar al informe.`
+          },
+          {
+            element: document.querySelector(".btnContainer"),
+            intro: `Este botón enviará tu informe y reiniciará el formulario.`
+          },
+          {
+            element: document.querySelector("body"),
+            intro: `¡Gracias por hacer el recorrido!`
+          }
+        
+  
+      ],
+    })
+    .start();
+})
