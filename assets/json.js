@@ -256,16 +256,16 @@ export const roles = {
     ],
   },
   "FrontEnd Web Developer": {
+    "Website Maintnance": [
+      "Troubleshoot and Diagnose & Fix website bugs/anomolies Reported",
+      "Update Specs, pricing rules, details, images etc on the BigCommerce platform for products requested",
+      "Ensure website stability and functionality through Analysis of website's performance and user experience.",
+    ],
     "Planning & Research": [
       "Meetings with internal and external departments",
       "Continuesly Test, Troubleshoot and Diagnose current Task at hand",
       "Research latest Industry practices for Tools implemented to ensure proper Integration",
       "Plan Approach and Execution",
-    ],
-    "Website Maintnance": [
-      "Troubleshoot and Diagnose & Fix website bugs/anomolies Reported",
-      "Update Specs, pricing rules, details, images etc on the BigCommerce platform for products requested",
-      "Ensure website stability and functionality through Analysis of website's performance and user experience.",
     ],
     "Design and Development": [
       "Gather Functional Requirements from End-Users before Designing",
@@ -285,40 +285,39 @@ export const roles = {
       "Discuss and prioritize changes based on project needs and feedback.",
     ],
   },
-  "Full Stack Developer": {
+  "Full Stack Developer":   {
     "Automate Airtable Processes": [
-      "Create and implement automation workflows in Airtable to streamline processes.",
-      "Ensure automation improves data accuracy and efficiency.",
-      "Test and Refine Automations.",
-      "Test automated workflows to ensure they function correctly.",
-      "Make adjustments as needed based on performance and feedback.",
-      "Review the website for any issues.",
-      "Verify that all prices and product information are accurate and up-to-date.",
+        "Create and implement automation workflows in Airtable to streamline processes.",
+        "Ensure automation improves data accuracy and efficiency.",
+        "Test and Refine Automations.",
+        "Test automated workflows to ensure they function correctly.",
+        "Make adjustments as needed based on performance and feedback."
     ],
     "Improve Website Data": {
-      "Analyze and Manage Website Data": [
-        "Review and analyze data to identify areas for website improvement.",
-        "Provide insights and recommendations for enhancing website functionality and content.",
-      ],
-      "Implement Data Enhancements": [
-        "Make data-driven adjustments to improve the website’s performance and user experience.",
-      ],
+        "Analyze and Manage Website Data": [
+            "Review and analyze data to identify areas for website improvement.",
+            "Provide insights and recommendations for enhancing website functionality and content."
+        ],
+        "Implement Data Enhancements": [
+            "Make data-driven adjustments to improve the website’s performance and user experience."
+        ]
     },
     "Assist with Program Repairs": [
-      "Identify and resolve issues with Airtable programs.",
-      "Provide support and solutions to ensure Airtable operates smoothly.",
-      "Assist with QuickBooks Repairs.",
-      "Address and resolve issues with QuickBooks software.",
-      "Ensure QuickBooks is functioning correctly and accurately.",
+        "Identify and resolve issues with Airtable programs.",
+        "Provide support and solutions to ensure Airtable operates smoothly.",
+        "Assist with QuickBooks Repairs.",
+        "Address and resolve issues with QuickBooks software.",
+        "Ensure QuickBooks is functioning correctly and accurately."
     ],
     "Maintain Website Updates": [
-      "Check and update the company website to reflect current prices and product codes.",
-      "Ensure all website information is accurate and up-to-date.",
-      "Regularly review the website for any required updates or corrections.",
-      "Coordinate with relevant teams to implement necessary changes.",
-    ],
-  },
-  "Graphic 'designer'": {
+        "Check and update the company website to reflect current prices and product codes.",
+        "Ensure all website information is accurate and up-to-date.",
+        "Regularly review the website for any required updates or corrections.",
+        "Coordinate with relevant teams to implement necessary changes.",
+        "Developments, Features and Codes Reviews."
+    ]
+},
+  "Graphic designer": {
     "Create Logos or Images for Advertising Campaigns": [
       "Develop logos and graphics as per campaign requirements.",
       "Ensure designs align with brand guidelines and campaign objectives.",
