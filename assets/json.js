@@ -278,12 +278,14 @@ export const roles = {
       "Refactor / Optimize written code to ensure high quality algorithms for minimilistic page execution time for features",
       "Continous white-box testing and debuggin code written",
       "Version Control handling to ensure Seemless Collaboration and Back ups for loss prevention and damage control",
-      "Code Review with Hector for feedback and debugging purposes"
+      "Code Review with Hector for feedback and debugging purposes",
+      "Receive Feedback On updates",
     ],
     "Endless Task": [
       "Research latest Industry practices for Tools implemented to ensure proper Integration",
       "Collaborate with Hector to review and implement any necessary changes to the website.",
       "Re-evaluate, Debug and Adapt the ever evolving tech used in development, integration and cross platform data sharing",
+      "Save and Deploy Updates or Changes",
     ],
   },
   "Full Stack Developer":   {
