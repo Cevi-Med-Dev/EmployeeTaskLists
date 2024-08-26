@@ -256,33 +256,33 @@ export const roles = {
     ],
   },
   "FrontEnd Web Developer": {
-    "Website Maintnance": [
-      "Troubleshoot and Diagnose & Fix website bugs/anomolies Reported",
-      "Update Specs, pricing rules, details, images etc on the BigCommerce platform for products requested",
+    "Website Maintenance ": [
+      "Monitor Website for Bugs / Anomolies",
+      "Update Webpage Specs, Pricing, Price rules, Options, Images on the BigCommerce platform",
+      "Troubleshoot, Diagnose & Fix website issues Reported",
       "Ensure website stability and functionality through Analysis of website's performance and user experience.",
     ],
     "Planning & Research": [
       "Meetings with internal and external departments",
-      "Continuesly Test, Troubleshoot and Diagnose current Task at hand",
-      "Research latest Industry practices for Tools implemented to ensure proper Integration",
+      "Test, Troubleshoot and Diagnose current Task at hand",
       "Plan Approach and Execution",
+      "Gather Functional Requirements from End-Users before Designing",
     ],
     "Design and Development": [
-      "Gather Functional Requirements from End-Users before Designing",
       "Design visually appealing and appropriate UI",
       "Design UX Prototype for Website flow",
-      "Adapt business Logic to code ",
       "Develop code architecture that is scalable, reusable and minilistic",
       "Write clean code implementing using established rules adapted to best industry standars",
+      "Adapt Business Logic to Interface and Code",
       "Refactor / Optimize written code to ensure high quality algorithms",
       "Continous white-box testing and debuggin code writtne",
       "Version Control handling to ensure Seemless Collaboration and Back ups for loss prevention and damage control",
       "Code Review with Hector for feedback and debugging purposes"
     ],
-    "Research Tools for Feature Development": [
-      "Stay updated on emerging technologies and trends for website development.",
+    "Endless Task": [
+      "Research latest Industry practices for Tools implemented to ensure proper Integration",
       "Collaborate with Hector to review and implement any necessary changes to the website.",
-      "Discuss and prioritize changes based on project needs and feedback.",
+      "Re-evaluate, Debug and Adapt the ever evolving tech used in development, integration and cross platform data sharing",
     ],
   },
   "Full Stack Developer":   {
