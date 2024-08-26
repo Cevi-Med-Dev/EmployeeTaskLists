@@ -263,7 +263,8 @@ export const roles = {
       "Ensure website stability and functionality through Analysis of website's performance and user experience.",
     ],
     "Planning & Research": [
-      "Meetings with internal and external departments",
+      "Meetings with Internal and external departments",
+      "Email / Phone Correspondences with External Dev Departments ",
       "Test, Troubleshoot and Diagnose current Task at hand",
       "Plan Approach and Execution",
       "Gather Functional Requirements from End-Users before Designing",
@@ -272,10 +273,10 @@ export const roles = {
       "Design visually appealing and appropriate UI",
       "Design UX Prototype for Website flow",
       "Develop code architecture that is scalable, reusable and minilistic",
-      "Write clean code implementing using established rules adapted to best industry standars",
+      "Write clean code implementing established practices(Ecmascript6+) adapted to best industry standards",
       "Adapt Business Logic to Interface and Code",
-      "Refactor / Optimize written code to ensure high quality algorithms",
-      "Continous white-box testing and debuggin code writtne",
+      "Refactor / Optimize written code to ensure high quality algorithms for minimilistic page execution time for features",
+      "Continous white-box testing and debuggin code written",
       "Version Control handling to ensure Seemless Collaboration and Back ups for loss prevention and damage control",
       "Code Review with Hector for feedback and debugging purposes"
     ],
