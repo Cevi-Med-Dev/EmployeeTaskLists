@@ -257,7 +257,7 @@ export const roles = {
   },
   "FrontEnd Web Developer": {
     "Website Maintenance ": [
-      "Monitor Website for Bugs / Anomolies",
+      "Monitor Website features for Bugs / Anomolies",
       "Update Webpage Specs, Pricing, Price rules, Options, Images on the BigCommerce platform",
       "Troubleshoot, Diagnose & Fix website issues Reported",
       "Ensure website stability and functionality through Analysis of website's performance and user experience.",
