@@ -368,7 +368,7 @@ export const employeeRoles = {
   "Shipping Assistant": ["Stephany Sterling"],
   "FrontEnd Web Developer": ["James Chaves"],
   "Full Stack Developer": ["Hector Castellano"],
-  "Graphic 'designer'": ["Diana Malpura"],
+  "Graphic designer": ["Diana Malpura"],
 };
 
 export const webHooks = {
