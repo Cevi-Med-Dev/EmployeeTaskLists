@@ -291,17 +291,15 @@ export const roles = {
         "Ensure automation improves data accuracy and efficiency.",
         "Test and Refine Automations.",
         "Test automated workflows to ensure they function correctly.",
-        "Make adjustments as needed based on performance and feedback."
+        "Make adjustments as needed based on performance and feedback.11"
     ],
-    "Improve Website Data": {
-        "Analyze and Manage Website Data": [
+    "Improve Website Data": [
+        "Analyze and Manage Website Data", 
             "Review and analyze data to identify areas for website improvement.",
-            "Provide insights and recommendations for enhancing website functionality and content."
-        ],
-        "Implement Data Enhancements": [
+            "Provide insights and recommendations for enhancing website functionality and content.",
+        "Implement Data Enhancements",
             "Make data-driven adjustments to improve the website’s performance and user experience."
-        ]
-    },
+        ],
     "Assist with Program Repairs": [
         "Identify and resolve issues with Airtable programs.",
         "Provide support and solutions to ensure Airtable operates smoothly.",
@@ -317,7 +315,7 @@ export const roles = {
         "Developments, Features and Codes Reviews."
     ]
 },
-  "Graphic designer": {
+  "graphic designer": {
     "Create Logos or Images for Advertising Campaigns": [
       "Develop logos and graphics as per campaign requirements.",
       "Ensure designs align with brand guidelines and campaign objectives.",
@@ -368,7 +366,7 @@ export const employeeRoles = {
   "Shipping Assistant": ["Stephany Sterling"],
   "FrontEnd Web Developer": ["James Chaves"],
   "Full Stack Developer": ["Hector Castellano"],
-  "Graphic designer": ["Diana Malpura"],
+  "graphic designer": ["Diana Malpura"],
 };
 
 export const webHooks = {
