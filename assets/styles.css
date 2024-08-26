@@ -140,6 +140,7 @@ select:hover {
 ul {
     font: 15px;
     list-style: none;
+    padding: 10px;
 }
 
 .taskContainer ul li {

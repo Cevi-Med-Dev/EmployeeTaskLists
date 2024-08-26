@@ -256,15 +256,9 @@ export const roles = {
     ],
   },
   "FrontEnd Web Developer": {
-    "Website Maintenance ": [
-      "Monitor Website features for Bugs / Anomolies",
-      "Update Webpage Specs, Pricing, Price rules, Options, Images on the BigCommerce platform",
-      "Troubleshoot, Diagnose & Fix website issues Reported",
-      "Ensure website stability and functionality through Analysis of website's performance and user experience.",
-    ],
-    "Planning & Research": [
+    "Planning and Research": [
       "Meetings with Internal and external departments",
-      "Email / Phone Correspondences with External Dev Departments ",
+      "Email / Phone Correspondences",
       "Test, Troubleshoot and Diagnose current Task at hand",
       "Plan Approach and Execution",
       "Gather Functional Requirements from End-Users before Designing",
@@ -281,43 +275,48 @@ export const roles = {
       "Code Review with Hector for feedback and debugging purposes",
       "Receive Feedback On updates",
     ],
-    "Endless Task": [
+    "Website Maintenance ": [
+      "Update Webpage Specs, Pricing, Price rules, Options, Images on the BigCommerce platform",
+      "Troubleshoot, Diagnose and Fix website Bugs / Anomolies Reported",
+      "Ensure website stability and functionality through Analysis of website's performance and user experience.",
+    ],
+    "Occassional Task": [
       "Research latest Industry practices for Tools implemented to ensure proper Integration",
       "Collaborate with Hector to review and implement any necessary changes to the website.",
       "Re-evaluate, Debug and Adapt the ever evolving tech used in development, integration and cross platform data sharing",
       "Save and Deploy Updates or Changes",
     ],
   },
-  "Full Stack Developer":   {
+  "Full Stack Developer": {
     "Automate Airtable Processes": [
-        "Create and implement automation workflows in Airtable to streamline processes.",
-        "Ensure automation improves data accuracy and efficiency.",
-        "Test and Refine Automations.",
-        "Test automated workflows to ensure they function correctly.",
-        "Make adjustments as needed based on performance and feedback.11"
+      "Create and implement automation workflows in Airtable to streamline processes.",
+      "Ensure automation improves data accuracy and efficiency.",
+      "Test and Refine Automations.",
+      "Test automated workflows to ensure they function correctly.",
+      "Make adjustments as needed based on performance and feedback.11",
     ],
     "Improve Website Data": [
-        "Analyze and Manage Website Data", 
-            "Review and analyze data to identify areas for website improvement.",
-            "Provide insights and recommendations for enhancing website functionality and content.",
-        "Implement Data Enhancements",
-            "Make data-driven adjustments to improve the website’s performance and user experience."
-        ],
+      "Analyze and Manage Website Data",
+      "Review and analyze data to identify areas for website improvement.",
+      "Provide insights and recommendations for enhancing website functionality and content.",
+      "Implement Data Enhancements",
+      "Make data-driven adjustments to improve the website’s performance and user experience.",
+    ],
     "Assist with Program Repairs": [
-        "Identify and resolve issues with Airtable programs.",
-        "Provide support and solutions to ensure Airtable operates smoothly.",
-        "Assist with QuickBooks Repairs.",
-        "Address and resolve issues with QuickBooks software.",
-        "Ensure QuickBooks is functioning correctly and accurately."
+      "Identify and resolve issues with Airtable programs.",
+      "Provide support and solutions to ensure Airtable operates smoothly.",
+      "Assist with QuickBooks Repairs.",
+      "Address and resolve issues with QuickBooks software.",
+      "Ensure QuickBooks is functioning correctly and accurately.",
     ],
     "Maintain Website Updates": [
-        "Check and update the company website to reflect current prices and product codes.",
-        "Ensure all website information is accurate and up-to-date.",
-        "Regularly review the website for any required updates or corrections.",
-        "Coordinate with relevant teams to implement necessary changes.",
-        "Developments, Features and Codes Reviews."
-    ]
-},
+      "Check and update the company website to reflect current prices and product codes.",
+      "Ensure all website information is accurate and up-to-date.",
+      "Regularly review the website for any required updates or corrections.",
+      "Coordinate with relevant teams to implement necessary changes.",
+      "Developments, Features and Codes Reviews.",
+    ],
+  },
   "graphic designer": {
     "Create Logos or Images for Advertising Campaigns": [
       "Develop logos and graphics as per campaign requirements.",
@@ -338,26 +337,22 @@ export const roles = {
       "Monitor and update Airtable databases daily.",
       "Ensure data accuracy and completeness.",
     ],
-    "Create the Company Catalog": {
-      "Compile Catalog Information": [
+    "Create the Company Catalog": [
+      "Compile Catalog Information",
         "Gather and organize information about company products or services.",
         "Create and format the catalog to highlight key offerings.",
-      ],
-      "Design and Produce Catalog": [
+      "Design and Produce Catalog",
         "Design the layout and visual elements of the catalog.",
         "Finalize and produce the catalog for distribution.",
       ],
-    },
-    "Edit Videos for the Company": {
-      "Review Video Footage": [
+    "Edit Videos for the Company": [
+      "Review Video Footage",
         "Evaluate video footage for quality and relevance.",
         "Select and organize clips for editing.",
-      ],
-      "Edit and Enhance Footage": [
+      "Edit and Enhance Footage",
         "Use video editing software to edit and enhance footage.",
         "Add graphics, text, and audio as needed.",
-      ],
-    },
+      ]
   },
 };
 
@@ -381,4 +376,8 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflyLdfLDL9cu7yqT/wtrRWKYZSwubqwrvD",
   "Carina Ballesteros":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfluyS106ZH3jb1YX/wtrNJpKelK22fAU3H",
+  "James Chaves":
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflsCEf4iRxfSPwTg/wtrLNbYixCSeOepY0",
+  "Diana Malpura": "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
+  "Hector Castellano": "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
 };
