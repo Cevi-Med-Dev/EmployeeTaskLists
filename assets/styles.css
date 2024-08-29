@@ -107,7 +107,7 @@ select:hover {
 }
 #newTaskPopUp{
     position: absolute;
-    right: 57px;
+    right: 75px;
     top: 15px;
     border: 2px solid #d9d9d9;
     padding: 10px;
