@@ -62,9 +62,7 @@ const createInterface = (target) => {
 
   document.getElementById("taskList").innerHTML = ""; 
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
-    console.log(task);
-    document.getElementById("title").innerText = `${
-      document.getElementById("role").value
+    document.getElementById("title").innerText = `${document.getElementById("role").value
     } Task List `; //chnages title
     document.getElementById("timeDate").innerText = timeStamp; //chnages time and date
 
@@ -194,6 +192,12 @@ call_form_.addEventListener("submit", (e) => {
 document.getElementById("add").addEventListener("click",()=>{
   document.getElementById("employee").value === "" ? alert("choose a Role and Name before adding task") :
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
+})
+document.getElementById("addBtn").addEventListener("click",()=>{
+  let newArr = Object.entries(JSON.parse(currentRole))
+  console.log(newArr[0][1])
+  newArr[0][1].unshift("$$$$$$$$$$$$")
+  console.log(newArr[0][1](Object.values(localRoles[`${document.getElementById("role").value}`])))
 })
 
 document.querySelector(".english").addEventListener("click", () => {
