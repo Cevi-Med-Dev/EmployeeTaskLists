@@ -107,18 +107,30 @@ select:hover {
 }
 #newTaskPopUp{
     position: absolute;
-    right: 100px;
+    right: 57px;
     top: 15px;
     border: 2px solid #d9d9d9;
     padding: 10px;
     width: max-content;
     height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
 }
-#newTaskPopUp input.input{
-   width: unset;
+#newTaskPopUp textarea.input{
+   width: 90%;
+   outline: none;
+}
+img#roleImg{
+    align-self: center;
+    height: auto;
+    width: 170px;
 }
 img#add{
-    width: 50px;
+    width: 30px;
     margin: 20px;
     cursor: pointer;
 }

@@ -192,7 +192,8 @@ call_form_.addEventListener("submit", (e) => {
   );
 });
 document.getElementById("add").addEventListener("click",()=>{
-  document.querySelector("#newTaskPopUp").classList.toggle("hide")
+  document.getElementById("employee").value === "" ? alert("choose a Role and Name before adding task") :
+  document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
 
 document.querySelector(".english").addEventListener("click", () => {
