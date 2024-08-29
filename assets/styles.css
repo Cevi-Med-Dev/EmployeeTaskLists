@@ -17,8 +17,10 @@ body {
 h1 {
     font-size: 35px;
     margin: 30px;
-    width: 60%;
+    width: max-content;
     text-align: center;
+    justify-self: center;
+    color: #7d7d7d;
 }
 
 #tutorialBtns {
@@ -82,7 +84,9 @@ select:hover {
     border: 1px solid #07b30aa9;
 
 }
-
+.hide{
+    display: none;
+}
 #formContainer {
     height: max-content;
     min-width: 375px;
@@ -91,6 +95,38 @@ select:hover {
     align-items: center;
     flex-direction: column;
 }
+#tools{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#newTask{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+#newTaskPopUp{
+    position: absolute;
+    right: 100px;
+    top: 15px;
+    border: 2px solid #d9d9d9;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+}
+#newTaskPopUp input.input{
+   width: unset;
+}
+img#add{
+    width: 50px;
+    margin: 20px;
+    cursor: pointer;
+}
+#formContainer img#roleImg{
+    width: 30%;
+    height: auto;
+}
+
 
 #formContainer form {
     width: 80%;
@@ -181,11 +217,14 @@ ul {
 .splitH {
     display: flex;
     justify-content: space-between;
+
+    align-items: center;
 }
 
 img.status {
     width: auto;
-    height: 50px;
+    height: 45px;
+    padding: 10px;
 }
 
 .taskOverview:hover input~.checkmark {

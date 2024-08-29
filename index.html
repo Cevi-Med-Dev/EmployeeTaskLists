@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <title>Employee Task Checklist</title>
-        <link rel = "icon" type = "image/png" sizes = "16x16" href = "./assets/imgs/cmTruck.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/imgs/cmTruck.png">
         <link rel="stylesheet" href="./assets/styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css" integrity="sha512-DcHJLWkmfnv+isBrT8M3PhKEhsHWhEgulhr8m5EuGhdAG9w+vUyjlwgR4ISLN0+s/m4ItmPsTOqPzW714dtr5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css"
+                integrity="sha512-DcHJLWkmfnv+isBrT8M3PhKEhsHWhEgulhr8m5EuGhdAG9w+vUyjlwgR4ISLN0+s/m4ItmPsTOqPzW714dtr5w=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-        <aside id="tutorialBtns">
-                <button class="btn english">English Tour</button>
-                <button class="btn2 spanish">Spanish Tour</button>
+        <aside id="tools">
+                <article id="tutorialBtns">
+                        <button class="btn english">English Tour</button>
+                        <button class="btn2 spanish">Spanish Tour</button>
+                </article>
+                <article id="newTask" class="hide">
+                        <img id="add"  src="./assets/imgs/add.svg" alt="">
+                        <section id="newTaskPopUp">
+                                <input class="input" id="" type="text">
+                        </section>
+                </article>
         </aside>
         <main id="formContainer">
-                <h1 id="title">Cevimeter Daily Report Form</h1>
+                <img id="roleImg" src="./assets/imgs/logob.png" alt="">
                 <small id="timeDate"></small>
-                <form action=" https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ" method="POST" >
+                <h1 id="title">Cevimeter Daily Report Form
+                </h1>
+                <form action=" https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ"
+                        method="POST">
                         <div class="splitH">
                                 <select class="input" name="role" id="role">
                                         <option value="">Choose a Role </option>
@@ -40,7 +55,8 @@
                                 </section>
                                 <div class="split">
                                         <label for="feedback">FeedBack</label>
-                                        <textarea id="feedback" name="feedback" class="input animate__animated animate__bounceInRight"
+                                        <textarea id="feedback" name="feedback"
+                                                class="input animate__animated animate__bounceInRight"
                                                 rows="1"></textarea>
                                 </div>
                                 <input id="moodRate" name="moodRate" value="" />
@@ -52,7 +68,9 @@
                         </div>
                 </form>
         </main>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js" integrity="sha512-VTd65gL0pCLNPv5Bsf5LNfKbL8/odPq0bLQ4u226UNmT7SzE4xk+5ckLNMuksNTux/pDLMtxYuf0Copz8zMsSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"
+                integrity="sha512-VTd65gL0pCLNPv5Bsf5LNfKbL8/odPq0bLQ4u226UNmT7SzE4xk+5ckLNMuksNTux/pDLMtxYuf0Copz8zMsSA=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 <script type="module" src="./assets/script.js"></script>
 

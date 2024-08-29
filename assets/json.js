@@ -18,7 +18,7 @@ export const roles = {
       "Lead the development of the company's short and long-term goals",
     ],
   },
-  Accounting: {
+  "Accounting": {
     Daily: [
       "Record daily transactions (sales, purchases, payments, receipts).",
       "Reconcile daily cash and bank statements.",
@@ -269,11 +269,11 @@ export const roles = {
       "Develop code architecture that is scalable, reusable and minilistic",
       "Write clean code implementing established practices(Ecmascript6+) adapted to best industry standards",
       "Adapt Business Logic to Interface and Code",
-      "Refactor / Optimize written code to ensure high quality algorithms for minimilistic page execution time for features",
-      "Continous white-box testing and debuggin code written",
-      "Version Control handling to ensure Seemless Collaboration and Back ups for loss prevention and damage control",
+      "Refactor / Optimize written code to ensure high quality algorithms for optum page/script execution time",
+      "Continous white-box testing and debuggin written code and logic",
+      "Version Control handling to ensure Seemless Collaboration and Back Ups for loss prevention and damage control",
       "Code Review with Hector for feedback and debugging purposes",
-      "Receive Feedback On updates",
+      "Collect Feedback On Expected end product",
     ],
     "Website Maintenance ": [
       "Update Webpage Specs, Pricing, Price rules, Options, Images on the BigCommerce platform",
@@ -339,26 +339,26 @@ export const roles = {
     ],
     "Create the Company Catalog": [
       "Compile Catalog Information",
-        "Gather and organize information about company products or services.",
-        "Create and format the catalog to highlight key offerings.",
+      "Gather and organize information about company products or services.",
+      "Create and format the catalog to highlight key offerings.",
       "Design and Produce Catalog",
-        "Design the layout and visual elements of the catalog.",
-        "Finalize and produce the catalog for distribution.",
-      ],
+      "Design the layout and visual elements of the catalog.",
+      "Finalize and produce the catalog for distribution.",
+    ],
     "Edit Videos for the Company": [
       "Review Video Footage",
-        "Evaluate video footage for quality and relevance.",
-        "Select and organize clips for editing.",
+      "Evaluate video footage for quality and relevance.",
+      "Select and organize clips for editing.",
       "Edit and Enhance Footage",
-        "Use video editing software to edit and enhance footage.",
-        "Add graphics, text, and audio as needed.",
-      ]
+      "Use video editing software to edit and enhance footage.",
+      "Add graphics, text, and audio as needed.",
+    ],
   },
 };
 
 export const employeeRoles = {
   "C.E.O.": ["Simon Cortes"],
-  Accounting: ["Carina Ballesteros"],
+  "Accounting": ["Carina Ballesteros"],
   "Purchasing Manager": ["Lina Montesino"],
   "Transportation Coordinator": ["Angela Fernandez"],
   "Shipping Assistant": ["Stephany Sterling"],
@@ -378,6 +378,19 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfluyS106ZH3jb1YX/wtrNJpKelK22fAU3H",
   "James Chaves":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflsCEf4iRxfSPwTg/wtrLNbYixCSeOepY0",
-  "Diana Malpura": "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
-  "Hector Castellano": "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
+  "Diana Malpura":
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
+  "Hector Castellano":
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
 };
+
+export const roleImgs = {
+  "C.E.O.": ["ceo"],
+  "Accounting": ["acc1","acc2"],
+  "Purchasing Manager": ["pm1","pm2"],
+  "Transportation Coordinator": ["tc1","tc2"],
+  "Shipping Assistant": ["sa1","sa2"],
+  "FrontEnd Web Developer": ["wd1","wd2"],
+  "Full Stack Developer": ["fd1","fd2"],
+  "graphic designer": ["gd1","gd2"],
+}
