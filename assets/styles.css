@@ -85,7 +85,7 @@ select:hover {
 
 }
 .hide{
-    display: none;
+    display: none !important;
 }
 #formContainer {
     height: max-content;
