@@ -158,7 +158,7 @@ img#add{
 .taskContainer ul.show {
     display: flex !important;
     flex-direction: column;
-    padding: 20px;
+    padding: 5px 20px;
     border-radius: 10px;
     border: 1px solid green;
 

@@ -12,6 +12,7 @@ var taskCounter = 0;
 var dynamicWebhook = "";
 var rateOptions = document.querySelectorAll(".smileRating img");
 var d = new Date();
+var newTaskArray = []
 const daysOfWeek = [
   "Sunday",
   "Monday",
@@ -56,8 +57,7 @@ let updateNames = () => {
     console.log("error");
   }
 };
-const createInterface = (target) => {
-  window.localStorage.setItem("currentRole",JSON.stringify(localRoles[`${target.value}`]));
+const createInterface = (currentRole) => {
   currentRole = window.localStorage.getItem("currentRole");
   document.getElementById("taskList").innerHTML = ""; 
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
@@ -125,6 +125,7 @@ Array.from(Object.keys(roles)).forEach((role) => {
 });
 document.getElementById("role").addEventListener("change", ({ target }) => {
   updateNames();
+  window.localStorage.setItem("currentRole",JSON.stringify(localRoles[`${target.value}`]));
   call_formData.set("role", target.value);
 });
 document.getElementById("employee").addEventListener("change", ({ target }) => {
@@ -182,10 +183,15 @@ document.getElementById("add").addEventListener("click",()=>{
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
 document.getElementById("addBtn").addEventListener("click",()=>{
-  let newArr = Object.entries(JSON.parse(currentRole))
-  console.log(Object.entries(localRoles[`${document.getElementById("role").value}`]))
-  let newwerArr = newArr.unshift("$$$$$$$$$$$$")
-  console.log("first list : ",newArr[0][1],"parent list : ",newArr)
+
+  let newArr = JSON.parse(window.localStorage.getItem("currentRole"))
+  console.log(newArr)
+  newTaskArray.push(`${document.getElementById("newTaskDesc").value}`)
+  newArr["New Task List"] = newTaskArray
+  window.localStorage.setItem("currentRole", JSON.stringify(newArr));
+  currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
+  console.log(currentRole, newArr)
+  createInterface(currentRole);
 })
 
 document.querySelector(".english").addEventListener("click", () => {
