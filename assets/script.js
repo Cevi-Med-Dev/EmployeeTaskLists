@@ -183,15 +183,15 @@ document.getElementById("add").addEventListener("click",()=>{
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
 document.getElementById("addBtn").addEventListener("click",()=>{
-
-  let newArr = JSON.parse(window.localStorage.getItem("currentRole"))
-  console.log(newArr)
-  newTaskArray.push(`${document.getElementById("newTaskDesc").value}`)
+  let newArr = JSON.parse(window.localStorage.getItem("currentRole"));
+  newTaskArray.push(`New Task : ${document.getElementById("newTaskDesc").value}`)
   newArr["New Task List"] = newTaskArray
   window.localStorage.setItem("currentRole", JSON.stringify(newArr));
   currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
   console.log(currentRole, newArr)
   createInterface(currentRole);
+  document.querySelector("#newTaskPopUp").innerText = ""
+  document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
 
 document.querySelector(".english").addEventListener("click", () => {
