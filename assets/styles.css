@@ -192,10 +192,35 @@ ul {
 }
 
 .taskContainer ul li {
+    display: flex;
+    justify-content: space-between;
     height: max-content;
     margin-top: 10px;
 }
+#actionBtns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#actionBtns img{
+    padding: 2px;
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+#actionBtns img:hover{
+    padding: 4px;
+    width: 20px;
+    height: auto;
+}
+#actionBtns img#edit:hover{
+    border: 0.5px solid green;
+}
+#actionBtns img#trash:hover{
+    border: 0.5px solid #C40C11;
 
+}
 .taskOverview {
     display: block;
     position: relative;

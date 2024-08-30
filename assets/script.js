@@ -59,42 +59,30 @@ let updateNames = () => {
 const createInterface = (target) => {
   window.localStorage.setItem("currentRole",JSON.stringify(localRoles[`${target.value}`]));
   currentRole = window.localStorage.getItem("currentRole");
-
   document.getElementById("taskList").innerHTML = ""; 
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
-    document.getElementById("title").innerText = `${document.getElementById("role").value
-    } Task List `; //chnages title
-    document.getElementById("timeDate").innerText = timeStamp; //chnages time and date
-
-    document.getElementById("roleImg").src = `./assets/imgs/${
-      roleImgs[`${document.getElementById("role").value}`][0]
-    }.png`;
-
-    document.getElementById(
-      "taskList"
-    ).innerHTML += `<div class="taskContainer">
-                                        <div class="splitH">
-                                                <h2 class="taskName">${
-                                                  task[0]
-                                                }</h2>
-                                          
-                                                <img class="status" src="./assets/imgs/undone.svg"/>
-                                        </div>
-                                      
-                                        <ul>
-                                               ${task[1]
-                                                 .map((taskDescription) => {
-                                                   return ` <li>
-                                                <label class="taskOverview">
-                                                            ${taskDescription}
-                                                <input type="checkbox" name=${(taskCounter += 1)} value="${taskDescription}">
-                                                <span class="checkmark"></span>
-                                                </label>
-                                                </li>       `;
-                                                 })
-                                                 .join("")}       
-                                        </ul>
-                                </div>`;
+    document.getElementById("title").innerText = `${document.getElementById("role").value} Task List `;
+    document.getElementById("timeDate").innerText = timeStamp;
+    document.getElementById("roleImg").src = `./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][0]}.png`;
+    document.getElementById("taskList").innerHTML += 
+    `<div class="taskContainer">
+            <div class="splitH">
+                  <h2 class="taskName">${task[0]}</h2>
+                  <img class="status" src="./assets/imgs/undone.svg"/>
+            </div>
+            <ul>${task[1].map((taskDescription) => {
+                return `
+                <li>
+                 <label class="taskOverview">${taskDescription}<input type="checkbox" name=${(taskCounter += 1)} value="${taskDescription}">
+                 <span class="checkmark"></span></label>
+                     <aside id="actionBtns">
+                                <img id="edit" src="./assets//imgs/edit1.svg" alt="">
+                                <img id="trash" src="./assets//imgs/trash1.svg" alt="">
+                      </aside>
+                </li>`}).join("")}
+                       
+            </ul>
+      </div>`;
   });
   document.querySelectorAll(".taskContainer").forEach((taskList) => {
     console.log(taskList)
@@ -195,9 +183,9 @@ document.getElementById("add").addEventListener("click",()=>{
 })
 document.getElementById("addBtn").addEventListener("click",()=>{
   let newArr = Object.entries(JSON.parse(currentRole))
-  console.log(newArr[0][1])
-  newArr[0][1].unshift("$$$$$$$$$$$$")
-  console.log(newArr[0][1](Object.values(localRoles[`${document.getElementById("role").value}`])))
+  console.log(Object.entries(localRoles[`${document.getElementById("role").value}`]))
+  let newwerArr = newArr.unshift("$$$$$$$$$$$$")
+  console.log("first list : ",newArr[0][1],"parent list : ",newArr)
 })
 
 document.querySelector(".english").addEventListener("click", () => {
