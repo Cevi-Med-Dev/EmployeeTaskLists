@@ -190,7 +190,7 @@ document.getElementById("addBtn").addEventListener("click",()=>{
   currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
   console.log(currentRole, newArr)
   createInterface(currentRole);
-  document.querySelector("#newTaskPopUp").innerText = ""
+  document.querySelector("#newTaskDesc").innerText = ""
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
 

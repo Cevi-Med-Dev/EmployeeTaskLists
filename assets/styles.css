@@ -143,8 +143,12 @@ img#add{
 #formContainer form {
     width: 80%;
 }
-
+#taskList{
+    display: flex;
+    flex-direction: column-reverse;
+}
 .taskContainer {
+    
     margin-top: 10px;
     width: 100%;
     height: max-content;
