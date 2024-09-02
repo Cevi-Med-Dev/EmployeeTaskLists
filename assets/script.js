@@ -192,10 +192,9 @@ document.getElementById("addBtn").addEventListener("click",()=>{
   console.log(currentRole, newArr)
   createInterface(currentRole);
   document.querySelector("#newTaskDesc").innerText = ""
-  // document.querySelector("#newTaskDesc").value = ""
+  document.querySelector("#newTaskDesc").value = ""
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
-
 document.querySelector(".english").addEventListener("click", () => {
   introJs()
     .setOptions({
@@ -229,6 +228,18 @@ document.querySelector(".english").addEventListener("click", () => {
         {
           element: document.querySelector("#formContainer"),
           intro: `All your Task lists will open up, When you hover over them, they list will expand... You can keep a task list open by clicking its Name.. Give it a try!`,
+        },
+        {
+          element: document.querySelector("#add"),
+          intro: `To add a New task Simply Click here`,
+        },
+        {
+          element: document.querySelector("#newTaskPopUp"),
+          intro: `Describe the New task in this Pop up, When done click Add and Your New task`,
+        },
+        {
+          element: document.querySelector("#taskList"),
+          intro: `You will find your new task listed under a New Task List called "New Task"`,
         },
         {
           element: document.querySelector("#taskList"),
