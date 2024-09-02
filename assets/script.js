@@ -183,6 +183,7 @@ document.getElementById("add").addEventListener("click",()=>{
   document.getElementById("employee").value === "" ? alert("choose a Role and Name before adding task") :
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
+
 document.getElementById("addBtn").addEventListener("click",()=>{
   let newArr = JSON.parse(window.localStorage.getItem("currentRole"));
   newTaskArray.push(`New Task : ${document.getElementById("newTaskDesc").value}`)
@@ -195,6 +196,9 @@ document.getElementById("addBtn").addEventListener("click",()=>{
   document.querySelector("#newTaskDesc").value = ""
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
+
+
+
 document.querySelector(".english").addEventListener("click", () => {
   introJs()
     .setOptions({
@@ -300,6 +304,23 @@ document.querySelector(".spanish").addEventListener("click", () => {
           intro:
             "Se generará una marca de tiempo para realizar un seguimiento de las actualizaciones para que puedas enviar varios formularios",
         },
+        {
+          element: document.querySelector("#formContainer"),
+          intro: "Se abrirán todas tus listas de tareas. Cuando las pases el ratón, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en su nombre. ¡Inténtalo!",
+        },
+        {
+          element: document.querySelector("#add"),
+          intro: "Para añadir una nueva tarea, simplemente haz clic aquí",
+        },
+        {
+          element: document.querySelector("#newTaskPopUp"),
+          intro: "Describe la nueva tarea en este pop-up. Cuando termines, haz clic en Añadir y tu nueva tarea",
+        },
+        {
+          element: document.querySelector("#taskList"),
+          intro: 'Encontrarás tu nueva tarea listada bajo una nueva lista de tareas llamada "Nueva Tarea"',
+        },
+        
         {
           element: document.querySelector("#formContainer"),
           intro: `Toda tu lista de tareas se abrirá. Cuando pases el cursor sobre cualquier lista, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en ella. ¡Inténtalo!`,
