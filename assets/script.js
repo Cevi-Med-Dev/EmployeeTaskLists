@@ -12,7 +12,7 @@ var taskCounter = 0;
 var dynamicWebhook = "";
 var rateOptions = document.querySelectorAll(".smileRating img");
 var d = new Date();
-var newTaskArray = []
+var newTaskArray = [];
 const daysOfWeek = [
   "Sunday",
   "Monday",
@@ -59,34 +59,51 @@ let updateNames = () => {
 };
 const createInterface = (currentRole) => {
   currentRole = window.localStorage.getItem("currentRole");
-  document.getElementById("taskList").innerHTML = ""; 
+  document.getElementById("taskList").innerHTML = "";
   taskCounter = 0;
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
-    document.getElementById("title").innerText = `${document.getElementById("role").value} Task List `;
+    console.log(task);
+    document.getElementById("title").innerHTML = `<span>
+    ${document.getElementById("role").value} Task Listtt
+    <img src="./assets/imgs/${
+      roleImgs[`${document.getElementById("role").value}`][1]
+    }.svg" /></span>`;
     document.getElementById("timeDate").innerText = timeStamp;
-    document.getElementById("roleImg").src = `./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][0]}.png`;
-    document.getElementById("taskList").innerHTML += 
-    `<div class="taskContainer">
+    document.getElementById("roleImg").src = `./assets/imgs/${
+      roleImgs[`${document.getElementById("role").value}`][0]
+    }.png`;
+    document.getElementById(
+      "taskList"
+    ).innerHTML += `<div class="taskContainer">
             <div class="splitH">
                   <h2 class="taskName">${task[0]}</h2>
                   <img class="status" src="./assets/imgs/undone.svg"/>
             </div>
-            <ul>${task[1].map((taskDescription) => {
+            <ul>${task[1]
+              .map((taskDescription) => {
                 return `
                 <li>
                  <label class="taskOverview">${taskDescription}<input type="checkbox" name=${(taskCounter += 1)} value="${taskDescription}">
+                  <img id="taskIcon" src="./assets/imgs/${
+                    roleImgs[`${document.getElementById("role").value}`][2]
+                  }.svg" />
                  <span class="checkmark"></span></label>
-                     <aside id="actionBtns">
-                                <img id="edit" src="./assets//imgs/edit1.svg" alt="">
-                                <img id="trash" src="./assets//imgs/trash1.svg" alt="">
-                      </aside>
-                </li>`}).join("")}
-                       
+                  ${
+                    task[0] === "New Task List"
+                      ? `<aside id="actionBtns">
+                            <img id="edit" name=${taskCounter} src="./assets//imgs/edit1.svg" alt=""/> 
+                            <img id="trash" name=${taskCounter} src="./assets//imgs/trash1.svg" alt=""/>
+                  </aside>`
+                      : ""
+                  }
+                </li>`;
+              })
+              .join("")}
             </ul>
       </div>`;
   });
   document.querySelectorAll(".taskContainer").forEach((taskList) => {
-    console.log(taskList)
+    console.log(taskList);
     taskList
       .querySelectorAll("input[type=checkbox]")
       .forEach((taskCheckbox) => {
@@ -118,7 +135,7 @@ const createInterface = (currentRole) => {
       taskList.querySelector("ul").classList.toggle("show");
     });
   });
-}; 
+};
 
 //triggers
 Array.from(Object.keys(roles)).forEach((role) => {
@@ -126,7 +143,10 @@ Array.from(Object.keys(roles)).forEach((role) => {
 });
 document.getElementById("role").addEventListener("change", ({ target }) => {
   updateNames();
-  window.localStorage.setItem("currentRole",JSON.stringify(localRoles[`${target.value}`]));
+  window.localStorage.setItem(
+    "currentRole",
+    JSON.stringify(localRoles[`${target.value}`])
+  );
   call_formData.set("role", target.value);
 });
 document.getElementById("employee").addEventListener("change", ({ target }) => {
@@ -137,7 +157,9 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   createInterface(document.getElementById("role"));
   target.classList.add("disabled");
 });
-document.getElementById("feedback").addEventListener("focusout", ({ target }) => {
+document
+  .getElementById("feedback")
+  .addEventListener("focusout", ({ target }) => {
     call_formData.set("feedback", target.value);
   });
 rateOptions.forEach((rate) => {
@@ -157,10 +179,7 @@ call_form_.addEventListener("submit", (e) => {
           `${checkBox.name}`,
           `${checkBox.value.slice(0, 35)}..  : ✅`
         )
-      : call_formData.set(
-          `${checkBox.name}`,
-          `${checkBox.value} : ❌`
-        );
+      : call_formData.set(`${checkBox.name}`, `${checkBox.value} : ❌`);
   });
 
   for (var [key, value] of call_formData.entries()) {
@@ -179,25 +198,28 @@ call_form_.addEventListener("submit", (e) => {
     }
   );
 });
-document.getElementById("add").addEventListener("click",()=>{
-  document.getElementById("employee").value === "" ? alert("choose a Role and Name before adding task") :
-  document.querySelector("#newTaskPopUp").classList.toggle("hide") 
-})
+document.getElementById("add").addEventListener("click", () => {
+  document.getElementById("employee").value === ""
+    ? alert("choose a Role and Name before adding task")
+    : document.querySelector("#newTaskPopUp").classList.toggle("hide");
+});
 
-document.getElementById("addBtn").addEventListener("click",()=>{
+document.getElementById("addBtn").addEventListener("click", () => {
   let newArr = JSON.parse(window.localStorage.getItem("currentRole"));
-  newTaskArray.push(`New Task : ${document.getElementById("newTaskDesc").value}`)
-  newArr["New Task List"] = newTaskArray
+  newTaskArray.push(
+    `New Task : ${document.getElementById("newTaskDesc").value}`
+  );
+  newArr["New Task List"] = newTaskArray;
   window.localStorage.setItem("currentRole", JSON.stringify(newArr));
   currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
-  console.log(currentRole, newArr)
+  console.log(currentRole, newArr);
   createInterface(currentRole);
-  document.querySelector("#newTaskDesc").innerText = ""
-  document.querySelector("#newTaskDesc").value = ""
-  document.querySelector("#newTaskPopUp").classList.toggle("hide") 
-})
+  document.querySelector("#newTaskDesc").innerText = "";
+  document.querySelector("#newTaskDesc").value = "";
+  document.querySelector("#newTaskPopUp").classList.toggle("hide");
+});
 
-
+currentRole.length > 0 && createInterface(currentRole);
 
 document.querySelector(".english").addEventListener("click", () => {
   introJs()
@@ -306,7 +328,8 @@ document.querySelector(".spanish").addEventListener("click", () => {
         },
         {
           element: document.querySelector("#formContainer"),
-          intro: "Se abrirán todas tus listas de tareas. Cuando las pases el ratón, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en su nombre. ¡Inténtalo!",
+          intro:
+            "Se abrirán todas tus listas de tareas. Cuando las pases el ratón, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en su nombre. ¡Inténtalo!",
         },
         {
           element: document.querySelector("#add"),
@@ -314,13 +337,15 @@ document.querySelector(".spanish").addEventListener("click", () => {
         },
         {
           element: document.querySelector("#newTaskPopUp"),
-          intro: "Describe la nueva tarea en este pop-up. Cuando termines, haz clic en Añadir y tu nueva tarea",
+          intro:
+            "Describe la nueva tarea en este pop-up. Cuando termines, haz clic en Añadir y tu nueva tarea",
         },
         {
           element: document.querySelector("#taskList"),
-          intro: 'Encontrarás tu nueva tarea listada bajo una nueva lista de tareas llamada "Nueva Tarea"',
+          intro:
+            'Encontrarás tu nueva tarea listada bajo una nueva lista de tareas llamada "Nueva Tarea"',
         },
-        
+
         {
           element: document.querySelector("#formContainer"),
           intro: `Toda tu lista de tareas se abrirá. Cuando pases el cursor sobre cualquier lista, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en ella. ¡Inténtalo!`,

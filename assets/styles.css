@@ -22,9 +22,17 @@ h1 {
     justify-self: center;
     color: #7d7d7d;
 }
+h1#title span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1#title img{
+    width: 50px;
+    height: auto;
+}
 
 #tutorialBtns {
-
     width: 200px;
 }
 
@@ -148,7 +156,6 @@ img#add{
     flex-direction: column;
 }
 .taskContainer {
-    
     margin: 10px 0px;
     width: 100%;
     height: max-content;
@@ -199,6 +206,10 @@ ul {
     justify-content: space-between;
     height: max-content;
     margin-top: 10px;
+}
+li img#taskIcon{
+    width: 50px;
+    height: auto;
 }
 #actionBtns{
     display: flex;
@@ -302,10 +313,6 @@ img.status {
     margin: 15px;
 }
 
-#formContainer label {
-    font-size: 14px;
-    margin: 5px;
-}
 
 #formContainer textarea {
     height: 125px;
