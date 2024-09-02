@@ -60,6 +60,7 @@ let updateNames = () => {
 const createInterface = (currentRole) => {
   currentRole = window.localStorage.getItem("currentRole");
   document.getElementById("taskList").innerHTML = ""; 
+  taskCounter = 0;
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
     document.getElementById("title").innerText = `${document.getElementById("role").value} Task List `;
     document.getElementById("timeDate").innerText = timeStamp;
@@ -145,7 +146,7 @@ rateOptions.forEach((rate) => {
       (rate) => (rate.src = `./assets/imgs/${rate.name}.svg`)
     );
     rate.src = `./assets/imgs/${rate.name}Selected.svg`;
-    call_formData.set("moodRate", rate.name);
+    call_formData.set("moodRate", rate.alt);
   });
 });
 call_form_.addEventListener("submit", (e) => {
@@ -154,11 +155,11 @@ call_form_.addEventListener("submit", (e) => {
     checkBox.checked
       ? call_formData.set(
           `${checkBox.name}`,
-          `${checkBox.value.slice(0, 40)} : ✅`
+          `${checkBox.value.slice(0, 35)}..  : ✅`
         )
       : call_formData.set(
           `${checkBox.name}`,
-          `${checkBox.value.slice(0, 40)} : ❌`
+          `${checkBox.value} : ❌`
         );
   });
 
