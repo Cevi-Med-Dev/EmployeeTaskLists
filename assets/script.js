@@ -192,6 +192,7 @@ document.getElementById("addBtn").addEventListener("click",()=>{
   console.log(currentRole, newArr)
   createInterface(currentRole);
   document.querySelector("#newTaskDesc").innerText = ""
+  // document.querySelector("#newTaskDesc").value = ""
   document.querySelector("#newTaskPopUp").classList.toggle("hide") 
 })
 
