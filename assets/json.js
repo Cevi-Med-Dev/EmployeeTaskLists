@@ -385,12 +385,14 @@ export const webHooks = {
 };
 
 export const roleImgs = {
-  "C.E.O.": ["ceo","./imgs/analyze-svgrepo-com.svg"],
-  "Accounting": ["acc1","./imgs/analyze-svgrepo-com.svg"],
-  "Purchasing Manager": ["pm1","pm2"],
-  "Transportation Coordinator": ["tc1","tc2"],
-  "Shipping Assistant": ["sa1","sa2"],
-  "FrontEnd Web Developer": ["wd1","wd2","wd3"],
-  "Full Stack Developer": ["fd1","fd2"],
-  "graphic designer": ["gd1","gd2"],
-}
+    "C.E.O.": ["ceo","ceo2"],
+    "Accounting": ["acc1","acc2","acc3"],
+    "Purchasing Manager": ["pm1","pm2","pm3"],
+    "Transportation Coordinator": ["tc1","tc2","tc3"],
+    "Shipping Assistant": ["sa1","sa2","sa3"],
+    "FrontEnd Web Developer": ["wd1","wd2","wd3"],
+    "Full Stack Developer": ["fd1","fd2","fd3"],
+    "graphic designer": ["gd1","gd2","gd3"],
+  }
+  
+
