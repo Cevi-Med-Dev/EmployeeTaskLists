@@ -228,9 +228,7 @@ Array.from(document.querySelectorAll("#edit")).forEach(edtBtn => {
 
 document.addEventListener('DOMContentLoaded', ()=>{
   currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
-  alert("Ready!");
   if(currentRole){
-    document.getElementById("employee").value
     console.log(currentRole,  document.getElementById("employee").value );
     createInterface(currentRole)
   }
