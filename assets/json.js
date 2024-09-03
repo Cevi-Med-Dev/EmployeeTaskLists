@@ -177,6 +177,11 @@ export const roles = {
       "Update departments on any changes to stock availability or delivery schedules.",
     ],
   },
+  "Purchasing Assistant" : {
+    "Daily" : ["testing"],
+    "Weekly" : [],
+    "Monthly" : []
+  },
   "Transportation Coordinator": {
     "Daily Tasks": [
       "Check email.",
@@ -354,12 +359,14 @@ export const roles = {
       "Add graphics, text, and audio as needed.",
     ],
   },
+ 
 };
 
 export const employeeRoles = {
   "C.E.O.": ["Simon Cortes"],
   "Accounting": ["Carina Ballesteros"],
   "Purchasing Manager": ["Lina Montesino"],
+  "Purchasing Assistant": ["Angelita"],
   "Transportation Coordinator": ["Angela Fernandez"],
   "Shipping Assistant": ["Stephany Sterling"],
   "FrontEnd Web Developer": ["James Chaves"],
@@ -382,12 +389,15 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
   "Hector Castellano":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
+  "Angelita":
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflnNnUKiNxIeTFJD/wtrGYUDYxySHaiyOn",
 };
 
 export const roleImgs = {
-    "C.E.O.": ["ceo","ceo2"],
+    "C.E.O.": ["ceo","ceo2","ceo3"],
     "Accounting": ["acc1","acc2","acc3"],
     "Purchasing Manager": ["pm1","pm2","pm3"],
+    "Purchasing Assistant": ["pa1","pa2","pa3"],
     "Transportation Coordinator": ["tc1","tc2","tc3"],
     "Shipping Assistant": ["sa1","sa2","sa3"],
     "FrontEnd Web Developer": ["wd1","wd2","wd3"],

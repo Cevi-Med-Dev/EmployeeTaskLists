@@ -64,13 +64,14 @@ const createInterface = (currentRole) => {
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
     console.log(task);
     document.getElementById("title").innerHTML = `<span>
-    ${document.getElementById("role").value} Task Listtt
     <img src="./assets/imgs/${
       roleImgs[`${document.getElementById("role").value}`][1]
-    }.svg" /></span>`;
+    }.svg" />
+    ${document.getElementById("role").value}   
+    </span>`;
     document.getElementById("timeDate").innerText = timeStamp;
     document.getElementById("roleImg").src = `./assets/imgs/${
-      roleImgs[`${document.getElementById("role").value}`][0]
+      roleImgs[`${document.getElementById("role").value}`][1]
     }.png`;
     document.getElementById(
       "taskList"
@@ -172,6 +173,7 @@ rateOptions.forEach((rate) => {
   });
 });
 call_form_.addEventListener("submit", (e) => {
+  document.getElementById("roleImg").src = `./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][0]}.png`;
   e.preventDefault();
   document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
     checkBox.checked
