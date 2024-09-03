@@ -142,6 +142,7 @@ const createInterface = (currentRole) => {
 Array.from(Object.keys(roles)).forEach((role) => {
   document.getElementById("role").add(new Option(role, role));
 });
+
 document.getElementById("role").addEventListener("change", ({ target }) => {
   updateNames();
   window.localStorage.setItem(
@@ -158,9 +159,7 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   createInterface(document.getElementById("role"));
   target.classList.add("disabled");
 });
-document
-  .getElementById("feedback")
-  .addEventListener("focusout", ({ target }) => {
+document.getElementById("feedback").addEventListener("focusout", ({ target }) => {
     call_formData.set("feedback", target.value);
   });
 rateOptions.forEach((rate) => {
@@ -219,9 +218,23 @@ document.getElementById("addBtn").addEventListener("click", () => {
   document.querySelector("#newTaskDesc").innerText = "";
   document.querySelector("#newTaskDesc").value = "";
   document.querySelector("#newTaskPopUp").classList.toggle("hide");
+Array.from(document.querySelectorAll("#edit")).forEach(edtBtn => {
+  console.log(edtBtn)
+  editBtn.addEventListener("click", ({target})=>{
+    console.log(target, target.value)
+  })
+})
 });
 
-currentRole.length > 0 && createInterface(currentRole);
+document.addEventListener('DOMContentLoaded', ()=>{
+  currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
+  alert("Ready!");
+  if(currentRole){
+    document.getElementById("employee").value
+    console.log(currentRole,  document.getElementById("employee").value );
+    createInterface(currentRole)
+  }
+}, false);
 
 document.querySelector(".english").addEventListener("click", () => {
   introJs()
@@ -263,7 +276,7 @@ document.querySelector(".english").addEventListener("click", () => {
         },
         {
           element: document.querySelector("#newTaskPopUp"),
-          intro: `Describe the New task in this Pop up, When done click Add and Your New task`,
+          intro: `Describe the New task in this Pop up, When done click Add and Your New task will now show up in the List`,
         },
         {
           element: document.querySelector("#taskList"),
@@ -331,7 +344,7 @@ document.querySelector(".spanish").addEventListener("click", () => {
         {
           element: document.querySelector("#formContainer"),
           intro:
-            "Se abrirán todas tus listas de tareas. Cuando las pases el ratón, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en su nombre. ¡Inténtalo!",
+            "Se abrirán todas tus listas de tareas. Cuando les pases el ratón por encima, la lista se expandirá... Puedes mantener una lista de tareas abierta haciendo clic en su nombre. ¡Inténtalo!",
         },
         {
           element: document.querySelector("#add"),
@@ -340,7 +353,7 @@ document.querySelector(".spanish").addEventListener("click", () => {
         {
           element: document.querySelector("#newTaskPopUp"),
           intro:
-            "Describe la nueva tarea en este pop-up. Cuando termines, haz clic en Añadir y tu nueva tarea",
+            "Describe la nueva tarea en este pop-up. Cuando termines, haz clic en Añadir y tu nueva tarea aparecera en la lista",
         },
         {
           element: document.querySelector("#taskList"),
@@ -381,3 +394,4 @@ document.querySelector(".spanish").addEventListener("click", () => {
     })
     .start();
 });
+
