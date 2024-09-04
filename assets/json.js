@@ -178,10 +178,47 @@ export const roles = {
     ],
   },
   "Purchasing Assistant" : {
-    "Daily" : ["testing"],
-    "Weekly" : [],
-    "Monthly" : []
-  },
+    "Daily Order Email Review": [
+      "Check and respond to emails related to orders.",
+      "Follow up on any pending order issues or inquiries."
+    ],
+    "Creation of Purchase Orders": [
+      "Generate and issue purchase orders for required products.",
+      "Ensure purchase orders include accurate product details and quantities."
+    ],
+    "Supplier Purchasing": [
+      "Purchase products from suppliers via online platforms and direct contact.",
+      "Confirm product availability and pricing with suppliers."
+    ],
+    "Supplier Follow-Up": [
+      "Confirm or adjust orders as necessary.",
+      "Track orders and ensure they are delivered on time.",
+      "Contact suppliers for order updates, confirmations, or issues.",
+      "Address any concerns or discrepancies with orders."
+    ],
+    "Stock Level Monitoring": [
+      "Regularly check inventory levels in the warehouse.",
+      "Determine when and what products need to be reordered."
+    ],
+    "Supplier Inquiry": [
+      "Research and contact potential new suppliers.",
+      "Evaluate potential suppliers for product quality and pricing.",
+      "Assist with various aspects of the ordering process as needed.",
+      "Ensure smooth execution of purchase orders and supplier transactions."
+    ],
+    "Database Maintenance": [
+      "Update and manage order details in the internal database.",
+      "Record important information such as order dates, suppliers, quantities, and discounts.",
+      "Oversee the management of systems and software (e.g., BigCommerce, QuickBooks, Airtable)."
+    ],
+    "Invoicing Management": [
+      "Ensure invoices are current in systems such as QuickBooks and Airtable.",
+      "Verify accuracy and completeness of invoice records.",
+      "Regularly review and update product and purchase costs.",
+      "Adjust pricing and budget forecasts based on cost changes."
+    ]
+  }
+  ,
   "Transportation Coordinator": {
     "Daily Tasks": [
       "Check email.",

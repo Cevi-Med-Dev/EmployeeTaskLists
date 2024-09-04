@@ -58,21 +58,26 @@ let updateNames = () => {
   }
 };
 const createInterface = (currentRole) => {
+  console.log(currentRole);
   currentRole = window.localStorage.getItem("currentRole");
   document.getElementById("taskList").innerHTML = "";
   taskCounter = 0;
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
     console.log(task);
-    document.getElementById("title").innerHTML = `<span>
+    if (document.getElementById("role").value) {
+      document.getElementById("title").innerHTML = `<span>
     <img src="./assets/imgs/${
       roleImgs[`${document.getElementById("role").value}`][1]
     }.svg" />
     ${document.getElementById("role").value}   
     </span>`;
+    }
     document.getElementById("timeDate").innerText = timeStamp;
-    document.getElementById("roleImg").src = `./assets/imgs/${
-      roleImgs[`${document.getElementById("role").value}`][1]
-    }.png`;
+    if (document.getElementById("role").value) {
+      document.getElementById("roleImg").src = `./assets/imgs/${
+        roleImgs[`${document.getElementById("role").value}`][1]
+      }.png`;
+    }
     document.getElementById(
       "taskList"
     ).innerHTML += `<div class="taskContainer">
@@ -86,7 +91,7 @@ const createInterface = (currentRole) => {
                 <li>
                  <label class="taskOverview">${taskDescription}<input type="checkbox" name=${(taskCounter += 1)} value="${taskDescription}">
                   <img id="taskIcon" src="./assets/imgs/${
-                    roleImgs[`${document.getElementById("role").value}`][2]
+                        roleImgs[`${document.getElementById("role").value}`][2]
                   }.svg" />
                  <span class="checkmark"></span></label>
                   ${
@@ -159,7 +164,9 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   createInterface(document.getElementById("role"));
   target.classList.add("disabled");
 });
-document.getElementById("feedback").addEventListener("focusout", ({ target }) => {
+document
+  .getElementById("feedback")
+  .addEventListener("focusout", ({ target }) => {
     call_formData.set("feedback", target.value);
   });
 rateOptions.forEach((rate) => {
@@ -172,7 +179,9 @@ rateOptions.forEach((rate) => {
   });
 });
 call_form_.addEventListener("submit", (e) => {
-  document.getElementById("roleImg").src = `./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][0]}.png`;
+  document.getElementById("roleImg").src = `./assets/imgs/${
+    roleImgs[`${document.getElementById("role").value}`][0]
+  }.png`;
   e.preventDefault();
   document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
     checkBox.checked
@@ -218,21 +227,26 @@ document.getElementById("addBtn").addEventListener("click", () => {
   document.querySelector("#newTaskDesc").innerText = "";
   document.querySelector("#newTaskDesc").value = "";
   document.querySelector("#newTaskPopUp").classList.toggle("hide");
-Array.from(document.querySelectorAll("#edit")).forEach(edtBtn => {
-  console.log(edtBtn)
-  editBtn.addEventListener("click", ({target})=>{
-    console.log(target, target.value)
-  })
-})
+  Array.from(document.querySelectorAll("#edit")).forEach((edtBtn) => {
+    console.log(edtBtn);
+    editBtn.addEventListener("click", ({ target }) => {
+      console.log(target, target.value);
+    });
+  });
 });
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
-  if(currentRole){
-    console.log(currentRole,  document.getElementById("employee").value );
-    createInterface(currentRole)
-  }
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
+    if (currentRole) {
+      console.log(currentRole);
+      console.log(currentRole, document.getElementById("employee").value);
+      createInterface(currentRole);
+    }
+  },
+  false
+);
 
 document.querySelector(".english").addEventListener("click", () => {
   introJs()
@@ -392,4 +406,3 @@ document.querySelector(".spanish").addEventListener("click", () => {
     })
     .start();
 });
-
