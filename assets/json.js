@@ -18,17 +18,33 @@ export const roles = {
       "Lead the development of the company's short and long-term goals",
     ],
   },
-  "Accounting": {
+  Accounting: {
     Daily: [
       "Record daily transactions (sales, purchases, payments, receipts).",
       "Reconcile daily cash and bank statements.",
       "Review and process invoices and expense reports.",
+      "Review and reply to email Accounting and Admin",
+      "Payment processing for Web page orders",
+      "Refund Request Processing",
+      "Response to Disputes",
+      "Claims to the bank for Fraudulent Charges",
+      "Review and update of airfreight forwarding charges charged by FedEx",
+      "Send at the end of the day the time Card",
+      "Be attentive to the daily deliveries of the orders dispatched by Angelita to be able to move them in accounts receivable to the corresponding status",
+      "Be attentive to WhatsApp chats",
+      "Response to Simon's requests",
+      "Review each of the Truck maintenance receipts and enter address and phone number",
     ],
     Weekly: [
       "Update and reconcile accounts payable and receivable.",
       "Review and categorize transactions in the general ledger.",
       "Monitor and manage cash flow, including bank reconciliations.",
       "Prepare and review payroll.",
+      "Perform travel expense calculations",
+      "Check that all refunds have been carried out and authorized by Simon",
+      "At the end of each week (Friday) make an analysis of the time worked in the warehouse and make a projection for the following week",
+      "Ensure all documentation is digitized and archived",
+      "A warehouse expense report every Friday",
     ],
     Monthly: [
       "Close monthly financial books (record and review journal entries).",
@@ -36,12 +52,19 @@ export const roles = {
       "Prepare and review financial statements (income statement, balance sheet, cash flow statement).",
       "Review and approve expense reports and ensure compliance with budgets.",
       "Analyze financial performance and variances from budget.",
+      "Revision and execution of Monthly Report of gas consumption by states for Semi Truck",
+      "Profit and Loss Month",
+      "Balance Sheet Month",
+      "Preparation and presentation of state taxes (Sales)",
     ],
     Quarterly: [
       "Prepare and file quarterly tax returns and other regulatory filings.",
       "Review and update financial forecasts and budgets.",
       "Conduct a detailed review of financial performance and key metrics.",
       "Perform internal audits and address any discrepancies.",
+      "Filing of DOT Report for tax payments",
+      "Profit and Loss QT",
+      "Balance Sheet QT",
     ],
     Annual: [
       "Prepare and file annual tax returns and ensure compliance with tax laws.",
@@ -49,6 +72,8 @@ export const roles = {
       "Prepare and review annual financial statements and reports.",
       "Coordinate with external auditors for annual audits.",
       "Review and update accounting policies and procedures.",
+      "Profit and Loss Annual",
+      "Balance Sheet  Annual"
     ],
     Ongoing: [
       "Ensure compliance with accounting standards and regulations.",
@@ -177,48 +202,47 @@ export const roles = {
       "Update departments on any changes to stock availability or delivery schedules.",
     ],
   },
-  "Purchasing Assistant" : {
+  "Purchasing Assistant": {
     "Daily Order Email Review": [
       "Check and respond to emails related to orders.",
-      "Follow up on any pending order issues or inquiries."
+      "Follow up on any pending order issues or inquiries.",
     ],
     "Creation of Purchase Orders": [
       "Generate and issue purchase orders for required products.",
-      "Ensure purchase orders include accurate product details and quantities."
+      "Ensure purchase orders include accurate product details and quantities.",
     ],
     "Supplier Purchasing": [
       "Purchase products from suppliers via online platforms and direct contact.",
-      "Confirm product availability and pricing with suppliers."
+      "Confirm product availability and pricing with suppliers.",
     ],
     "Supplier Follow-Up": [
       "Confirm or adjust orders as necessary.",
       "Track orders and ensure they are delivered on time.",
       "Contact suppliers for order updates, confirmations, or issues.",
-      "Address any concerns or discrepancies with orders."
+      "Address any concerns or discrepancies with orders.",
     ],
     "Stock Level Monitoring": [
       "Regularly check inventory levels in the warehouse.",
-      "Determine when and what products need to be reordered."
+      "Determine when and what products need to be reordered.",
     ],
     "Supplier Inquiry": [
       "Research and contact potential new suppliers.",
       "Evaluate potential suppliers for product quality and pricing.",
       "Assist with various aspects of the ordering process as needed.",
-      "Ensure smooth execution of purchase orders and supplier transactions."
+      "Ensure smooth execution of purchase orders and supplier transactions.",
     ],
     "Database Maintenance": [
       "Update and manage order details in the internal database.",
       "Record important information such as order dates, suppliers, quantities, and discounts.",
-      "Oversee the management of systems and software (e.g., BigCommerce, QuickBooks, Airtable)."
+      "Oversee the management of systems and software (e.g., BigCommerce, QuickBooks, Airtable).",
     ],
     "Invoicing Management": [
       "Ensure invoices are current in systems such as QuickBooks and Airtable.",
       "Verify accuracy and completeness of invoice records.",
       "Regularly review and update product and purchase costs.",
-      "Adjust pricing and budget forecasts based on cost changes."
-    ]
-  }
-  ,
+      "Adjust pricing and budget forecasts based on cost changes.",
+    ],
+  },
   "Transportation Coordinator": {
     "Daily Tasks": [
       "Check email.",
@@ -359,7 +383,7 @@ export const roles = {
       "Developments, Features and Codes Reviews.",
     ],
   },
-  "graphic designer": {
+  "Graphic Designer": {
     "Create Logos or Images for Advertising Campaigns": [
       "Develop logos and graphics as per campaign requirements.",
       "Ensure designs align with brand guidelines and campaign objectives.",
@@ -396,19 +420,18 @@ export const roles = {
       "Add graphics, text, and audio as needed.",
     ],
   },
- 
 };
 
 export const employeeRoles = {
   "C.E.O.": ["Simon Cortes"],
-  "Accounting": ["Carina Ballesteros"],
+  Accounting: ["Carina Ballesteros"],
   "Purchasing Manager": ["Lina Montesino"],
-  "Purchasing Assistant": ["Angelita"],
+  "Purchasing Assistant": ["Angela María Peña"],
   "Transportation Coordinator": ["Angela Fernandez"],
   "Shipping Assistant": ["Stephany Sterling"],
   "FrontEnd Web Developer": ["James Chaves"],
   "Full Stack Developer": ["Hector Castellano"],
-  "graphic designer": ["Diana Malpura"],
+  "Graphic Designer": ["Diana Malpura"],
 };
 
 export const webHooks = {
@@ -426,20 +449,18 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
   "Hector Castellano":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
-  "Angelita":
+  "Angela María Peña":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflnNnUKiNxIeTFJD/wtrGYUDYxySHaiyOn",
 };
 
 export const roleImgs = {
-    "C.E.O.": ["ceo","ceo2","ceo3"],
-    "Accounting": ["acc1","acc2","acc3"],
-    "Purchasing Manager": ["pm1","pm2","pm3"],
-    "Purchasing Assistant": ["pa1","pa2","pa3"],
-    "Transportation Coordinator": ["tc1","tc2","tc3"],
-    "Shipping Assistant": ["sa1","sa2","sa3"],
-    "FrontEnd Web Developer": ["wd1","wd2","wd3"],
-    "Full Stack Developer": ["fd1","fd2","fd3"],
-    "graphic designer": ["gd1","gd2","gd3"],
-  }
-  
-
+  "C.E.O.": ["ceo", "ceo2", "ceo3"],
+  Accounting: ["acc1", "acc2", "acc3"],
+  "Purchasing Manager": ["pm1", "pm2", "pm3"],
+  "Purchasing Assistant": ["pa1", "pa2", "pa3"],
+  "Transportation Coordinator": ["tc1", "tc2", "tc3"],
+  "Shipping Assistant": ["sa1", "sa2", "sa3"],
+  "FrontEnd Web Developer": ["wd1", "wd2", "wd3"],
+  "Full Stack Developer": ["fd1", "fd2", "fd3"],
+  "Graphic Designer": ["gd1", "gd2", "gd3"],
+};

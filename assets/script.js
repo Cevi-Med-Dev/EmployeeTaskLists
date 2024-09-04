@@ -97,7 +97,12 @@ const createInterface = (currentRole) => {
                   ${
                     task[0] === "New Task List"
                       ? `<aside id="actionBtns">
-                            <img id="edit" name=${taskCounter} src="./assets//imgs/edit1.svg" alt=""/> 
+                        <section id="editPopUp" class="hide">
+                                <label for="taskEditor">Please edit description of this Task here : </label>
+                                <textarea id="editTaskDesc" class="input" name="taskEditor" type="text"></textarea>
+                                <button class="btn" id="updateBtn"> Update </button>
+                        </section>
+                            <img id="edit" name=${taskCounter} src="./assets//imgs/edit2.svg" alt=""/> 
                             <img id="trash" name=${taskCounter} src="./assets//imgs/trash1.svg" alt=""/>
                   </aside>`
                       : ""
@@ -229,11 +234,19 @@ document.getElementById("addBtn").addEventListener("click", () => {
   document.querySelector("#newTaskPopUp").classList.toggle("hide");
   Array.from(document.querySelectorAll("#edit")).forEach((edtBtn) => {
     console.log(edtBtn);
-    editBtn.addEventListener("click", ({ target }) => {
+    edtBtn.addEventListener("click", ({ target }) => {
       console.log(target, target.value);
+      document.getElementById("editPopUp").classList.toggle("hide")
+    });
+  });
+  Array.from(document.querySelectorAll("#trash")).forEach((dltBtn) => {
+    console.log(dltBtn);
+    dltBtn.addEventListener("click", ({ target }) => {
+      console.log(target, target.value)
     });
   });
 });
+
 
 document.addEventListener(
   "DOMContentLoaded",

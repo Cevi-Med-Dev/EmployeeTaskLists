@@ -22,12 +22,14 @@ h1 {
     justify-self: center;
     color: #7d7d7d;
 }
-h1#title span{
+
+h1#title span {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-h1#title img{
+
+h1#title img {
     width: 50px;
     height: auto;
 }
@@ -92,9 +94,11 @@ select:hover {
     border: 1px solid #07b30aa9;
 
 }
-.hide{
+
+.hide {
     display: none !important;
 }
+
 #formContainer {
     height: max-content;
     min-width: 375px;
@@ -103,17 +107,20 @@ select:hover {
     align-items: center;
     flex-direction: column;
 }
-#tools{
+
+#tools {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
-#newTask{
+
+#newTask {
     display: flex;
     flex-direction: row-reverse;
     position: relative;
 }
-#newTaskPopUp{
+
+#newTaskPopUp {
     position: absolute;
     right: 75px;
     top: 15px;
@@ -128,21 +135,25 @@ select:hover {
     background-color: white;
     border-radius: 5px;
 }
-#newTaskPopUp textarea.input{
-   width: 90%;
-   outline: none;
+
+#newTaskPopUp textarea.input {
+    width: 90%;
+    outline: none;
 }
-img#roleImg{
+
+img#roleImg {
     align-self: center;
     height: auto;
     width: 170px;
 }
-img#add{
+
+img#add {
     width: 45px;
     margin: 20px;
     cursor: pointer;
 }
-#formContainer img#roleImg{
+
+#formContainer img#roleImg {
     width: 30%;
     height: auto;
 }
@@ -151,10 +162,12 @@ img#add{
 #formContainer form {
     width: 80%;
 }
-#taskList{
+
+#taskList {
     display: flex;
     flex-direction: column;
 }
+
 .taskContainer {
     margin: 10px 0px;
     width: 100%;
@@ -188,7 +201,7 @@ img#add{
     flex-direction: column;
     border-radius: 5px;
 
-  
+
 }
 
 .taskContainer ul {
@@ -207,29 +220,57 @@ ul {
     height: max-content;
     margin-top: 10px;
 }
-li img#taskIcon{
+
+li img#taskIcon {
     width: 35px;
     height: auto;
 }
-#actionBtns{
+
+#actionBtns {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-#actionBtns img{
+
+#actionBtns img {
     width: 35px;
     height: auto;
     margin: 0 5px;
     border-radius: 50%;
+    padding: 2px;
 }
 
-#actionBtns img#edit:hover{
+#actionBtns img#edit:hover {
     border: 0.5px solid green;
 }
-#actionBtns img#trash:hover{
-    border: 0.5px solid #C40C11;
 
+#actionBtns img#trash:hover {
+    border: 0.5px solid #C40C11;
 }
+
+#editPopUp{
+    background: white;
+    position: absolute;
+    right: 90px;
+    top: 0px;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+#editPopUp label{
+    margin: 10px 5px;
+    text-align: center;
+}
+
+#editTaskDesc {
+    width: 80%;
+}
+
 .taskOverview {
     width: 100%;
     display: flex;
@@ -306,16 +347,8 @@ img.status {
     transform: rotate(45deg);
 }
 
-
 #formContainer hr {
     margin: 15px;
-}
-
-
-#formContainer textarea {
-    height: 125px;
-    width: 100%;
-    outline: none;
 }
 
 .btn {
