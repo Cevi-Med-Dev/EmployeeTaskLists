@@ -136,6 +136,7 @@ select:hover {
     border-radius: 5px;
 }
 
+
 #newTaskPopUp textarea.input {
     width: 90%;
     outline: none;
@@ -249,7 +250,7 @@ li img#taskIcon {
     border: 0.5px solid #C40C11;
 }
 
-#editPopUp{
+#actionBtns > section{
     background: white;
     position: absolute;
     right: 90px;
@@ -262,7 +263,7 @@ li img#taskIcon {
     align-items: center;
     z-index: 1;
 }
-#editPopUp label{
+#actionBtns > section label{
     margin: 10px 5px;
     text-align: center;
 }

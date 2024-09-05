@@ -63,7 +63,6 @@ const createInterface = (currentRole) => {
   document.getElementById("taskList").innerHTML = "";
   taskCounter = 0;
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
-    console.log(task);
     if (document.getElementById("role").value) {
       document.getElementById("title").innerHTML = `<span>
     <img src="./assets/imgs/${
@@ -80,18 +79,29 @@ const createInterface = (currentRole) => {
     }
     document.getElementById(
       "taskList"
+    ).innerHTML += `<div class="taskContainer hide">
+                                  <div class="splitH">
+                                        <h2 class="taskName">New Task List</h2>
+                                        <img class="status" src="./assets/imgs/undone.svg"/>
+                                  </div>
+                                  <ul id="newTaskList">
+                                  </ul>
+                    </div>`;
+    document.getElementById(
+      "taskList"
     ).innerHTML += `<div class="taskContainer">
             <div class="splitH">
                   <h2 class="taskName">${task[0]}</h2>
                   <img class="status" src="./assets/imgs/undone.svg"/>
             </div>
-            <ul>${task[1]
+            <ul>
+            ${task[1]
               .map((taskDescription) => {
                 return `
                 <li>
                  <label class="taskOverview">${taskDescription}<input type="checkbox" name=${(taskCounter += 1)} value="${taskDescription}">
                   <img id="taskIcon" src="./assets/imgs/${
-                        roleImgs[`${document.getElementById("role").value}`][2]
+                    roleImgs[`${document.getElementById("role").value}`][2]
                   }.svg" />
                  <span class="checkmark"></span></label>
                   ${
@@ -147,12 +157,31 @@ const createInterface = (currentRole) => {
     });
   });
 };
+const addNewTask = (newTask, newTaskList) => {
+  document.querySelector(".taskContainer").classList.remove("hide");
+  console.log("total list  : ", newTaskList, "new task : ", newTask);
+  document.getElementById("newTaskList").innerHTML += `
+                <li>
+                 <label class="taskOverview">${newTask}
+                  <input type="checkbox" name=${(taskCounter += 1)} value="${newTask}">
+                  <span class="checkmark"></span>
+                 </label>
+                 <aside id="actionBtns">
+                        <section id="editPopUp" class="hide">
+                                <label for="taskEditor">Please edit description of this Task here : </label>
+                                <textarea id="editTaskDesc" class="input" name="taskEditor" type="text"></textarea>
+                                <button class="btn" id="updateBtn"> Update </button>
+                        </section>
+                            <img id="edit" name=${taskCounter} src="./assets//imgs/edit2.svg" alt=""/> 
+                            <img id="trash" name=${taskCounter} src="./assets//imgs/trash1.svg" alt=""/>
+                  </aside>
+                </li>`;
+};
 
 //triggers
 Array.from(Object.keys(roles)).forEach((role) => {
   document.getElementById("role").add(new Option(role, role));
 });
-
 document.getElementById("role").addEventListener("change", ({ target }) => {
   updateNames();
   window.localStorage.setItem(
@@ -183,6 +212,7 @@ rateOptions.forEach((rate) => {
     call_formData.set("moodRate", rate.alt);
   });
 });
+
 call_form_.addEventListener("submit", (e) => {
   document.getElementById("roleImg").src = `./assets/imgs/${
     roleImgs[`${document.getElementById("role").value}`][0]
@@ -213,22 +243,26 @@ call_form_.addEventListener("submit", (e) => {
     }
   );
 });
+
 document.getElementById("add").addEventListener("click", () => {
   document.getElementById("employee").value === ""
     ? alert("choose a Role and Name before adding task")
     : document.querySelector("#newTaskPopUp").classList.toggle("hide");
 });
 
+//W.I.P
 document.getElementById("addBtn").addEventListener("click", () => {
-  let newArr = JSON.parse(window.localStorage.getItem("currentRole"));
-  newTaskArray.push(
-    `New Task : ${document.getElementById("newTaskDesc").value}`
-  );
+  let newArr = JSON.parse(window.localStorage.getItem("New Task List")) || [];
+  newTaskArray.push(`🆕 - ${document.getElementById("newTaskDesc").value}`);
   newArr["New Task List"] = newTaskArray;
-  window.localStorage.setItem("currentRole", JSON.stringify(newArr));
-  currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
-  console.log(currentRole, newArr);
-  createInterface(currentRole);
+  window.localStorage.setItem("New Task List", JSON.stringify(newArr));
+  let newTaskList = JSON.parse(window.localStorage.getItem("New Task List"));
+  console.log(newTaskList, newArr);
+  addNewTask(
+    `🆕 - ${document.getElementById("newTaskDesc").value}`,
+    newTaskList
+  );
+
   document.querySelector("#newTaskDesc").innerText = "";
   document.querySelector("#newTaskDesc").value = "";
   document.querySelector("#newTaskPopUp").classList.toggle("hide");
@@ -236,18 +270,18 @@ document.getElementById("addBtn").addEventListener("click", () => {
     console.log(edtBtn);
     edtBtn.addEventListener("click", ({ target }) => {
       console.log(target, target.value);
-      document.getElementById("editPopUp").classList.toggle("hide")
+      document.getElementById("editPopUp").classList.toggle("hide");
     });
   });
   Array.from(document.querySelectorAll("#trash")).forEach((dltBtn) => {
     console.log(dltBtn);
     dltBtn.addEventListener("click", ({ target }) => {
-      console.log(target, target.value)
+      console.log(target, target.value);
     });
   });
 });
 
-
+//W.I.P
 document.addEventListener(
   "DOMContentLoaded",
   () => {
