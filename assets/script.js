@@ -258,10 +258,7 @@ document.getElementById("addBtn").addEventListener("click", () => {
   window.localStorage.setItem("New Task List", JSON.stringify(newArr));
   let newTaskList = JSON.parse(window.localStorage.getItem("New Task List"));
   console.log(newTaskList, newArr);
-  addNewTask(
-    `🆕 - ${document.getElementById("newTaskDesc").value}`,
-    newTaskList
-  );
+  addNewTask(`🆕 - ${document.getElementById("newTaskDesc").value}`,newTaskList);
 
   document.querySelector("#newTaskDesc").innerText = "";
   document.querySelector("#newTaskDesc").value = "";
@@ -273,10 +270,12 @@ document.getElementById("addBtn").addEventListener("click", () => {
       document.getElementById("editPopUp").classList.toggle("hide");
     });
   });
+
   Array.from(document.querySelectorAll("#trash")).forEach((dltBtn) => {
     console.log(dltBtn);
     dltBtn.addEventListener("click", ({ target }) => {
-      console.log(target, target.value);
+      target.parentNode.parentNode.remove()
+      console.log(target, target.parentNode.parentNode);
     });
   });
 });
