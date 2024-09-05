@@ -73,7 +73,7 @@ export const roles = {
       "Coordinate with external auditors for annual audits.",
       "Review and update accounting policies and procedures.",
       "Profit and Loss Annual",
-      "Balance Sheet  Annual"
+      "Balance Sheet  Annual",
     ],
     Ongoing: [
       "Ensure compliance with accounting standards and regulations.",
@@ -241,6 +241,54 @@ export const roles = {
       "Verify accuracy and completeness of invoice records.",
       "Regularly review and update product and purchase costs.",
       "Adjust pricing and budget forecasts based on cost changes.",
+    ],
+  },
+  "Sales Support": {
+    "Daily Sales Email Review": [
+      "Review Sales Emails Daily.",
+      "Check and respond to sales emails.",
+      "Follow up on any pending issues or inquiries.",
+    ],
+    "Support for CEO": [
+      "Provide Direct Support to the CEO.",
+      "Assist with any activities or tasks required by the CEO.",
+      "Prioritize and execute tasks as directed by the CEO.",
+    ],
+    "Estimate and Invoice Management": [
+      "Prepare and issue estimates for potential projects or sales.",
+      "Ensure accuracy and detail in estimates.",
+      "Generate and send invoices for completed sales or services.",
+      "Verify that invoices are accurate and complete.",
+      "Monitor the status of sent estimates and invoices.",
+      "Follow up with customers to ensure timely responses and payments.",
+    ],
+    "Customer Assistance": [
+      "Make Calls, Assistance, and Support.",
+      "Assist existing and potential customers with inquiries and support via email.",
+    ],
+    "Database Management": [
+      "Maintain and update CRM and Airtable databases.",
+      "Ensure data accuracy and completeness.",
+      "Gather and organize data for new database creation.",
+      "Ensure data is accurate and relevant.",
+    ],
+    "Shipping Label Creation": [
+      "Prepare and print shipping labels for outgoing orders when necessary.",
+      "Ensure accuracy in shipping details.",
+    ],
+    "Appointment Management": [
+      "Manage Reminders and Appointments.",
+      "Inform the CEO of upcoming appointments and ensure reminders are set.",
+    ],
+    "Meeting Documentation": [
+      "Document Key Points During Meetings.",
+      "Take detailed notes during meetings.",
+      "Ensure clear and accurate documentation of key points.",
+    ],
+    "Accounts Receivable Management": [
+      "Oversee the database of accounts receivable.",
+      "Make calls and send emails to customers regarding outstanding payments.",
+      "Update information in Airtable as needed.",
     ],
   },
   "Transportation Coordinator": {
@@ -427,8 +475,9 @@ export const employeeRoles = {
   Accounting: ["Carina Ballesteros"],
   "Purchasing Manager": ["Lina Montesino"],
   "Purchasing Assistant": ["Angela María Peña"],
+  "Sales Support": ["Nataly Arboleda"],
   "Transportation Coordinator": ["Angela Fernandez"],
-  "Shipping Assistant": ["Stephany Sterling"],
+  "Shipping Assistant": ["Stephanie Sterling"],
   "FrontEnd Web Developer": ["James Chaves"],
   "Full Stack Developer": ["Hector Castellano"],
   "Graphic Designer": ["Diana Malpura"],
@@ -445,6 +494,8 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfluyS106ZH3jb1YX/wtrNJpKelK22fAU3H",
   "James Chaves":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflsCEf4iRxfSPwTg/wtrLNbYixCSeOepY0",
+  "Nataly Arboleda":
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflq8QqCa9861KWTC/wtrJjn9QpUt5X9PYm",
   "Diana Malpura":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
   "Hector Castellano":
@@ -458,6 +509,7 @@ export const roleImgs = {
   Accounting: ["acc1", "acc2", "acc3"],
   "Purchasing Manager": ["pm1", "pm2", "pm3"],
   "Purchasing Assistant": ["pa1", "pa2", "pa3"],
+  "Sales Support": ["ss1", "ss2", "ss3"],
   "Transportation Coordinator": ["tc1", "tc2", "tc3"],
   "Shipping Assistant": ["sa1", "sa2", "sa3"],
   "FrontEnd Web Developer": ["wd1", "wd2", "wd3"],
