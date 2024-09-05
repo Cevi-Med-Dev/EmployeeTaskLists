@@ -169,7 +169,7 @@ const addNewTask = (newTask, newTaskList) => {
                         <section id="editPopUp" class="hide">
                                 <label for="taskEditor">Please edit description of this Task here : </label>
                                 <textarea id="editTaskDesc" class="input" name="taskEditor" type="text"></textarea>
-                                <button class="btn" id="updateBtn"> Update </button>
+                                <button class="btn" id="updateBtn" disabled > Update </button>
                         </section>
                             <img id="edit" name=${taskCounter} src="./assets//imgs/edit2.svg" alt=""/> 
                             <img id="trash" name=${taskCounter} src="./assets//imgs/trash1.svg" alt=""/>
