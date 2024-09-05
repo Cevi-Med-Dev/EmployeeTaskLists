@@ -65,10 +65,10 @@ const createInterface = (currentRole) => {
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
     if (document.getElementById("role").value) {
       document.getElementById("title").innerHTML = `<span>
-    <img src="./assets/imgs/${
-      roleImgs[`${document.getElementById("role").value}`][1]
-    }.svg" />
-    ${document.getElementById("role").value}   
+      <img src="./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][1]}.svg"/>
+      <span>${window.localStorage.getItem("activeRole")} </span>
+      <small>${document.getElementById("role").value} </small>
+  
     </span>`;
     }
     document.getElementById("timeDate").innerText = timeStamp;
@@ -100,9 +100,8 @@ const createInterface = (currentRole) => {
                 return `
                 <li>
                  <label class="taskOverview">${taskDescription}<input type="checkbox" name=${(taskCounter += 1)} value="${taskDescription}">
-                  <img id="taskIcon" src="./assets/imgs/${
-                    roleImgs[`${document.getElementById("role").value}`][2]
-                  }.svg" />
+                  
+                  ${ document.getElementById("role").value ? `<img id="taskIcon" src="./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][2]}.svg"/>` : "" }
                  <span class="checkmark"></span></label>
                   ${
                     task[0] === "New Task List"
@@ -191,12 +190,13 @@ document.getElementById("role").addEventListener("change", ({ target }) => {
   call_formData.set("role", target.value);
 });
 document.getElementById("employee").addEventListener("change", ({ target }) => {
+  window.localStorage.setItem("activeRole", target.value);
   call_formData.set("employee", target.value);
   call_formData.set("timeStamp", timeStamp);
   dynamicWebhook = webHooks[`${target.value}`];
   document.getElementById("role").classList.add("disabled");
   createInterface(document.getElementById("role"));
-  target.classList.add("disabled");
+
 });
 document
   .getElementById("feedback")
@@ -284,12 +284,11 @@ document.getElementById("addBtn").addEventListener("click", () => {
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    currentRole = JSON.parse(window.localStorage.getItem("currentRole"));
-    if (currentRole) {
-      console.log(currentRole);
+      console.log(window.localStorage.getItem("activeRole"));
+      document.getElementById("role").classList.remove("disabled");
       console.log(currentRole, document.getElementById("employee").value);
-      createInterface(currentRole);
-    }
+      // createInterface(currentRole);
+
   },
   false
 );

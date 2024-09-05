@@ -14,22 +14,28 @@ body {
     padding: 0;
 }
 
-h1 {
+title{
     font-size: 35px;
     margin: 30px;
     width: max-content;
     text-align: center;
     justify-self: center;
-    color: #7d7d7d;
+    
 }
 
-h1#title span {
+#title span {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    color: #7d7d7d;
 }
-
-h1#title img {
+#title small{
+    font-weight: 100;
+    font-size: 22px;
+    color: black;
+}
+#title img {
     width: 50px;
     height: auto;
 }
