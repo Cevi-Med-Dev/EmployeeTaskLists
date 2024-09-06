@@ -291,11 +291,9 @@ document.getElementById("addBtn").addEventListener("click", () => {
       container.querySelector("h5").style.borderBottom ="1px solid orange"
 
       container.querySelector("#updateBtn").addEventListener("click",({target})=>{
-        console.log(target, target.parentNode, target.parentNode.parentNode)
-        // call_formData.set("feedback", target.value);
-        container.querySelector("h5").value = `🆕 - ${container.querySelector("#editTaskDesc").value}`;
+        call_params[`${target.parentNode.parentNode.querySelector("#edit").name}`] = `🆕 - ${container.querySelector("#editTaskDesc").value}`;
         container.querySelector("h5").innerText = `🆕 - ${container.querySelector("#editTaskDesc").value}`
-        // container.querySelector(".editPopUp").classList.toggle("hide");
+        container.querySelector(".editPopUp").classList.toggle("hide");
         container.querySelector("h5").style.borderBottom =""
       })
     });
