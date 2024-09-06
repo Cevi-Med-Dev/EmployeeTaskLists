@@ -256,7 +256,7 @@ li img#taskIcon {
     border: 0.5px solid #C40C11;
 }
 
-#actionBtns > section{
+#actionBtns > section.editPopUp{
     background: white;
     position: absolute;
     right: 90px;

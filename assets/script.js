@@ -134,19 +134,6 @@ const createInterface = (currentRole) => {
                       : ""
                   }
                  <span class="checkmark"></span></label>
-                  ${
-                    task[0] === "New Task List"
-                      ? `<aside id="actionBtns">
-                        <section id="editPopUp" class="hide">
-                                <label for="taskEditor">Please edit description of this Task here : </label>
-                                <textarea id="editTaskDesc" class="input" name="taskEditor" type="text"></textarea>
-                                <button class="btn" id="updateBtn"> Update </button>
-                        </section>
-                            <img id="edit" name=${taskCounter} src="./assets//imgs/edit2.svg" alt=""/> 
-                            <img id="trash" name=${taskCounter} src="./assets//imgs/trash1.svg" alt=""/>
-                  </aside>`
-                      : ""
-                  }
                 </li>`;
               })
               .join("")}
@@ -180,7 +167,7 @@ const addNewTask = (newTask, newTaskList) => {
                   <span class="checkmark"></span>
                  </label>
                  <aside id="actionBtns">
-                        <section id="editPopUp" class="hide">
+                        <section class="editPopUp hide">
                                 <label for="taskEditor">Please edit description of this Task here : </label>
                                 <textarea id="editTaskDesc" class="input" name="taskEditor" type="text"></textarea>
                                 <span class="btn" id="updateBtn" > Update </span>
@@ -226,9 +213,7 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   document.getElementById("role").classList.add("disabled");
   createInterface(document.getElementById("role"));
 });
-document
-  .getElementById("feedback")
-  .addEventListener("focusout", ({ target }) => {
+document.getElementById("feedback").addEventListener("focusout", ({ target }) => {
     call_formData.set("feedback", target.value);
   });
 rateOptions.forEach((rate) => {
@@ -300,15 +285,17 @@ document.getElementById("addBtn").addEventListener("click", () => {
 
   Array.from(document.querySelectorAll("#edit")).forEach((edtBtn) => {
     edtBtn.addEventListener("click", ({ target }) => {
-      document.getElementById("editPopUp").classList.toggle("hide");
-      updateListView(newtaskContainer);
       let container = target.parentNode.parentNode
+      container.querySelector(".editPopUp").classList.toggle("hide");
+      updateListView(newtaskContainer);
       container.querySelector("h5").style.borderBottom ="1px solid orange"
-      console.log(container)
+
       container.querySelector("#updateBtn").addEventListener("click",({target})=>{
-        console.log(target,container,container.querySelector("h5").innerText, `🆕 - ${container.querySelector("#editTaskDesc").value}`)
+        console.log(target, target.parentNode, target.parentNode.parentNode)
+        // call_formData.set("feedback", target.value);
+        container.querySelector("h5").value = `🆕 - ${container.querySelector("#editTaskDesc").value}`;
         container.querySelector("h5").innerText = `🆕 - ${container.querySelector("#editTaskDesc").value}`
-        document.getElementById("editPopUp").classList.toggle("hide");
+        // container.querySelector(".editPopUp").classList.toggle("hide");
         container.querySelector("h5").style.borderBottom =""
       })
     });
