@@ -62,7 +62,6 @@ let updateListView = (checkBoxContainer) => {
     checkBoxContainer.querySelectorAll("input:checked~.checkmark").length ===
     checkBoxContainer.querySelectorAll("input[type=checkbox]").length
   ) {
-    console.log(document.getElementById(".newTaskList ul"));
     checkBoxContainer.querySelector("img.status").src =
       "./assets/imgs/logo.png";
     checkBoxContainer.style.color = "green";
@@ -161,12 +160,14 @@ const createInterface = (currentRole) => {
       .forEach((taskCheckbox) => {
         taskCheckbox.addEventListener("change", () => {
           updateListView(taskList);
+          playSound('./assets/audio/check.mp3')
         });
       });
     //keeps tb task
     taskList.querySelector(".splitH").addEventListener("click", (e) => {
       taskList.querySelector("ul").classList.toggle("show");
     });
+
   });
 };
 const addNewTask = (newTask, newTaskList) => {
@@ -196,10 +197,14 @@ const addNewTask = (newTask, newTaskList) => {
     .forEach((taskCheckbox) => {
       taskCheckbox.addEventListener("change", () => {
         updateListView(newtaskContainer);
+        playSound('./assets/audio/check.mp3')
       });
     });
   updateListView(newtaskContainer);
 };
+const playSound = (soundFile)=> {
+  new Audio(soundFile).play();
+}
 
 //triggers
 Array.from(Object.keys(roles)).forEach((role) => {
@@ -236,6 +241,7 @@ rateOptions.forEach((rate) => {
   });
 });
 call_form_.addEventListener("submit", (e) => {
+  playSound('./assets/audio/sent.mp3')
   document.getElementById("roleImg").src = `./assets/imgs/${
     roleImgs[`${document.getElementById("role").value}`][0]
   }.png`;
@@ -271,6 +277,13 @@ document.getElementById("add").addEventListener("click", () => {
     : document.querySelector("#newTaskPopUp").classList.toggle("hide");
 });
 
+//sounds
+document.querySelectorAll("select, img, button").forEach(btn => {
+  btn.addEventListener("click",()=>{playSound('./assets/audio/pop.mp3')
+})
+})
+
+
 //W.I.P
 document.getElementById("addBtn").addEventListener("click", () => {
   let newtaskContainer = document.querySelector(".taskContainer");
@@ -279,10 +292,7 @@ document.getElementById("addBtn").addEventListener("click", () => {
   newArr["New Task List"] = newTaskArray;
   window.localStorage.setItem("New Task List", JSON.stringify(newArr));
   let newTaskList = JSON.parse(window.localStorage.getItem("New Task List"));
-  addNewTask(
-    `🆕 - ${document.getElementById("newTaskDesc").value}`,
-    newTaskList
-  );
+  addNewTask(`🆕 - ${document.getElementById("newTaskDesc").value}`,newTaskList);
 
   document.querySelector("#newTaskDesc").innerText = "";
   document.querySelector("#newTaskDesc").value = "";
@@ -308,6 +318,7 @@ document.getElementById("addBtn").addEventListener("click", () => {
     dltBtn.addEventListener("click", ({ target }) => {
       target.parentNode.parentNode.remove();
       updateListView(newtaskContainer);
+      playSound('./assets/audio/deleted.mp3')
     });
   });
 });
