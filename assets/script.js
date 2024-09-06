@@ -62,6 +62,7 @@ let updateListView = (checkBoxContainer) => {
     checkBoxContainer.querySelectorAll("input:checked~.checkmark").length ===
     checkBoxContainer.querySelectorAll("input[type=checkbox]").length
   ) {
+    playSound('./assets/audio/allTaskDone.mp3')
     checkBoxContainer.querySelector("img.status").src =
       "./assets/imgs/logo.png";
     checkBoxContainer.style.color = "green";
@@ -77,6 +78,7 @@ let updateListView = (checkBoxContainer) => {
     checkBoxContainer.querySelector("h2").style.color = "black";
     checkBoxContainer.style.background = "white";
   }
+  
 };
 const createInterface = (currentRole) => {
   // console.log(currentRole);
@@ -267,9 +269,6 @@ document.querySelectorAll("select, img, button").forEach(btn => {
   btn.addEventListener("click",()=>{playSound('./assets/audio/pop.mp3')
 })
 })
-
-
-//W.I.P
 document.getElementById("addBtn").addEventListener("click", () => {
   let newtaskContainer = document.querySelector(".taskContainer");
   let newArr = JSON.parse(window.localStorage.getItem("New Task List")) || [];
