@@ -301,6 +301,10 @@ li img#taskIcon {
     height: 0;
     width: 0;
 }
+.taskOverview h5{
+    margin: 0;
+    padding-top: 5px;
+}
 
 .checkmark {
     position: absolute;
@@ -412,4 +416,8 @@ h4 {
 
 #moodRate {
     opacity: 0;
+}
+
+span#updateBtn{
+    text-align: center;
 }

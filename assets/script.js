@@ -57,15 +57,39 @@ let updateNames = () => {
     console.log("error");
   }
 };
+let updateListView = (checkBoxContainer) => {
+  if (
+    checkBoxContainer.querySelectorAll("input:checked~.checkmark").length ===
+    checkBoxContainer.querySelectorAll("input[type=checkbox]").length
+  ) {
+    console.log(document.getElementById(".newTaskList ul"));
+    checkBoxContainer.querySelector("img.status").src =
+      "./assets/imgs/logo.png";
+    checkBoxContainer.style.color = "green";
+    checkBoxContainer.style.border = "2px solid green";
+    checkBoxContainer.style.background = "#3EA54387";
+    checkBoxContainer.querySelector("h2").style.color = "white";
+    checkBoxContainer.querySelector("ul").style.background = "white";
+  } else {
+    checkBoxContainer.querySelector("img.status").src =
+      "./assets/imgs/undone.svg";
+    checkBoxContainer.querySelector("h2").style.color = "black";
+    checkBoxContainer.style.color = "#black";
+    checkBoxContainer.querySelector("h2").style.color = "black";
+    checkBoxContainer.style.background = "white";
+  }
+};
 const createInterface = (currentRole) => {
-  console.log(currentRole);
+  // console.log(currentRole);
   currentRole = window.localStorage.getItem("currentRole");
   document.getElementById("taskList").innerHTML = "";
   taskCounter = 0;
   Object.entries(JSON.parse(currentRole)).forEach((task) => {
     if (document.getElementById("role").value) {
       document.getElementById("title").innerHTML = `<span>
-      <img src="./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][1]}.svg"/>
+      <img src="./assets/imgs/${
+        roleImgs[`${document.getElementById("role").value}`][1]
+      }.svg"/>
       <span>${window.localStorage.getItem("activeRole")} </span>
       <small>${document.getElementById("role").value} </small>
   
@@ -84,8 +108,8 @@ const createInterface = (currentRole) => {
                                         <h2 class="taskName">New Task List</h2>
                                         <img class="status" src="./assets/imgs/undone.svg"/>
                                   </div>
-                                  <ul id="newTaskList">
-                                  </ul>
+                          <ul id="newTaskList">
+                          </ul>
                     </div>`;
     document.getElementById(
       "taskList"
@@ -98,10 +122,18 @@ const createInterface = (currentRole) => {
             ${task[1]
               .map((taskDescription) => {
                 return `
-                <li>
+                <li class="chkBx">
                  <label class="taskOverview">${taskDescription}<input type="checkbox" name=${(taskCounter += 1)} value="${taskDescription}">
                   
-                  ${ document.getElementById("role").value ? `<img id="taskIcon" src="./assets/imgs/${roleImgs[`${document.getElementById("role").value}`][2]}.svg"/>` : "" }
+                  ${
+                    document.getElementById("role").value
+                      ? `<img id="taskIcon" src="./assets/imgs/${
+                          roleImgs[
+                            `${document.getElementById("role").value}`
+                          ][2]
+                        }.svg"/>`
+                      : ""
+                  }
                  <span class="checkmark"></span></label>
                   ${
                     task[0] === "New Task List"
@@ -122,32 +154,13 @@ const createInterface = (currentRole) => {
             </ul>
       </div>`;
   });
+
   document.querySelectorAll(".taskContainer").forEach((taskList) => {
-    console.log(taskList);
     taskList
       .querySelectorAll("input[type=checkbox]")
       .forEach((taskCheckbox) => {
-        //checks if all task are in task group are completed
         taskCheckbox.addEventListener("change", () => {
-          if (
-            taskList.querySelectorAll("input:checked~.checkmark").length ===
-            taskList.querySelectorAll("input[type=checkbox]").length
-          ) {
-            // taskList.style.pointerEvents ="none";
-            taskList.querySelector("img.status").src = "./assets/imgs/logo.png";
-            taskList.style.color = "green";
-            taskList.style.border = "2px solid green";
-            taskList.style.background = "#3EA54387";
-            taskList.querySelector("h2").style.color = "white";
-            taskList.querySelector("ul").style.background = "white";
-          } else {
-            taskList.querySelector("img.status").src =
-              "./assets/imgs/undone.svg";
-            taskList.querySelector("h2").style.color = "black";
-            taskList.style.color = "#black";
-            taskList.querySelector("h2").style.color = "black";
-            taskList.style.background = "white";
-          }
+          updateListView(taskList);
         });
       });
     //keeps tb task
@@ -158,10 +171,10 @@ const createInterface = (currentRole) => {
 };
 const addNewTask = (newTask, newTaskList) => {
   document.querySelector(".taskContainer").classList.remove("hide");
-  console.log("total list  : ", newTaskList, "new task : ", newTask);
   document.getElementById("newTaskList").innerHTML += `
                 <li>
-                 <label class="taskOverview">${newTask}
+                 <label class="taskOverview">
+                 <h5>${newTask}</h5>
                   <input type="checkbox" name=${(taskCounter += 1)} value="${newTask}">
                   <span class="checkmark"></span>
                  </label>
@@ -175,6 +188,17 @@ const addNewTask = (newTask, newTaskList) => {
                             <img id="trash" name=${taskCounter} src="./assets//imgs/trash1.svg" alt=""/>
                   </aside>
                 </li>`;
+
+  let newtaskContainer = document.querySelector(".taskContainer");
+  document
+    .querySelector("#newTaskList")
+    .querySelectorAll("input[type=checkbox]")
+    .forEach((taskCheckbox) => {
+      taskCheckbox.addEventListener("change", () => {
+        updateListView(newtaskContainer);
+      });
+    });
+  updateListView(newtaskContainer);
 };
 
 //triggers
@@ -196,7 +220,6 @@ document.getElementById("employee").addEventListener("change", ({ target }) => {
   dynamicWebhook = webHooks[`${target.value}`];
   document.getElementById("role").classList.add("disabled");
   createInterface(document.getElementById("role"));
-
 });
 document
   .getElementById("feedback")
@@ -212,7 +235,6 @@ rateOptions.forEach((rate) => {
     call_formData.set("moodRate", rate.alt);
   });
 });
-
 call_form_.addEventListener("submit", (e) => {
   document.getElementById("roleImg").src = `./assets/imgs/${
     roleImgs[`${document.getElementById("role").value}`][0]
@@ -243,7 +265,6 @@ call_form_.addEventListener("submit", (e) => {
     }
   );
 });
-
 document.getElementById("add").addEventListener("click", () => {
   document.getElementById("employee").value === ""
     ? alert("choose a Role and Name before adding task")
@@ -252,47 +273,44 @@ document.getElementById("add").addEventListener("click", () => {
 
 //W.I.P
 document.getElementById("addBtn").addEventListener("click", () => {
+  let newtaskContainer = document.querySelector(".taskContainer");
   let newArr = JSON.parse(window.localStorage.getItem("New Task List")) || [];
   newTaskArray.push(`🆕 - ${document.getElementById("newTaskDesc").value}`);
   newArr["New Task List"] = newTaskArray;
   window.localStorage.setItem("New Task List", JSON.stringify(newArr));
   let newTaskList = JSON.parse(window.localStorage.getItem("New Task List"));
-  console.log(newTaskList, newArr);
-  addNewTask(`🆕 - ${document.getElementById("newTaskDesc").value}`,newTaskList);
+  addNewTask(
+    `🆕 - ${document.getElementById("newTaskDesc").value}`,
+    newTaskList
+  );
 
   document.querySelector("#newTaskDesc").innerText = "";
   document.querySelector("#newTaskDesc").value = "";
   document.querySelector("#newTaskPopUp").classList.toggle("hide");
+
   Array.from(document.querySelectorAll("#edit")).forEach((edtBtn) => {
-    console.log(edtBtn);
     edtBtn.addEventListener("click", ({ target }) => {
-      console.log(target, target.value);
       document.getElementById("editPopUp").classList.toggle("hide");
+      updateListView(newtaskContainer);
+      let container = target.parentNode.parentNode
+      container.querySelector("h5").style.borderBottom ="1px solid orange"
+      console.log(container)
+      container.querySelector("#updateBtn").addEventListener("click",({target})=>{
+        console.log(target,container,container.querySelector("h5").innerText, `🆕 - ${container.querySelector("#editTaskDesc").value}`)
+        container.querySelector("h5").innerText = `🆕 - ${container.querySelector("#editTaskDesc").value}`
+        document.getElementById("editPopUp").classList.toggle("hide");
+        container.querySelector("h5").style.borderBottom =""
+      })
     });
   });
 
   Array.from(document.querySelectorAll("#trash")).forEach((dltBtn) => {
-    console.log(dltBtn);
     dltBtn.addEventListener("click", ({ target }) => {
-      target.parentNode.parentNode.remove()
-      console.log(target, target.parentNode.parentNode);
+      target.parentNode.parentNode.remove();
+      updateListView(newtaskContainer);
     });
   });
 });
-
-//W.I.P
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-      console.log(window.localStorage.getItem("activeRole"));
-      document.getElementById("role").classList.remove("disabled");
-      console.log(currentRole, document.getElementById("employee").value);
-      // createInterface(currentRole);
-
-  },
-  false
-);
-
 document.querySelector(".english").addEventListener("click", () => {
   introJs()
     .setOptions({
