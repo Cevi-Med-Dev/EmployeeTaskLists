@@ -155,6 +155,7 @@ const createInterface = (currentRole) => {
     //keeps tb task
     taskList.querySelector(".splitH").addEventListener("click", (e) => {
       taskList.querySelector("ul").classList.toggle("show");
+      playSound('./assets/audio/pin.mp3')
     });
 
   });

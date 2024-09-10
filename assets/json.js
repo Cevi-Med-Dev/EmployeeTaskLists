@@ -432,42 +432,35 @@ export const roles = {
     ],
   },
   "Graphic Designer": {
-    "Create Logos or Images for Advertising Campaigns": [
-      "Develop logos and graphics as per campaign requirements.",
-      "Ensure designs align with brand guidelines and campaign objectives.",
-      "Review and Finalize Designs.",
-      "Seek feedback on designs and make necessary revisions.",
-      "Finalize and prepare files for use in campaigns.",
+    "Daily tasks": [
+      "Update estimates (Check previous day's estimates, add status, document, and vendor.)",
+      "Report estimates (Add in a table the number of estimates made the previous day with their respective projected amount of money.)",
+      "CRM Clients (Review the customers who purchased the previous day, organize in CRM their corresponding category and find all information to complete, such as order number, products purchased, type of product, company, phone, social networks, website, email.)",
+      "Abandoned Cart (Review abandoned carts from the previous day and complete the information on the person's status, products of interest, contact, product type, and price.)",
+      "Tag Live Chat (Review the previous day's conversations and categorize the person's interest and place their corresponding status.)",
+      "Merchandising clients (Review the clients that are ready for delivery and all those of 2024, make their respective mug design and stickers with logo and name, in addition to the search and editing of the logo.)"
     ],
-    "Review Estimates": [
-      "Prepare detailed estimates for upcoming projects or services.",
-      "Ensure accuracy and clarity in the estimates provided.",
-      "Verify Estimates.",
+    "Weekly": [
+      "Check Google review (Check the Google reviews, and if there is a new one, add it to the table and create a response to your comment.)",
+      "Report sales coming of the month (Review all the customers who bought during the week and perform the search on each part of where this person's interest came from and append all this information in the table.)",
+      "Samsara delivers photos (Review the week's deliveries and download the images of the products with their respective product name, delivery date, and order number.)",
+      "Upload and organize deliveries photos (Organize in the drive each of the photographs in the corresponding folder of the product.)",
+      "Upholstery check to review (Check in the upholstery table the tracking of the waybill to determine if the product has arrived in the estimated time and qualify it as eligible to receive a mail or not.)",
+      "Send automation emails after sales (Review the customers who have purchased and ensure they have not been repeated to send them the mail according to the product they purchased and the time it takes after receiving the mail to send the next one.)"
     ],
-    "Daily Reviews": [
-      "Check daily for any updates or changes to estimates.",
-      "Address any discrepancies or issues identified.",
-      "Review Airtable Databases.",
-      "Monitor and update Airtable databases daily.",
-      "Ensure data accuracy and completeness.",
-    ],
-    "Create the Company Catalog": [
-      "Compile Catalog Information",
-      "Gather and organize information about company products or services.",
-      "Create and format the catalog to highlight key offerings.",
-      "Design and Produce Catalog",
-      "Design the layout and visual elements of the catalog.",
-      "Finalize and produce the catalog for distribution.",
-    ],
-    "Edit Videos for the Company": [
-      "Review Video Footage",
-      "Evaluate video footage for quality and relevance.",
-      "Select and organize clips for editing.",
-      "Edit and Enhance Footage",
-      "Use video editing software to edit and enhance footage.",
-      "Add graphics, text, and audio as needed.",
-    ],
-  },
+    "Occasional": [
+      "Report Estimates of the week (Review the week's estimates and classify them according to their status and projected value.)",
+      "Report Estimates of the month (Review estimates for the month and classify them according to their status and projected value.)",
+      "Update information of Google ads in refurbished products (Add the information provided from the Google report to each of the refurbished products in the corresponding table.)",
+      "Update information of Google ads per state (Add the information delivered from the Google report to each of the states.)",
+      "Complete CRM old info (Perform the daily task process to customers from 2022 backwards.)",
+      "Banner web holidays (Create holiday or special day designs for the webpage.)",
+      "Graphics Cevi Med (Flyer | Catalog | Stand | Envelope | Emails | Web Page)",
+      "Change size of the images products",
+      "Organize table and send emails",
+      "Check estimates status and send email"
+    ]
+  }  
 };
 
 export const employeeRoles = {
