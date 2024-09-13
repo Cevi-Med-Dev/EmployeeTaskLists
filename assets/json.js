@@ -473,7 +473,7 @@ export const employeeRoles = {
   "Shipping Assistant": ["Stephanie Sterling"],
   "FrontEnd Web Developer": ["James Chaves"],
   "Full Stack Developer": ["Hector Castellano"],
-  "Graphic Designer": ["Diana Malpura"],
+  "Graphic Designer": ["Diana Mapura"],
 };
 
 export const webHooks = {
@@ -489,7 +489,7 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflsCEf4iRxfSPwTg/wtrLNbYixCSeOepY0",
   "Nataly Arboleda":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflq8QqCa9861KWTC/wtrJjn9QpUt5X9PYm",
-  "Diana Malpura":
+  "Diana Mapura":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
   "Hector Castellano":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
