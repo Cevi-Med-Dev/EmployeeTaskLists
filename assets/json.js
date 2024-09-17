@@ -1,5 +1,5 @@
 export const roles = {
-  "C.E.O.": {
+  "C.E.O. 👨🏻‍💼": {
     Daily: [
       "Develop and execute the company's business strategies",
       "Make high-level decisions about policy and strategy",
@@ -18,7 +18,7 @@ export const roles = {
       "Lead the development of the company's short and long-term goals",
     ],
   },
-  Accounting: {
+  "Accountant 💲": {
     Daily: [
       "Record daily transactions (sales, purchases, payments, receipts).",
       "Reconcile daily cash and bank statements.",
@@ -111,7 +111,161 @@ export const roles = {
       "Ensure accuracy and proper categorization of expenses.",
     ],
   },
-  "Purchasing Manager": {
+  "Sales Support 🤝": {
+    "Daily Sales Email Review": [
+      "Review Sales Emails Daily.",
+      "Check and respond to sales emails.",
+      "Follow up on any pending issues or inquiries.",
+    ],
+    "Support for CEO": [
+      "Provide Direct Support to the CEO.",
+      "Assist with any activities or tasks required by the CEO.",
+      "Prioritize and execute tasks as directed by the CEO.",
+    ],
+    "Estimate and Invoice Management": [
+      "Prepare and issue estimates for potential projects or sales.",
+      "Ensure accuracy and detail in estimates.",
+      "Generate and send invoices for completed sales or services.",
+      "Verify that invoices are accurate and complete.",
+      "Monitor the status of sent estimates and invoices.",
+      "Follow up with customers to ensure timely responses and payments.",
+    ],
+    "Customer Assistance": [
+      "Make Calls, Assistance, and Support.",
+      "Assist existing and potential customers with inquiries and support via email.",
+    ],
+    "Database Management": [
+      "Maintain and update CRM and Airtable databases.",
+      "Ensure data accuracy and completeness.",
+      "Gather and organize data for new database creation.",
+      "Ensure data is accurate and relevant.",
+    ],
+    "Shipping Label Creation": [
+      "Prepare and print shipping labels for outgoing orders when necessary.",
+      "Ensure accuracy in shipping details.",
+    ],
+    "Appointment Management": [
+      "Manage Reminders and Appointments.",
+      "Inform the CEO of upcoming appointments and ensure reminders are set.",
+    ],
+    "Meeting Documentation": [
+      "Document Key Points During Meetings.",
+      "Take detailed notes during meetings.",
+      "Ensure clear and accurate documentation of key points.",
+    ],
+    "Accounts Receivable Management": [
+      "Oversee the database of accounts receivable.",
+      "Make calls and send emails to customers regarding outstanding payments.",
+      "Update information in Airtable as needed.",
+    ],
+  },
+  "Sales Manager 💳": {
+    Daily: ["1", "2", "3", "4", "5", "6"],
+    Weekly: ["7", "8", "9", "10", "11", "12"],
+    Occasional: ["13", "14", "15", "16", "17", "18"],
+  },
+  
+  "Graphic Designer 👩‍💻": {
+    "Daily tasks": [
+      "Update estimates (Check previous day's estimates, add status, document, and vendor.)",
+      "Report estimates (Add in a table the number of estimates made the previous day with their respective projected amount of money.)",
+      "CRM Clients (Review the customers who purchased the previous day, organize in CRM their corresponding category and find all information to complete, such as order number, products purchased, type of product, company, phone, social networks, website, email.)",
+      "Abandoned Cart (Review abandoned carts from the previous day and complete the information on the person's status, products of interest, contact, product type, and price.)",
+      "Tag Live Chat (Review the previous day's conversations and categorize the person's interest and place their corresponding status.)",
+      "Merchandising clients (Review the clients that are ready for delivery and all those of 2024, make their respective mug design and stickers with logo and name, in addition to the search and editing of the logo.)",
+    ],
+    Weekly: [
+      "Check Google review (Check the Google reviews, and if there is a new one, add it to the table and create a response to your comment.)",
+      "Report sales coming of the month (Review all the customers who bought during the week and perform the search on each part of where this person's interest came from and append all this information in the table.)",
+      "Samsara delivers photos (Review the week's deliveries and download the images of the products with their respective product name, delivery date, and order number.)",
+      "Upload and organize deliveries photos (Organize in the drive each of the photographs in the corresponding folder of the product.)",
+      "Upholstery check to review (Check in the upholstery table the tracking of the waybill to determine if the product has arrived in the estimated time and qualify it as eligible to receive a mail or not.)",
+      "Send automation emails after sales (Review the customers who have purchased and ensure they have not been repeated to send them the mail according to the product they purchased and the time it takes after receiving the mail to send the next one.)",
+    ],
+    Occasional: [
+      "Report Estimates of the week (Review the week's estimates and classify them according to their status and projected value.)",
+      "Report Estimates of the month (Review estimates for the month and classify them according to their status and projected value.)",
+      "Update information of Google ads in refurbished products (Add the information provided from the Google report to each of the refurbished products in the corresponding table.)",
+      "Update information of Google ads per state (Add the information delivered from the Google report to each of the states.)",
+      "Complete CRM old info (Perform the daily task process to customers from 2022 backwards.)",
+      "Banner web holidays (Create holiday or special day designs for the webpage.)",
+      "Graphics Cevi Med (Flyer | Catalog | Stand | Envelope | Emails | Web Page)",
+      "Change size of the images products",
+      "Organize table and send emails",
+      "Check estimates status and send email",
+    ],
+  },
+  "Shipping Assistant 🚛": {
+    "Inform Customers About Their Orders(Daily)": [
+      "Call customers to provide updates regarding their order status.",
+      "Communicate any changes or delays in the delivery schedule.",
+    ],
+    "Record Update Information in Airtable(Daily)": [
+      "Log all customer interactions and order updates in Airtable.",
+      "Ensure records are current and reflect the latest information.",
+    ],
+    "Respond to Customer Care Emails(Daily)": [
+      "Answer emails from customers regarding their orders or delivery issues.",
+      "Provide accurate and timely information based on the latest updates.",
+    ],
+    "Call Drivers for Guidance and Confirmation(Daily)": [
+      "Contact drivers to provide guidance to their delivery locations.",
+      "Confirm the delivery schedule and ensure drivers are prepared with what they need to complete the delivery.",
+    ],
+    "Customer Address Verification(Weekly)": [
+      "Contact customers to confirm their delivery addresses.",
+      "Update any incorrect or incomplete address details.",
+      "Update Information in Airtable.",
+      "Enter verified address details into Airtable.",
+      "Ensure all address information is accurate and up-to-date.",
+    ],
+    "Meetings with Transportation Department(Weekly)": [
+      "Hold regular meetings with the transportation department to review schedules and updates.",
+      "Ensure both teams are aligned on delivery plans and any changes.",
+      "Coordinate delivery times and schedules with the transportation department.",
+      "Ensure that delivery windows align with transportation availability.",
+    ],
+    "Support Delivery Team(Bi Weekly)": [
+      "Support in finding parking, storage, and hotels when required by the delivery team.",
+      "Coordinate delivery times and schedules with the transportation department.",
+      "Ensure that delivery windows align with transportation availability.",
+    ],
+    "Follow-Up on Pending Issues": [
+      "Monitor any pending issues or unresolved customer concerns.",
+      "Ensure follow-up actions are completed and documented.",
+    ],
+  },
+  "Full Stack Developer ✴": {
+    "Automate Airtable Processes": [
+      "Create and implement automation workflows in Airtable to streamline processes.",
+      "Ensure automation improves data accuracy and efficiency.",
+      "Test and Refine Automations.",
+      "Test automated workflows to ensure they function correctly.",
+      "Make adjustments as needed based on performance and feedback.11",
+    ],
+    "Improve Website Data": [
+      "Analyze and Manage Website Data",
+      "Review and analyze data to identify areas for website improvement.",
+      "Provide insights and recommendations for enhancing website functionality and content.",
+      "Implement Data Enhancements",
+      "Make data-driven adjustments to improve the website’s performance and user experience.",
+    ],
+    "Assist with Program Repairs": [
+      "Identify and resolve issues with Airtable programs.",
+      "Provide support and solutions to ensure Airtable operates smoothly.",
+      "Assist with QuickBooks Repairs.",
+      "Address and resolve issues with QuickBooks software.",
+      "Ensure QuickBooks is functioning correctly and accurately.",
+    ],
+    "Maintain Website Updates": [
+      "Check and update the company website to reflect current prices and product codes.",
+      "Ensure all website information is accurate and up-to-date.",
+      "Regularly review the website for any required updates or corrections.",
+      "Coordinate with relevant teams to implement necessary changes.",
+      "Developments, Features and Codes Reviews.",
+    ],
+  },
+  "Purchasing Manager 💵": {
     "Daily Tasks (Products Refurbished)": [
       "Review and reply to email Purchasing, Admin, Orders.",
       "Daily sales review.",
@@ -191,7 +345,7 @@ export const roles = {
       "Identify cost-saving opportunities through bulk purchasing or discounts.",
       "Develop a plan for negotiating better terms with suppliers.",
       "Communicate regularly with suppliers to discuss needs and expectations.",
-      "Communicate effectively with the purchasing assistant to delegate tasks.",
+      "Communicate effectively with the purchasing assistant 🛒to delegate tasks.",
       "Collect and organize all purchase receipts and invoices.",
       "Ensure all purchasing records are up-to-date and accessible.",
       "Conduct regular inventory checks to assess stock levels.",
@@ -202,7 +356,8 @@ export const roles = {
       "Update departments on any changes to stock availability or delivery schedules.",
     ],
   },
-  "Purchasing Assistant": {
+
+  "Purchasing Assistant 🛒": {
     "Daily Order Email Review": [
       "Check and respond to emails related to orders.",
       "Follow up on any pending order issues or inquiries.",
@@ -243,55 +398,40 @@ export const roles = {
       "Adjust pricing and budget forecasts based on cost changes.",
     ],
   },
-  "Sales Support": {
-    "Daily Sales Email Review": [
-      "Review Sales Emails Daily.",
-      "Check and respond to sales emails.",
-      "Follow up on any pending issues or inquiries.",
+  "FrontEnd Web Developer 🌐": {
+    "Planning and Research": [
+      "Meetings with Internal and external departments",
+      "Email / Phone Correspondences",
+      "Test, Troubleshoot and Diagnose current Task at hand",
+      "Plan Approach and Execution",
+      "Gather Functional Requirements from End-Users before Designing",
     ],
-    "Support for CEO": [
-      "Provide Direct Support to the CEO.",
-      "Assist with any activities or tasks required by the CEO.",
-      "Prioritize and execute tasks as directed by the CEO.",
+    "Design and Development": [
+      "Design visually appealing and appropriate UI",
+      "Design UX Prototype for Website flow",
+      "Develop code architecture that is scalable, reusable and minilistic",
+      "Write clean code implementing established practices(Ecmascript6+) adapted to best industry standards",
+      "Adapt Business Logic to Interface and Code",
+      "Refactor / Optimize written code to ensure high quality algorithms for optum page/script execution time",
+      "Continous white-box testing and debuggin written code and logic",
+      "Version Control handling to ensure Seemless Collaboration and Back Ups for loss prevention and damage control",
+      "Code Review with Hector for feedback and debugging purposes",
+      "Collect Feedback On Expected end product",
     ],
-    "Estimate and Invoice Management": [
-      "Prepare and issue estimates for potential projects or sales.",
-      "Ensure accuracy and detail in estimates.",
-      "Generate and send invoices for completed sales or services.",
-      "Verify that invoices are accurate and complete.",
-      "Monitor the status of sent estimates and invoices.",
-      "Follow up with customers to ensure timely responses and payments.",
+    "Website Maintenance ": [
+      "Update Webpage Specs, Pricing, Price rules, Options, Images on the BigCommerce platform",
+      "Troubleshoot, Diagnose and Fix website Bugs / Anomolies Reported",
+      "Ensure website stability and functionality through Analysis of website's performance and user experience.",
     ],
-    "Customer Assistance": [
-      "Make Calls, Assistance, and Support.",
-      "Assist existing and potential customers with inquiries and support via email.",
-    ],
-    "Database Management": [
-      "Maintain and update CRM and Airtable databases.",
-      "Ensure data accuracy and completeness.",
-      "Gather and organize data for new database creation.",
-      "Ensure data is accurate and relevant.",
-    ],
-    "Shipping Label Creation": [
-      "Prepare and print shipping labels for outgoing orders when necessary.",
-      "Ensure accuracy in shipping details.",
-    ],
-    "Appointment Management": [
-      "Manage Reminders and Appointments.",
-      "Inform the CEO of upcoming appointments and ensure reminders are set.",
-    ],
-    "Meeting Documentation": [
-      "Document Key Points During Meetings.",
-      "Take detailed notes during meetings.",
-      "Ensure clear and accurate documentation of key points.",
-    ],
-    "Accounts Receivable Management": [
-      "Oversee the database of accounts receivable.",
-      "Make calls and send emails to customers regarding outstanding payments.",
-      "Update information in Airtable as needed.",
+    "Occassional Task": [
+      "Research latest Industry practices for Tools implemented to ensure proper Integration",
+      "Collaborate with Hector to review and implement any necessary changes to the website.",
+      "Re-evaluate, Debug and Adapt the ever evolving tech used in development, integration and cross platform data sharing",
+      "Save and Deploy Updates or Changes",
     ],
   },
-  "Transportation Coordinator": {
+
+  "Transportation Coordinator 🗺️": {
     "Daily Tasks": [
       "Check email.",
       "Sort sales (initial sales revenue). Sort orders into Warehouse, Upholstery, and Travel.",
@@ -329,151 +469,20 @@ export const roles = {
       "Process Optimization: Implement improvements based on feedback performance reviews.",
     ],
   },
-  "Shipping Assistant": {
-    "Inform Customers About Their Orders(Daily)": [
-      "Call customers to provide updates regarding their order status.",
-      "Communicate any changes or delays in the delivery schedule.",
-    ],
-    "Record Update Information in Airtable(Daily)": [
-      "Log all customer interactions and order updates in Airtable.",
-      "Ensure records are current and reflect the latest information.",
-    ],
-    "Respond to Customer Care Emails(Daily)": [
-      "Answer emails from customers regarding their orders or delivery issues.",
-      "Provide accurate and timely information based on the latest updates.",
-    ],
-    "Call Drivers for Guidance and Confirmation(Daily)": [
-      "Contact drivers to provide guidance to their delivery locations.",
-      "Confirm the delivery schedule and ensure drivers are prepared with what they need to complete the delivery.",
-    ],
-    "Customer Address Verification(Weekly)": [
-      "Contact customers to confirm their delivery addresses.",
-      "Update any incorrect or incomplete address details.",
-      "Update Information in Airtable.",
-      "Enter verified address details into Airtable.",
-      "Ensure all address information is accurate and up-to-date.",
-    ],
-    "Meetings with Transportation Department(Weekly)": [
-      "Hold regular meetings with the transportation department to review schedules and updates.",
-      "Ensure both teams are aligned on delivery plans and any changes.",
-      "Coordinate delivery times and schedules with the transportation department.",
-      "Ensure that delivery windows align with transportation availability.",
-    ],
-    "Support Delivery Team(Bi Weekly)": [
-      "Support in finding parking, storage, and hotels when required by the delivery team.",
-      "Coordinate delivery times and schedules with the transportation department.",
-      "Ensure that delivery windows align with transportation availability.",
-    ],
-    "Follow-Up on Pending Issues": [
-      "Monitor any pending issues or unresolved customer concerns.",
-      "Ensure follow-up actions are completed and documented.",
-    ],
-  },
-  "FrontEnd Web Developer": {
-    "Planning and Research": [
-      "Meetings with Internal and external departments",
-      "Email / Phone Correspondences",
-      "Test, Troubleshoot and Diagnose current Task at hand",
-      "Plan Approach and Execution",
-      "Gather Functional Requirements from End-Users before Designing",
-    ],
-    "Design and Development": [
-      "Design visually appealing and appropriate UI",
-      "Design UX Prototype for Website flow",
-      "Develop code architecture that is scalable, reusable and minilistic",
-      "Write clean code implementing established practices(Ecmascript6+) adapted to best industry standards",
-      "Adapt Business Logic to Interface and Code",
-      "Refactor / Optimize written code to ensure high quality algorithms for optum page/script execution time",
-      "Continous white-box testing and debuggin written code and logic",
-      "Version Control handling to ensure Seemless Collaboration and Back Ups for loss prevention and damage control",
-      "Code Review with Hector for feedback and debugging purposes",
-      "Collect Feedback On Expected end product",
-    ],
-    "Website Maintenance ": [
-      "Update Webpage Specs, Pricing, Price rules, Options, Images on the BigCommerce platform",
-      "Troubleshoot, Diagnose and Fix website Bugs / Anomolies Reported",
-      "Ensure website stability and functionality through Analysis of website's performance and user experience.",
-    ],
-    "Occassional Task": [
-      "Research latest Industry practices for Tools implemented to ensure proper Integration",
-      "Collaborate with Hector to review and implement any necessary changes to the website.",
-      "Re-evaluate, Debug and Adapt the ever evolving tech used in development, integration and cross platform data sharing",
-      "Save and Deploy Updates or Changes",
-    ],
-  },
-  "Full Stack Developer": {
-    "Automate Airtable Processes": [
-      "Create and implement automation workflows in Airtable to streamline processes.",
-      "Ensure automation improves data accuracy and efficiency.",
-      "Test and Refine Automations.",
-      "Test automated workflows to ensure they function correctly.",
-      "Make adjustments as needed based on performance and feedback.11",
-    ],
-    "Improve Website Data": [
-      "Analyze and Manage Website Data",
-      "Review and analyze data to identify areas for website improvement.",
-      "Provide insights and recommendations for enhancing website functionality and content.",
-      "Implement Data Enhancements",
-      "Make data-driven adjustments to improve the website’s performance and user experience.",
-    ],
-    "Assist with Program Repairs": [
-      "Identify and resolve issues with Airtable programs.",
-      "Provide support and solutions to ensure Airtable operates smoothly.",
-      "Assist with QuickBooks Repairs.",
-      "Address and resolve issues with QuickBooks software.",
-      "Ensure QuickBooks is functioning correctly and accurately.",
-    ],
-    "Maintain Website Updates": [
-      "Check and update the company website to reflect current prices and product codes.",
-      "Ensure all website information is accurate and up-to-date.",
-      "Regularly review the website for any required updates or corrections.",
-      "Coordinate with relevant teams to implement necessary changes.",
-      "Developments, Features and Codes Reviews.",
-    ],
-  },
-  "Graphic Designer": {
-    "Daily tasks": [
-      "Update estimates (Check previous day's estimates, add status, document, and vendor.)",
-      "Report estimates (Add in a table the number of estimates made the previous day with their respective projected amount of money.)",
-      "CRM Clients (Review the customers who purchased the previous day, organize in CRM their corresponding category and find all information to complete, such as order number, products purchased, type of product, company, phone, social networks, website, email.)",
-      "Abandoned Cart (Review abandoned carts from the previous day and complete the information on the person's status, products of interest, contact, product type, and price.)",
-      "Tag Live Chat (Review the previous day's conversations and categorize the person's interest and place their corresponding status.)",
-      "Merchandising clients (Review the clients that are ready for delivery and all those of 2024, make their respective mug design and stickers with logo and name, in addition to the search and editing of the logo.)"
-    ],
-    "Weekly": [
-      "Check Google review (Check the Google reviews, and if there is a new one, add it to the table and create a response to your comment.)",
-      "Report sales coming of the month (Review all the customers who bought during the week and perform the search on each part of where this person's interest came from and append all this information in the table.)",
-      "Samsara delivers photos (Review the week's deliveries and download the images of the products with their respective product name, delivery date, and order number.)",
-      "Upload and organize deliveries photos (Organize in the drive each of the photographs in the corresponding folder of the product.)",
-      "Upholstery check to review (Check in the upholstery table the tracking of the waybill to determine if the product has arrived in the estimated time and qualify it as eligible to receive a mail or not.)",
-      "Send automation emails after sales (Review the customers who have purchased and ensure they have not been repeated to send them the mail according to the product they purchased and the time it takes after receiving the mail to send the next one.)"
-    ],
-    "Occasional": [
-      "Report Estimates of the week (Review the week's estimates and classify them according to their status and projected value.)",
-      "Report Estimates of the month (Review estimates for the month and classify them according to their status and projected value.)",
-      "Update information of Google ads in refurbished products (Add the information provided from the Google report to each of the refurbished products in the corresponding table.)",
-      "Update information of Google ads per state (Add the information delivered from the Google report to each of the states.)",
-      "Complete CRM old info (Perform the daily task process to customers from 2022 backwards.)",
-      "Banner web holidays (Create holiday or special day designs for the webpage.)",
-      "Graphics Cevi Med (Flyer | Catalog | Stand | Envelope | Emails | Web Page)",
-      "Change size of the images products",
-      "Organize table and send emails",
-      "Check estimates status and send email"
-    ]
-  }  
 };
 
 export const employeeRoles = {
-  "C.E.O.": ["Simon Cortes"],
-  Accounting: ["Carina Ballesteros"],
-  "Purchasing Manager": ["Lina Montesino"],
-  "Purchasing Assistant": ["Angela María Peña"],
-  "Sales Support": ["Nataly Arboleda"],
-  "Transportation Coordinator": ["Angela Fernandez"],
-  "Shipping Assistant": ["Stephanie Sterling"],
-  "FrontEnd Web Developer": ["James Chaves"],
-  "Full Stack Developer": ["Hector Castellano"],
-  "Graphic Designer": ["Diana Mapura"],
+  "C.E.O. 👨🏻‍💼": ["Simon Cortes"],
+  "Accountant 💲": ["Carina Ballesteros"],
+  "Sales Support 🤝": ["Nataly Arboleda"],
+  "Sales Manager 💳": ["Robert Arundel"],
+  "Graphic Designer 👩‍💻": ["Diana Mapura"],
+  "Purchasing Manager 💵": ["Lina Montesino"],
+  "Shipping Assistant 🚛": ["Stephanie Sterling"],
+  "Full Stack Developer ✴": ["Hector Castellano"],
+  "Purchasing Assistant 🛒": ["Angela María Peña"],
+  "FrontEnd Web Developer 🌐": ["James Chaves"],
+  "Transportation Coordinator 🗺️": ["Angela Fernandez"],
 };
 
 export const webHooks = {
@@ -495,17 +504,20 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
   "Angela María Peña":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflnNnUKiNxIeTFJD/wtrGYUDYxySHaiyOn",
+  "Robert Arundel":
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflH7TeW53GNz17bc/wtr0iqXakO1Mvq0gW",
 };
 
 export const roleImgs = {
-  "C.E.O.": ["ceo", "ceo2", "ceo3"],
-  Accounting: ["acc1", "acc2", "acc3"],
-  "Purchasing Manager": ["pm1", "pm2", "pm3"],
-  "Purchasing Assistant": ["pa1", "pa2", "pa3"],
-  "Sales Support": ["ss1", "ss2", "ss3"],
-  "Transportation Coordinator": ["tc1", "tc2", "tc3"],
-  "Shipping Assistant": ["sa1", "sa2", "sa3"],
-  "FrontEnd Web Developer": ["wd1", "wd2", "wd3"],
-  "Full Stack Developer": ["fd1", "fd2", "fd3"],
-  "Graphic Designer": ["gd1", "gd2", "gd3"],
+  "C.E.O. 👨🏻‍💼": ["ceo", "ceo2", "ceo3"],
+  "Accountant 💲": ["acc1", "acc2", "acc3"],
+  "Sales Manager 💳": ["sm1", "sm2", "sm3"],
+  "Sales Support 🤝": ["ss1", "ss2", "ss3"],
+  "Graphic Designer 👩‍💻": ["gd1", "gd2", "gd3"],
+  "Shipping Assistant 🚛": ["sa1", "sa2", "sa3"],
+  "Purchasing Manager 💵": ["pm1", "pm2", "pm3"],
+  "Full Stack Developer ✴": ["fd1", "fd2", "fd3"],
+  "Purchasing Assistant 🛒": ["pa1", "pa2", "pa3"],
+  "FrontEnd Web Developer 🌐": ["wd1", "wd2", "wd3"],
+  "Transportation Coordinator 🗺️": ["tc1", "tc2", "tc3"],
 };
