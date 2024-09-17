@@ -241,7 +241,7 @@ export const roles = {
       "Ensure automation improves data accuracy and efficiency.",
       "Test and Refine Automations.",
       "Test automated workflows to ensure they function correctly.",
-      "Make adjustments as needed based on performance and feedback.11",
+      "Make adjustments as needed based on performance and feedback.",
     ],
     "Improve Website Data": [
       "Analyze and Manage Website Data",
