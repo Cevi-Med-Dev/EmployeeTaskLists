@@ -160,9 +160,46 @@ export const roles = {
     ],
   },
   "Sales Manager 💳": {
-    Daily: ["1", "2", "3", "4", "5", "6"],
-    Weekly: ["7", "8", "9", "10", "11", "12"],
-    Occasional: ["13", "14", "15", "16", "17", "18"],
+    "Daily Tasks": [
+      "Review and prioritize daily operational activities and tasks.",
+      "Conduct briefings with team leaders to review daily goals and issues."
+    ],
+    "Monthly Tasks": [
+      "Analyze and review monthly performance data and operational trends.",
+      "Develop and update operational plans and strategies based on performance.",
+      "Conduct monthly meetings with department heads to review progress and set new targets."
+    ],
+    "Make Calls to Universities": [
+      "Conduct regular outreach to universities and educational institutions to promote and offer our product range.",
+      "Develop and maintain a database of key contacts at these institutions for ongoing engagement.",
+      "Present tailored solutions that meet the specific needs of each university."
+    ],
+    "Create and Manage Estimates": [
+      "Prepare detailed estimates based on customer inquiries and product requests.",
+      "Regularly follow up on estimates, categorizing them into Sales Won, Pending Sales, and Sales Lost.",
+      "Sales Won: Finalize agreements and proceed with invoicing.",
+      "Pending Sales: Engage with clients to move them towards a decision.",
+      "Sales Lost: Analyze reasons for lost opportunities to improve future sales strategies."
+    ],
+    "Invoice Creation and Processing": [
+      "Generate accurate invoices for clients based on completed sales.",
+      "Ensure timely delivery of invoices and follow up on outstanding payments.",
+      "Maintain a record of all invoiced transactions for future reference."
+    ],
+    "Manage Incoming and Outgoing Calls": [
+      "Handle incoming calls from customers and prospects, answering inquiries and resolving any issues.",
+      "Make outbound calls to follow up on leads, estimates, or any pending matters related to sales."
+    ],
+    "Oversee Live Chat Support": [
+      "Monitor the live chat platform on the company website, responding promptly to customer inquiries.",
+      "Provide real-time solutions to potential buyers, converting chat inquiries into actionable sales leads.",
+      "Ensure a friendly and professional tone in all live chat conversations."
+    ],
+    "Email Communication": [
+      "Respond to all customer emails in a timely and professional manner.",
+      "Address inquiries, provide product information, and follow up on sales-related emails.",
+      "Keep a detailed log of email interactions to ensure effective follow-up and customer satisfaction."
+    ]
   },
   
   "Graphic Designer 👩‍💻": {
@@ -490,7 +527,7 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl57mybweawrKPo6/wtroiThpLZvvn9ItQ",
   "Lina Montesino":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflHAMBXO08q8JIPk/wtr0Ljkb3Ltp48BU4",
-  "Stephany Sterling":
+  "Stephanie Sterling":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflyLdfLDL9cu7yqT/wtrRWKYZSwubqwrvD",
   "Carina Ballesteros":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfluyS106ZH3jb1YX/wtrNJpKelK22fAU3H",
