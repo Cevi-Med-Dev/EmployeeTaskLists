@@ -517,7 +517,7 @@ export const employeeRoles = {
   "Purchasing Manager 💵": ["Lina Montesino"],
   "Shipping Assistant 🚛": ["Stephanie Sterling"],
   "Full Stack Developer ✴": ["Hector Castellano"],
-  "Purchasing Assistant 🛒": ["Angela María Peña"],
+  "Purchasing Assistant 🛒": ["Adriana Rocha"],
   "FrontEnd Web Developer 🌐": ["James Chaves"],
   "Transportation Coordinator 🗺️": ["Angela Fernandez"],
 };
@@ -539,7 +539,7 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
   "Hector Castellano":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
-  "Angela María Peña":
+  "Andriana Rocha":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflnNnUKiNxIeTFJD/wtrGYUDYxySHaiyOn",
   "Robert Arundel":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflH7TeW53GNz17bc/wtr0iqXakO1Mvq0gW",
