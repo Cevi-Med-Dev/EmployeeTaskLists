@@ -490,7 +490,7 @@ export const roles = {
     ],
     "Weekly Tasks": [
       "Review and update the return label file (occasionally).",
-      "Inform Angela Peña of possible travel dates and departure of new or reconditioned products (lights, monitor autoclaves or others).",
+      "Inform Adriana Rocha of possible travel dates and departure of new or reconditioned products (lights, monitor autoclaves or others).",
       "Schedule delivery and collection routes, times and dates in Samsara, as well as support and inclusion of stops for the realization of guarantees when required.",
       "Issue reports requested by Simon (List of pending deliveries, tables delivered and carried out in warehouse).",
       "Review and update travel costs and expenses at the end of them.",
@@ -539,7 +539,7 @@ export const webHooks = {
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflKebhSwDjfGQXjA/wtr3pI06LoEeCfQok",
   "Hector Castellano":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wfl0gUNE8yQhVNROH/wtrjrrwSnjbgRcKTr",
-  "Andriana Rocha":
+  "Adriana Rocha":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflnNnUKiNxIeTFJD/wtrGYUDYxySHaiyOn",
   "Robert Arundel":
     "https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflH7TeW53GNz17bc/wtr0iqXakO1Mvq0gW",
